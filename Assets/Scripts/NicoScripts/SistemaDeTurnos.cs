@@ -4,15 +4,21 @@ using System.Collections.Generic;
  
  public class SistemaDeTurnos : MonoBehaviour
  {
+    
+    //ESTO SE PUEDE LLAMAR TAMBIEN COMBATE MANAGER, porque la clase escaló mas de lo que pensé y ahora abarca y modifica todo el combate
+
 
     public static SistemaDeTurnos Instance { get; private set; }
 
-     public bool turnoPlayer = true;
-     public bool puedeAgarrarCarta = true;
-     private int dañoAlEnemigo;
-     [SerializeField] GameObject handUtils;
-     [SerializeField] GameObject sistemaDeCombate;
-     [SerializeField] GameObject[] desactivarCosasAlIniciarCombate;
+    public bool turnoPlayer = true;
+    public bool puedeAgarrarCarta = true;
+    private int dañoAlEnemigo;
+    [SerializeField] GameObject handUtils;
+    [SerializeField] GameObject sistemaDeCombate;
+    [SerializeField] GameObject[] desactivarCosasAlIniciarCombate;
+
+
+    [SerializeField] int dineroTotal;
 
 
  
@@ -287,6 +293,18 @@ using System.Collections.Generic;
     //hacer el sistema de ABBA, turno player enemigo, enemigo player, player enemigo...
     //Sistema de vida
 
+    public void AñadirDinero(int dineroNuevo)
+    {
+        dineroTotal =+ dineroNuevo;
+    }
+    public int Get_DineroTotal()
+    {
+        return dineroTotal;
+    }
+    public void RestarDinero(int dineroNuevo)
+    {
+        dineroTotal =- dineroNuevo;
+    }
 
 
  }

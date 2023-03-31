@@ -12,6 +12,7 @@
 
     public List<Sprite> mazoGuardado = new List<Sprite>();
     //private List<Sprite> mazoExportado = new List<Sprite>();
+    public List<Sprite> cartasParaInventario = new List<Sprite>();
 
 
     private void Awake() 
@@ -24,6 +25,11 @@
         {
             Instance = this;
         }
+
+        //Añado las cartas por defecto
+        //cartasParaInventario.Push();
+
+
     }
 
     public void GuardarMazo(List<Sprite> imazo)
@@ -79,19 +85,20 @@
     //Recordatorio: me quede en la parte de los mazos y el generador de cartas (tambien falta el daño y demas)
 
 
+    public List<Sprite> Get_Cartas()
+    {
+        return cartasParaInventario;
+    }
 
-/*function ShuffleT$$anonymous$$s(data : Array) : Array
- {  
-     var size : int = data.length;
-  
-     for (var i : int = 0; i < size; i++)
-     {
-         var indexToSwap : int = Random.Range(i, size);
-         var oldValue = data[i];
-         data[i] = data[indexToSwap];
-         data[indexToSwap] = oldValue;
-     }
-     return data;
- }*/
+    public void AñadirCartaAlInventario(SpriteRenderer spriteRenderer)
+    {
+        Sprite sp = spriteRenderer.sprite;
+        cartasParaInventario.Add(sp);
+
+    }
+
+
+
+    //añadir carta: (int daño, sprite, bloqueo, cantidad)
 
 }

@@ -123,28 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &407284664 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 407284664, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
-  m_PrefabInstance: {fileID: 5781461766542672265}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &642322745 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 642322745, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
-  m_PrefabInstance: {fileID: 5781461766542672265}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!850595691 &1651189026
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -262,13 +240,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5781461765019987069, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
-      propertyPath: numero_vidaE
-      value: 
-      objectReference: {fileID: 407284664}
-    - target: {fileID: 5781461765019987069, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
-      propertyPath: numero_vidaP
-      value: 
-      objectReference: {fileID: 642322745}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}

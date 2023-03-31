@@ -10,11 +10,18 @@ public class MazoBehaviour : MonoBehaviour
     [SerializeField] List<Sprite> mazo = new List<Sprite>();
 
     [SerializeField] GameObject señalDeError;
+
     //[SerializeField] float tamañoMazo = 6f;
+    [SerializeField] List<Sprite> cartasSeleccionables = new List<Sprite>();
 
 
-    //añadir botones de cartas, estas añadiran las cartas a la lista [completado]
+    //implementar las cartas del mazo dentro de este script
 
+
+    private void OnEnable() 
+    {
+        cartasSeleccionables = new List<Sprite>(MazoManager.Instance.Get_Cartas());
+    }
 
 
     public void AñadirCarta(Sprite carta)

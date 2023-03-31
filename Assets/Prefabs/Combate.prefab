@@ -426,8 +426,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p_healthBar: {fileID: 317249583021612206}
-  numero_vidaP: {fileID: 0}
-  numero_vidaE: {fileID: 0}
+  numero_vidaP: {fileID: 642322745}
+  numero_vidaE: {fileID: 407284664}
   e_healthBar: {fileID: 317249583979349055}
 --- !u!1 &5781461765039186459
 GameObject:
