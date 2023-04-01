@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MazoBehaviour : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class MazoBehaviour : MonoBehaviour
     //[SerializeField] float tamañoMazo = 6f;
     [SerializeField] List<Sprite> cartasSeleccionables = new List<Sprite>();
 
+    [SerializeField] GameObject[] cartasParaSeleccionar;
+
+    [SerializeField] TMP_Text texto_CantidadCartasMazo;
+
 
     //implementar las cartas del mazo dentro de este script
 
@@ -21,33 +26,57 @@ public class MazoBehaviour : MonoBehaviour
     private void OnEnable() 
     {
         cartasSeleccionables = new List<Sprite>(MazoManager.Instance.Get_Cartas());
+
+        for (int i = 0; i < cartasParaSeleccionar.Length; i++)
+        {
+            if (i < (cartasSeleccionables.Count))
+            {
+                cartasParaSeleccionar[i].GetComponent<SpriteRenderer>().sprite = cartasSeleccionables[i];
+                cartasParaSeleccionar[i].SetActive(true);
+            }
+            else
+            {
+                cartasParaSeleccionar[i].SetActive(false);
+            }
+        }
+
+
     }
 
 
-    public void AñadirCarta(Sprite carta)
+
+
+    public void AñadirCarta(GameObject carta)
     {
+
+        Sprite cartaSprite = carta.GetComponent<SpriteRenderer>().sprite;
 
         for (int i = 0; i < mazo.Count; i++)
         {
             if(mazo[i] == null)
             {
                 mazo.RemoveAt(i);
-                mazo.Add(carta);
+                mazo.Add(cartaSprite);
                 break;
             }
         }
+        texto_CantidadCartasMazo.text = ContarATexto();
         
     }
-    public void EliminarCarta (Sprite carta)
+    public void EliminarCarta (GameObject carta)
     {
+
+        Sprite cartaSprite = carta.GetComponent<SpriteRenderer>().sprite;
+
         for (int i = 0; i < mazo.Count; i++)
         {
-            if (mazo[i] == carta)
+            if (mazo[i] == cartaSprite)
             {
                 mazo[i] = null;
                 break;
             }
         }
+        texto_CantidadCartasMazo.text = ContarATexto();
     }
 
     public void GuardarMazo ()
@@ -67,4 +96,27 @@ public class MazoBehaviour : MonoBehaviour
         
     }
 
+
+    private string ContarATexto()
+    {
+        int _count = 0;
+        for (int i = 0; i < mazo.Count; i++)
+        {
+            if (mazo[i] == null) _count ++;
+        }
+
+        return (mazo.Count - _count).ToString();
+    }
+
+
+
+    public int TotalDeCartas()
+    {
+        int _count = 0;
+        for (int i = 0; i < mazo.Count; i++)
+        {
+            if (mazo[i] == null) _count ++;
+        }
+        return (mazo.Count - _count);
+    }
 }

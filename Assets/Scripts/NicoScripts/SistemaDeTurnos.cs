@@ -306,5 +306,4 @@ using System.Collections.Generic;
         dineroTotal =- dineroNuevo;
     }
 
-
- }
+}

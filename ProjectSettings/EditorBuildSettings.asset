@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/MainMenu.unity
     guid: d09030846142a4b49b0646fb1aac7df2
-  - enabled: 1
+  - enabled: 0
     path: Assets/FirstLevel.unity
     guid: ecbe8ba261ae66f4784d3b06ad696b0c
+  - enabled: 1
+    path: Assets/Scenes/TiendaEscenasDEV/PruebaDeTienda.unity
+    guid: eea8e2397c9cd7b4f8fc76e0710a14a2
+  - enabled: 1
+    path: Assets/Scenes/TiendaEscenasDEV/MenuMazos.unity
+    guid: f353fb1b8a120284dbe58dde0a25de86
   m_configObjects: {}

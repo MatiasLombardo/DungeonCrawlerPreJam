@@ -19,13 +19,15 @@
     {
         if(Instance != null && Instance != this)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
             Instance = this;
         }
 
+
+        DontDestroyOnLoad(this.gameObject);
         //Añado las cartas por defecto
         //cartasParaInventario.Push();
 
