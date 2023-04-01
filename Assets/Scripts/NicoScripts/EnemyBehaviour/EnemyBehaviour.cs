@@ -9,16 +9,23 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] float vidaMaxima = 15f;
     [SerializeField] PlayerInput codigoPlayer;
     [SerializeField] Transform cara;
+    float oldPos, newPos;
+    int temp2 = 0;
 
-    private void OnTriggerEnter(Collider other) 
+    private void OnTriggerStay(Collider other) 
     {
-        
-        if (other.tag == "Player")
+
+        newPos = Vector3.Distance(other.transform.position, transform.position);
+        if (temp2 <= 5)
+        {
+            oldPos = Vector3.Distance(other.transform.position, transform.position);
+        }
+        if (newPos == oldPos)
         {
             codigoPlayer.GirarCamaraA(cara);
             StartCoroutine(PrepararseParaCombate());
-
         }
+        temp2++;
 
     }
 

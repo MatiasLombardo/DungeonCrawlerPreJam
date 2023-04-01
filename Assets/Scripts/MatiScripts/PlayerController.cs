@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    bool AtRest {
+    public bool AtRest {
         get {
             if ((Vector3.Distance(transform.position, targetGridPos) < 0.05f) &&
                 (Vector3.Distance(transform.eulerAngles, targetRotation) < 0.05f))

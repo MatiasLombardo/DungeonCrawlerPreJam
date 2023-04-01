@@ -17,11 +17,32 @@ public class TiendaBehaviour : MonoBehaviour
     [SerializeField] TMP_Text cantidadDineroTotal;
     int dineroTotal;
     int temp = 0;
+    int temp2 = 0;
+    [SerializeField] PlayerInput codigoPlayer;
+    [SerializeField] Transform target;
+    float newPos, oldPos;
+    
     //[SerializeField] int dineroTotal;
 
     private void OnTriggerEnter(Collider other) 
     {
-        botonTienda.SetActive(true);
+        
+        temp2 = 0;
+    }
+
+    private void OnTriggerStay(Collider other) 
+    {        
+
+        newPos = Vector3.Distance(other.transform.position, transform.position);
+        if (temp2 <= 5)
+        {
+            oldPos = Vector3.Distance(other.transform.position, transform.position);
+        }
+        if (newPos == oldPos)
+        {
+            botonTienda.SetActive(true);
+        }
+        temp2++;
     }
 
     private void OnTriggerExit(Collider other) 
@@ -31,6 +52,7 @@ public class TiendaBehaviour : MonoBehaviour
 
     public void ActivarTienda(bool valor)
     {
+        codigoPlayer.GirarCamaraA(target);
         dineroTotal = SistemaDeTurnos.Instance.Get_DineroTotal();
         cantidadDineroTotal.text = dineroTotal.ToString();
         opciones.SetActive(valor);
@@ -50,6 +72,7 @@ public class TiendaBehaviour : MonoBehaviour
             carta.SetActive(false);
             if (temp >= 3)
             {
+                SalirTienda();
                 Destroy(padre);
             }
         }
@@ -57,12 +80,19 @@ public class TiendaBehaviour : MonoBehaviour
         {
 
             opciones.SetActive(false);
-            MazoManager.Instance.AñadirCartaAlInventario(sprite); 
+            MazoManager.Instance.AñadirCartaAlInventario(sprite);
+            SalirTienda();
             Destroy(padre);
         }
         dineroTotal = SistemaDeTurnos.Instance.Get_DineroTotal();
         cantidadDineroTotal.text = dineroTotal.ToString();
         
+    }
+
+    public void SalirTienda()
+    {
+        codigoPlayer.sePuedeMover = true;
+        codigoPlayer.camaraPlayer.transform.rotation = new Quaternion (0,0,0,0);
     }
 
 

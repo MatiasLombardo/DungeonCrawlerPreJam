@@ -16,11 +16,11 @@ public class PlayerInput : MonoBehaviour
     KeyCode turnRight = KeyCode.E;
     [SerializeField] float range=2;
 
-    [SerializeField] bool sePuedeMover;
+    public bool sePuedeMover;
     [SerializeField] float rotationSpeed;
 
     PlayerController controller;
-    [SerializeField] GameObject camaraPlayer; 
+    public GameObject camaraPlayer; 
 
     private void Awake()
     {
@@ -97,23 +97,24 @@ public class PlayerInput : MonoBehaviour
     public void GirarCamaraA(Transform pointer)
     {
         //Mueve la camara a el objetivo pointer
-        sePuedeMover = false;
-        int temp = 0;
-        int temp2 = 0;
-        Debug.Log("mueve la cam");
-        while (temp < 1000)
-        {
-            if(temp2 >= 1000) break;
-            Vector3 direction = pointer.position - transform.position;
-            //esto cumple la misma funcion que LookAt(), poer tomando mas control del angulo.
-            float angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.up);
-            camaraPlayer.transform.rotation = Quaternion.Slerp(camaraPlayer.transform.rotation, rotation, rotationSpeed * Time.deltaTime);
-            Debug.Log("gira la camara");
-            //myCamera.transform.LookAt(pointer);
-            temp++;
-            temp2++;
-        }
+            sePuedeMover = false;
+            int temp = 0;
+            int temp2 = 0;
+            Debug.Log("mueve la cam");
+            while (temp < 1000)
+            {
+                if(temp2 >= 1000) break;
+                Vector3 direction = pointer.position - transform.position;
+                //esto cumple la misma funcion que LookAt(), poer tomando mas control del angulo.
+                float angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+                Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.up);
+                camaraPlayer.transform.rotation = Quaternion.Slerp(camaraPlayer.transform.rotation, rotation, rotationSpeed * Time.deltaTime);
+                //Debug.Log("gira la camara");
+                //myCamera.transform.LookAt(pointer);
+                temp++;
+                temp2++;
+            }
+            //sePuedeMover = true;
     }
 
 
