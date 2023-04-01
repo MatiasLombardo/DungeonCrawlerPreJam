@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightBehaviour : MonoBehaviour
 {
-    [SerializeField] Light light;
+    [SerializeField] Light lightup;
     [SerializeField] float minIntensity=5f;
     [SerializeField] float maxIntensity=8f;
     [SerializeField] float t=0f;
@@ -19,7 +19,7 @@ public class LightBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        light.intensity = Mathf.Lerp(minIntensity,maxIntensity,t);
+        lightup.intensity = Mathf.Lerp(minIntensity,maxIntensity,t);
         t += 0.5f * Time.deltaTime;
 
         if (t > 1.0f)
