@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     Vector3 targetGridPos;
     Vector3 prevTargetGridPos;
-    Vector3 targetRotation;
+    public Vector3 targetRotation;
 
     public void RotateLeft() { if (AtRest) targetRotation -= Vector3.up * 90; }
     public void RotateRight() { if (AtRest) targetRotation += Vector3.up * 90; }
@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
         targetGridPos = Vector3Int.RoundToInt(transform.position);
 
     }
+
+    
 
     private void FixedUpdate()
     {

@@ -14,6 +14,7 @@ public class PlayerInput : MonoBehaviour
     public KeyCode right = KeyCode.D;
     public KeyCode turnLeft = KeyCode.Q;
     public KeyCode turnRight = KeyCode.E;
+  
     public float range=2;
 
     PlayerController controller;
@@ -40,11 +41,23 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyUp(turnRight)) controller.RotateRight();
 
         //Rayo adelante
-        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * range);
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward) , out hitForward, range)&& Input.GetKey(forward))
+
+        if (controller.smoothTransition)
         {
-            controller.MoveForward();
-            
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * range);
+            if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hitForward, range) && Input.GetKey(forward))
+            {
+                controller.MoveForward();
+
+            }
+        }
+        else {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * range);
+            if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hitForward, range) && Input.GetKeyUp(forward))
+            {
+                controller.MoveForward();
+
+            }
         }
 
         //Rayo atras
@@ -71,12 +84,7 @@ public class PlayerInput : MonoBehaviour
 
         }
 
-        /*if (Input.GetKeyUp(forward)) controller.MoveForward();
-       /if (Input.GetKeyUp(back)) controller.MoveBack();
-        //if (Input.GetKeyUp(left)) controller.MoveLeft();
-        if (Input.GetKeyUp(right)) controller.MoveRight();
-        */
-        
+       
     }
 
 }
