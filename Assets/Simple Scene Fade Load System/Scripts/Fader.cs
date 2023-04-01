@@ -40,6 +40,7 @@ public class Fader : MonoBehaviour
         //Getting the visual elements
         if (transform.GetComponent<CanvasGroup>())
             myCanvas = transform.GetComponent<CanvasGroup>();
+            
 
         if (transform.GetComponentInChildren<Image>())
         {

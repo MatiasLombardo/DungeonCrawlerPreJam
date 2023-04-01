@@ -16,12 +16,17 @@ public class TiendaBehaviour : MonoBehaviour
     [SerializeField] GameObject padre;
     [SerializeField] TMP_Text cantidadDineroTotal;
     int dineroTotal;
-
+    int temp = 0;
     //[SerializeField] int dineroTotal;
 
-    private void OnTriggerStay(Collider other) 
+    private void OnTriggerEnter(Collider other) 
     {
         botonTienda.SetActive(true);
+    }
+
+    private void OnTriggerExit(Collider other) 
+    {
+        botonTienda.SetActive(false);
     }
 
     public void ActivarTienda(bool valor)
@@ -29,6 +34,7 @@ public class TiendaBehaviour : MonoBehaviour
         dineroTotal = SistemaDeTurnos.Instance.Get_DineroTotal();
         cantidadDineroTotal.text = dineroTotal.ToString();
         opciones.SetActive(valor);
+
     }
 
     public void SeleccionarCarta(SpriteRenderer sprite, GameObject carta, int coste)
@@ -37,11 +43,15 @@ public class TiendaBehaviour : MonoBehaviour
         Debug.Log("comprar");
         if (isTienda && dineroTotal >= coste)
         {
-            
+            temp++;
             SistemaDeTurnos.Instance.RestarDinero(coste);
             cantidadDineroTotal.text = dineroTotal.ToString();
             MazoManager.Instance.AñadirCartaAlInventario(sprite);
-            //carta.SetActive(false);
+            carta.SetActive(false);
+            if (temp >= 3)
+            {
+                Destroy(padre);
+            }
         }
         else if (!isTienda)
         {
@@ -50,6 +60,8 @@ public class TiendaBehaviour : MonoBehaviour
             MazoManager.Instance.AñadirCartaAlInventario(sprite); 
             Destroy(padre);
         }
+        dineroTotal = SistemaDeTurnos.Instance.Get_DineroTotal();
+        cantidadDineroTotal.text = dineroTotal.ToString();
         
     }
 

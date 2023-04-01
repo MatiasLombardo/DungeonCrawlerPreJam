@@ -1635,46 +1635,6 @@ PrefabInstance:
       propertyPath: mazoBehaviour
       value: 
       objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: "A\xF1adirCarta"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 575278816}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EliminarCarta
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 575278816}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8954634450396447100, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1723,10 +1683,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CartaInventario (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 8954634450396447103, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
 --- !u!4 &575278815 stripped
@@ -1750,46 +1706,6 @@ PrefabInstance:
       propertyPath: mazoBehaviour
       value: 
       objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: "A\xF1adirCarta"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 646493207}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EliminarCarta
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 646493207}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8954634450396447100, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1837,10 +1753,6 @@ PrefabInstance:
     - target: {fileID: 8954634450396447101, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: m_Name
       value: CartaInventario (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8954634450396447103, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
@@ -2000,46 +1912,6 @@ PrefabInstance:
       propertyPath: mazoBehaviour
       value: 
       objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: "A\xF1adirCarta"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 676409275}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EliminarCarta
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 676409275}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8954634450396447100, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2088,10 +1960,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CartaInventario (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 8954634450396447103, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
 --- !u!4 &676409274 stripped
@@ -2115,46 +1983,6 @@ PrefabInstance:
       propertyPath: mazoBehaviour
       value: 
       objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: "A\xF1adirCarta"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 778384840}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EliminarCarta
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 778384840}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8954634450396447100, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2202,10 +2030,6 @@ PrefabInstance:
     - target: {fileID: 8954634450396447101, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: m_Name
       value: CartaInventario (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8954634450396447103, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
@@ -2320,46 +2144,6 @@ PrefabInstance:
       propertyPath: mazoBehaviour
       value: 
       objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: "A\xF1adirCarta"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 806756541}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EliminarCarta
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 806756541}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8954634450396447100, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2408,10 +2192,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CartaInventario (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 8954634450396447103, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
 --- !u!4 &806756540 stripped
@@ -2435,46 +2215,6 @@ PrefabInstance:
       propertyPath: mazoBehaviour
       value: 
       objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: "A\xF1adirCarta"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 859313825}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EliminarCarta
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 859313825}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8954634450396447100, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2522,10 +2262,6 @@ PrefabInstance:
     - target: {fileID: 8954634450396447101, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: m_Name
       value: CartaInventario (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8954634450396447103, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
@@ -3408,46 +3144,6 @@ PrefabInstance:
       propertyPath: mazoBehaviour
       value: 
       objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: "A\xF1adirCarta"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 1331067280}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EliminarCarta
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 1331067280}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8954634450396447100, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -3496,10 +3192,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CartaInventario (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 8954634450396447103, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
 --- !u!4 &1331067279 stripped
@@ -3523,46 +3215,6 @@ PrefabInstance:
       propertyPath: mazoBehaviour
       value: 
       objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: "A\xF1adirCarta"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 1370842779}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EliminarCarta
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 1370842779}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8954634450396447100, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3610,10 +3262,6 @@ PrefabInstance:
     - target: {fileID: 8954634450396447101, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: m_Name
       value: CartaInventario (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8954634450396447103, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
@@ -4724,8 +4372,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424fb459a08d9fa42acb3006e83c8db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: PruebaDeTienda
-  color: {r: 0, g: 0, b: 0, a: 0}
+  scene: PruebaDeCombate
+  color: {r: 0, g: 0, b: 0, a: 1}
+  temp: 1.5
 --- !u!1001 &2082228903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4737,46 +4386,6 @@ PrefabInstance:
       propertyPath: mazoBehaviour
       value: 
       objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: "A\xF1adirCarta"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 2082228905}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EliminarCarta
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazoBehaviour, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 2082228905}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8954634450396447100, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4825,10 +4434,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CartaInventario (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8954634450396447103, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
 --- !u!4 &2082228904 stripped
@@ -4850,14 +4455,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 255035956792788116, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
       propertyPath: mazoBehaviour
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 4029720548437121410, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1165275337}
-    - target: {fileID: 8575922793788473763, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1165275337}
     - target: {fileID: 8954634450396447100, guid: 8ebc754552ee7ad4d964fde5831de0d1, type: 3}

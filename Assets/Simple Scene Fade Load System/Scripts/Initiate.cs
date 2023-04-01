@@ -21,6 +21,7 @@ public static class Initiate
         init.AddComponent<Fader>();
         init.AddComponent<CanvasGroup>();
         init.AddComponent<Image>();
+        myCanvas.sortingOrder = 999;
 
         Fader scr = init.GetComponent<Fader>();
         scr.fadeDamp = multiplier;

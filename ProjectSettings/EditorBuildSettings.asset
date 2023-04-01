@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TiendaEscenasDEV/MenuMazos.unity
     guid: f353fb1b8a120284dbe58dde0a25de86
+  - enabled: 1
+    path: Assets/Scenes/PruebaDeCombate.unity
+    guid: 4e1139c343c5d5048baa28c205d89f12
   m_configObjects: {}

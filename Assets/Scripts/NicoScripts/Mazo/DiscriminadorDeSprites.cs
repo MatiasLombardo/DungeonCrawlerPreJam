@@ -83,27 +83,9 @@ public class DiscriminadorDeSprites : MonoBehaviour
 
     }
 
-    public void BajarNumero()
+    private void Update() 
     {
-        if (cantidadActual <= cantidadTotal && cantidadActual > 0 && mazoBehaviour.TotalDeCartas() < 12)
-        {
-            cantidadActual --;
-            texto_CantidadCartas.text = cantidadActual.ToString();
-        }
-    }
-
-    public void SubirNumero()
-    {
-        if (cantidadActual < cantidadTotal)
-        {
-            cantidadActual ++;
-            texto_CantidadCartas.text = cantidadActual.ToString();
-        }
-    }
-
-    public void DesactivarBoton()
-    {
-        if (cantidadActual == 0)
+        if (cantidadActual == 0 || mazoBehaviour.TotalDeCartas() == 12)
         {
             botonAñadir.SetActive(false);
         }
@@ -120,5 +102,46 @@ public class DiscriminadorDeSprites : MonoBehaviour
             botonQuitar.SetActive(true);
         }
     }
+    
+
+    public void BajarNumero()
+    {
+        if (cantidadActual <= cantidadTotal && cantidadActual > 0 && mazoBehaviour.TotalDeCartas() < 12)
+        {
+            cantidadActual --;
+            texto_CantidadCartas.text = cantidadActual.ToString();
+            mazoBehaviour.AñadirCarta(this.gameObject);
+        }
+    }
+
+    public void SubirNumero()
+    {
+        if (cantidadActual < cantidadTotal)
+        {
+            cantidadActual ++;
+            texto_CantidadCartas.text = cantidadActual.ToString();
+            mazoBehaviour.EliminarCarta(this.gameObject);
+        }
+    }
+
+    /*public void DesactivarBoton()
+    {
+        if (cantidadActual == 0 || mazoBehaviour.TotalDeCartas() == 12)
+        {
+            botonAñadir.SetActive(false);
+        }
+        else
+        {
+            botonAñadir.SetActive(true);
+        }
+        if (cantidadActual == cantidadTotal)
+        {
+            botonQuitar.SetActive(false);
+        }
+        else
+        {
+            botonQuitar.SetActive(true);
+        }
+    }*/
 
 }

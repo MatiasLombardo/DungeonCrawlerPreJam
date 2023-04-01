@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BotonBehaviour : MonoBehaviour
 {
@@ -9,8 +10,13 @@ public class BotonBehaviour : MonoBehaviour
     [SerializeField] SpriteRenderer sprite;
     [SerializeField] GameObject carta;
     [SerializeField] int coste;
+    [SerializeField] int cantidad;
+    [SerializeField] TMP_Text texto_coste;
+    [SerializeField] TMP_Text texto_cantidad;
 
     private void Start() {
+        texto_coste.text = coste.ToString();
+        texto_cantidad.text = cantidad.ToString();
         boton.onClick.AddListener(TaskOnClick);
     }
 

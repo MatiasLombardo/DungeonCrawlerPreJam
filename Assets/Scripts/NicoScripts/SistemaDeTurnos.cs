@@ -303,7 +303,7 @@ using System.Collections.Generic;
     }
     public void RestarDinero(int dineroNuevo)
     {
-        dineroTotal =- dineroNuevo;
+        dineroTotal = dineroTotal - dineroNuevo;
     }
 
 }
