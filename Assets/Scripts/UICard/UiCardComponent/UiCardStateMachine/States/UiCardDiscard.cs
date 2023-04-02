@@ -29,7 +29,7 @@ namespace Tools.UI.Card
         void SetScale()
         {
             var finalScale = Handler.transform.localScale * Parameters.DiscardedSize;
-            Handler.ScaleTo(finalScale, Parameters.ScaleSpeed);
+            Handler.ScaleTo(finalScale*1.6f, Parameters.ScaleSpeed);
         }
 
         void SetRotation()

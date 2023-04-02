@@ -1993,6 +1993,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1239975630 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 163942309, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
+  m_PrefabInstance: {fileID: 1239975625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1239975631 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1392499395, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
+  m_PrefabInstance: {fileID: 1239975625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1239975632 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1499557425, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
+  m_PrefabInstance: {fileID: 1239975625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1239975633 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 286646751, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
+  m_PrefabInstance: {fileID: 1239975625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1239975634 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 63021947, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
+  m_PrefabInstance: {fileID: 1239975625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1239975635 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2101239166, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
+  m_PrefabInstance: {fileID: 1239975625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1498897231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,6 +2838,8 @@ MonoBehaviour:
   p_healthBar: {fileID: 1239975629}
   numero_vidaP: {fileID: 1641950402}
   numero_vidaE: {fileID: 1124474455}
+  com_ResultadoP: {fileID: 1239975631}
+  com_ResultadoE: {fileID: 1239975630}
   e_healthBar: {fileID: 1239975628}
 --- !u!4 &1760917836
 Transform:
@@ -2808,6 +2876,11 @@ MonoBehaviour:
   - {fileID: 1503489577}
   - {fileID: 1824750869}
   - {fileID: 1120488994}
+  comparadores:
+  - {fileID: 1239975635}
+  - {fileID: 1239975634}
+  - {fileID: 1239975632}
+  - {fileID: 1239975633}
   dineroTotal: 120
   "choqueDeDa\xF1os": 00000000000000000000000000000000
 --- !u!1 &1824750869
