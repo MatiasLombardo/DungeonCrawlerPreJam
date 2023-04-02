@@ -362,6 +362,7 @@ MonoBehaviour:
   handUtils: {fileID: 5781461765713017255}
   sistemaDeCombate: {fileID: 0}
   desactivarCosasAlIniciarCombate: []
+  dineroTotal: 0
   "choqueDeDa\xF1os": 00000000000000000000000000000000
 --- !u!114 &5781461765019987067
 MonoBehaviour:
@@ -376,12 +377,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazoGuardado:
+  - {fileID: 21300000, guid: fb3b0717ab33bfe4d9823f3a90cd23c9, type: 3}
+  - {fileID: 21300000, guid: fb3b0717ab33bfe4d9823f3a90cd23c9, type: 3}
   - {fileID: 21300000, guid: be7970f9794a0fc49b2c0338855075cc, type: 3}
   - {fileID: 21300000, guid: be7970f9794a0fc49b2c0338855075cc, type: 3}
   - {fileID: 21300000, guid: be7970f9794a0fc49b2c0338855075cc, type: 3}
   - {fileID: 21300000, guid: be7970f9794a0fc49b2c0338855075cc, type: 3}
-  - {fileID: 21300000, guid: be7970f9794a0fc49b2c0338855075cc, type: 3}
-  - {fileID: 21300000, guid: be7970f9794a0fc49b2c0338855075cc, type: 3}
+  cartasParaInventario: []
   numeroDeCarta: 0
   spriteActual: {fileID: 0}
 --- !u!114 &5781461765019987066
@@ -1001,6 +1003,30 @@ PrefabInstance:
       propertyPath: isPlayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7298798167439824414, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298798167439824414, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298798167439824414, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298798167439824414, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298798167439824414, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7298798167439824414, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7298798168462864442, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1090,6 +1116,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3163185574627404208}
     m_Modifications:
+    - target: {fileID: 2144038176815076911, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144038176815076911, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144038176815076911, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144038176815076911, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144038176815076911, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144038176815076911, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2144038177838837770, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
       propertyPath: m_Name
       value: GameViewP1

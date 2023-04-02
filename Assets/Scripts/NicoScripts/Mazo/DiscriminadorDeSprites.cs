@@ -15,61 +15,113 @@ public class DiscriminadorDeSprites : MonoBehaviour
     int cantidadTotal;
     int cantidadActual;
 
-    private void Awake() 
+    private void OnEnable() 
     {
+        
         string nombre = gameObject.GetComponent<SpriteRenderer>().sprite.name;
+        Debug.Log(nombre);
         switch (nombre)
         {
             case var value when value == sprites[0].name :
                 cantidadTotal = 12;
                 cantidadActual = cantidadTotal;
+                Debug.Log(cantidadTotal);
                 texto_CantidadCartas.text = cantidadActual.ToString();
             break;
 
             case var value when value == sprites[1].name :
-                cantidadTotal = 6;
+                cantidadTotal = 4;
                 cantidadActual = cantidadTotal;
+                Debug.Log(cantidadTotal);
                 texto_CantidadCartas.text = cantidadActual.ToString();
             break;
 
             case var value when value == sprites[2].name :
-                cantidadTotal = 7;
+                cantidadTotal = 5;
                 cantidadActual = cantidadTotal;
+                Debug.Log(cantidadTotal);
                 texto_CantidadCartas.text = cantidadActual.ToString();
             break;
 
             case var value when value == sprites[3].name :
-                cantidadTotal = 4;
+                cantidadTotal = 8;
                 cantidadActual = cantidadTotal;
+                Debug.Log(cantidadTotal);
                 texto_CantidadCartas.text = cantidadActual.ToString();
             break;
             case var value when value == sprites[4].name :
-                cantidadTotal = 1;
+                cantidadTotal = 3;
                 cantidadActual = cantidadTotal;
+                Debug.Log(cantidadTotal);
                 texto_CantidadCartas.text = cantidadActual.ToString();
             break;
             case var value when value == sprites[5].name :
-                cantidadTotal = 3;
+                cantidadTotal = 5;
                 cantidadActual = cantidadTotal;
                 texto_CantidadCartas.text = cantidadActual.ToString();
             break;
             case var value when value == sprites[6].name :
-                cantidadTotal = 4;
+                cantidadTotal = 10;
                 cantidadActual = cantidadTotal;
                 texto_CantidadCartas.text = cantidadActual.ToString();
             break;
             case var value when value == sprites[7].name :
-                cantidadTotal = 2;
+                cantidadTotal = 3;
                 cantidadActual = cantidadTotal;
                 texto_CantidadCartas.text = cantidadActual.ToString();
             break;
             case var value when value == sprites[8].name :
-                cantidadTotal = 6;
+                cantidadTotal = 4;
                 cantidadActual = cantidadTotal;
                 texto_CantidadCartas.text = cantidadActual.ToString();
             break;
             case var value when value == sprites[9].name :
-                cantidadTotal = 4;
+                cantidadTotal = 3;
+                cantidadActual = cantidadTotal;
+                texto_CantidadCartas.text = cantidadActual.ToString();
+            break;
+            case var value when value == sprites[10].name :
+                cantidadTotal = 3;
+                cantidadActual = cantidadTotal;
+                texto_CantidadCartas.text = cantidadActual.ToString();
+            break;
+            case var value when value == sprites[11].name :
+                cantidadTotal = 2;
+                cantidadActual = cantidadTotal;
+                texto_CantidadCartas.text = cantidadActual.ToString();
+            break;
+            case var value when value == sprites[12].name :
+                cantidadTotal = 2;
+                cantidadActual = cantidadTotal;
+                texto_CantidadCartas.text = cantidadActual.ToString();
+            break;
+            case var value when value == sprites[13].name :
+                cantidadTotal = 1;
+                cantidadActual = cantidadTotal;
+                texto_CantidadCartas.text = cantidadActual.ToString();
+            break;
+            case var value when value == sprites[14].name :
+                cantidadTotal = 1;
+                cantidadActual = cantidadTotal;
+                texto_CantidadCartas.text = cantidadActual.ToString();
+            break;
+            case var value when value == sprites[15].name :
+                cantidadTotal = 1;
+                cantidadActual = cantidadTotal;
+                texto_CantidadCartas.text = cantidadActual.ToString();
+            break;
+            case var value when value == sprites[16].name :
+                cantidadTotal = 1;
+                cantidadActual = cantidadTotal;
+                texto_CantidadCartas.text = cantidadActual.ToString();
+            break;
+            case var value when value == sprites[17].name :
+                cantidadTotal = 1;
+                cantidadActual = cantidadTotal;
+                texto_CantidadCartas.text = cantidadActual.ToString();
+            break;
+            case var value when value == sprites[18].name :
+                cantidadTotal = 1;
                 cantidadActual = cantidadTotal;
                 texto_CantidadCartas.text = cantidadActual.ToString();
             break;
@@ -77,7 +129,7 @@ public class DiscriminadorDeSprites : MonoBehaviour
 
 
             default:
-            Debug.LogError("Error discriminador de sprites");
+            Debug.Log("Error discriminador de sprites");
             break;
         }
 

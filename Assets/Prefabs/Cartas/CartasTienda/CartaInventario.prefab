@@ -774,16 +774,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
+  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
+  - {fileID: 21300000, guid: 587303f3a77973140962dfaf171b553b, type: 3}
+  - {fileID: 21300000, guid: cee24eac560f4104bba5179f801b1e18, type: 3}
+  - {fileID: 21300000, guid: 869c7f25e3e569a439463faacb0a24ff, type: 3}
+  - {fileID: 21300000, guid: 24f29d3f8859ace4cb873346a2d581a8, type: 3}
+  - {fileID: 21300000, guid: dac460c33e51b304698d622c11fe3ccf, type: 3}
+  - {fileID: 21300000, guid: afd343b601d07af45b2dbde5cae001bf, type: 3}
+  - {fileID: 21300000, guid: 822ea458b94f46f439394468ee9e4436, type: 3}
+  - {fileID: 21300000, guid: a3e2a6cc0e928a045b4cdd3d2eeb4d99, type: 3}
+  - {fileID: 21300000, guid: 411855d16150bee458bfaf545a14a14a, type: 3}
+  - {fileID: 21300000, guid: fbd8cd4ab55686a4eae0fe1c34c7e54f, type: 3}
+  - {fileID: 21300000, guid: 9994b710ca087574db85e8a499e1a9e5, type: 3}
+  - {fileID: 21300000, guid: 299b3f6fb180e3243a2ea1b3fce8711d, type: 3}
+  - {fileID: 21300000, guid: 18f5eaec41f073d4b87ab54c4287cbd1, type: 3}
+  - {fileID: 21300000, guid: 9608a1832626d794d87a54eab60c09eb, type: 3}
+  - {fileID: 21300000, guid: 6f45aa4de3c3ad944aa78e6b26bb71e8, type: 3}
+  - {fileID: 21300000, guid: e76f424dad99e0f458c2bdf5a70adb2c, type: 3}
+  - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
   - {fileID: 21300000, guid: be7970f9794a0fc49b2c0338855075cc, type: 3}
-  - {fileID: 21300000, guid: a14c08c9ae2f5fc4e9f1d1dca567f8c0, type: 3}
-  - {fileID: 21300000, guid: 5882111ba678db24ea5cb55ce15a8408, type: 3}
-  - {fileID: 21300000, guid: ece16ffd2ff03414ca9b13061f21fb96, type: 3}
-  - {fileID: 21300000, guid: afc0b0a841b52c640b98c7103d89f603, type: 3}
-  - {fileID: 21300000, guid: 812eed9e9c8a0f04d9f88e0c74cde4a9, type: 3}
-  - {fileID: 21300000, guid: 812eed9e9c8a0f04d9f88e0c74cde4a9, type: 3}
-  - {fileID: 21300000, guid: 812eed9e9c8a0f04d9f88e0c74cde4a9, type: 3}
-  - {fileID: 21300000, guid: 812eed9e9c8a0f04d9f88e0c74cde4a9, type: 3}
-  - {fileID: 21300000, guid: 812eed9e9c8a0f04d9f88e0c74cde4a9, type: 3}
   texto_CantidadCartas: {fileID: 3052946301125115186}
   mazoBehaviour: {fileID: 0}
   "botonA\xF1adir": {fileID: 1522391420238232478}

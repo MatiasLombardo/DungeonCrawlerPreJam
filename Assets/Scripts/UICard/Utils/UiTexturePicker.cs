@@ -56,27 +56,116 @@ namespace Tools.UI.Card
 
         private void PosiblesCartas()
         {
-            if (MyRenderer.sprite == posiblesCartas[0])
-                {
-                    //Debug.Log("toco demonio: hace 4 de daño");
-                    int daño = 4;
-                    int absorber = 2;
+
+            string nombre = MyRenderer.sprite.name;
+            int daño;
+            int absorber;
+            switch (nombre)
+            {
+                
+                case var value when value == posiblesCartas[0].name :
+                    daño = 12;
+                    absorber = 1;
                     cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
-                }
-                else if (MyRenderer.sprite == posiblesCartas[1])
-                {
-                    //Debug.Log("toco EvilGod: hace 1 de daño");
-                    int daño = 1;
-                    int absorber = 1;
+                break;
+                case var value when value == posiblesCartas[1].name :
+                    daño = 7;
+                    absorber = 3;
                     cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
-                }
-                else if (MyRenderer.sprite == posiblesCartas[2])
-                {
-                    //Debug.Log("toco EvilGod: hace 1 de daño");
-                    int daño = 5;
-                    int absorber = 5;
+                break;
+                case var value when value == posiblesCartas[2].name :
+                    daño = 4;
+                    absorber = 6;
                     cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
-                }
+                break;
+                case var value when value == posiblesCartas[3].name :
+                    daño = 5;
+                    absorber = 5;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[4].name :
+                    daño = 8;
+                    absorber = 16;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[5].name :
+                    daño = 3;
+                    absorber = 8;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[6].name :
+                    daño = 4;
+                    absorber = 5;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[7].name :
+                    daño = 0;
+                    absorber = 12;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[8].name :
+                    daño = 6;
+                    absorber = 4;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[9].name :
+                    daño = 2;
+                    absorber = 9;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[10].name :
+                    daño = 6;
+                    absorber = 8;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[11].name :
+                    daño = 4;
+                    absorber = 11;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[12].name :
+                    daño = 1;
+                    absorber = 10;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[13].name :
+                    daño = 15;
+                    absorber = 10;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[14].name :
+                    daño = 13;
+                    absorber = 15;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[15].name :
+                    daño = 10;
+                    absorber = 18;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[16].name :
+                    daño = 8;
+                    absorber = 20;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[17].name :
+                    daño = 5;
+                    absorber = 25;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[18].name :
+                    daño = 15;
+                    absorber = 12;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+
+                default:
+                    Debug.LogError("Error UITexturePicker");
+                break;
+
+            }
+
+            
         }
 
 

@@ -194,8 +194,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3245573509247951606}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0002, z: -0.03}
-  m_LocalScale: {x: 0.024, y: 0.017, z: 0.8}
+  m_LocalPosition: {x: 0.00052, y: -0.00019, z: -0.03}
+  m_LocalScale: {x: 0.021658782, y: 0.017062731, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3921877624254176190}
@@ -242,7 +242,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 20455dcba2870e24eb931aa4570255c7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8abd6f91fd18d7344a1e36a747454e9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -250,7 +250,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &8598093160269803284
@@ -268,9 +268,25 @@ MonoBehaviour:
   cartaPadre: {fileID: 3245573509686006908}
   isPlayer: 1
   posiblesCartas:
-  - {fileID: 21300000, guid: b3497253e58513a469fb1bfa56829150, type: 3}
-  - {fileID: 21300000, guid: 97eed4db298436a45971e9b17442b6e5, type: 3}
   - {fileID: 21300000, guid: be7970f9794a0fc49b2c0338855075cc, type: 3}
+  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
+  - {fileID: 21300000, guid: 587303f3a77973140962dfaf171b553b, type: 3}
+  - {fileID: 21300000, guid: cee24eac560f4104bba5179f801b1e18, type: 3}
+  - {fileID: 21300000, guid: 869c7f25e3e569a439463faacb0a24ff, type: 3}
+  - {fileID: 21300000, guid: 24f29d3f8859ace4cb873346a2d581a8, type: 3}
+  - {fileID: 21300000, guid: dac460c33e51b304698d622c11fe3ccf, type: 3}
+  - {fileID: 21300000, guid: afd343b601d07af45b2dbde5cae001bf, type: 3}
+  - {fileID: 21300000, guid: 822ea458b94f46f439394468ee9e4436, type: 3}
+  - {fileID: 21300000, guid: a3e2a6cc0e928a045b4cdd3d2eeb4d99, type: 3}
+  - {fileID: 21300000, guid: 411855d16150bee458bfaf545a14a14a, type: 3}
+  - {fileID: 21300000, guid: fbd8cd4ab55686a4eae0fe1c34c7e54f, type: 3}
+  - {fileID: 21300000, guid: 9994b710ca087574db85e8a499e1a9e5, type: 3}
+  - {fileID: 21300000, guid: 299b3f6fb180e3243a2ea1b3fce8711d, type: 3}
+  - {fileID: 21300000, guid: 18f5eaec41f073d4b87ab54c4287cbd1, type: 3}
+  - {fileID: 21300000, guid: 9608a1832626d794d87a54eab60c09eb, type: 3}
+  - {fileID: 21300000, guid: 6f45aa4de3c3ad944aa78e6b26bb71e8, type: 3}
+  - {fileID: 21300000, guid: e76f424dad99e0f458c2bdf5a70adb2c, type: 3}
+  - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
 --- !u!1 &3245573509686006908
 GameObject:
   m_ObjectHideFlags: 0
