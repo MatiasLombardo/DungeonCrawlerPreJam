@@ -1,6 +1,7 @@
- using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
  
  public class SistemaDeTurnos : MonoBehaviour
  {
@@ -16,6 +17,10 @@ using System.Collections.Generic;
     [SerializeField] GameObject handUtils;
     [SerializeField] GameObject sistemaDeCombate;
     [SerializeField] GameObject[] desactivarCosasAlIniciarCombate;
+
+    [SerializeField] TMP_Text[] comparadores;
+
+    
 
 
     [SerializeField] int dineroTotal;
@@ -138,12 +143,12 @@ using System.Collections.Generic;
 
     private void ProcesarDaño ()
     {
-        if (valorTurno == 0)
+        /*if (valorTurno == 0)
         {
             SistemaDeVida.Instance.HacerDañoEnemigo(choqueDeDaños[0] - choqueDeDaños[3]);  
             SistemaDeVida.Instance.HacerDañoPlayer(choqueDeDaños[2] - choqueDeDaños[1]);  
 
-            /*if (choqueDeDaños[0] > choqueDeDaños[1])
+            if (choqueDeDaños[0] > choqueDeDaños[1])
             {
                 // daño jugador vs daño enemigo
                 int dañoTotal = choqueDeDaños[0] - choqueDeDaños[1];
@@ -161,7 +166,7 @@ using System.Collections.Generic;
             else if(choqueDeDaños[0] == choqueDeDaños[1])
             {
                 Debug.Log("Hicieron el mismo daño, se repelieron");    
-            }*/
+            }
         }
         else if (valorTurno == 1)
         {
@@ -172,7 +177,7 @@ using System.Collections.Generic;
 
 
 
-            /*if (choqueDeDaños[0] > choqueDeDaños[1])
+            if (choqueDeDaños[0] > choqueDeDaños[1])
             {
     
                 int dañoTotal = choqueDeDaños[0] - choqueDeDaños[1];
@@ -189,8 +194,58 @@ using System.Collections.Generic;
             else if(choqueDeDaños[0] == choqueDeDaños[1])
             {
                 Debug.Log("Hicieron el mismo daño, se repelieron");    
-            }*/
+            }
+        }*/
+        StartCoroutine(EfectoComparadores());
+    }
+
+    IEnumerator EfectoComparadores()
+    {
+        if (valorTurno == 0)
+        {
+
+            for (int i = 0; i < choqueDeDaños.Length; i++)
+            {
+                comparadores[i].text = choqueDeDaños[i].ToString();
+                //comparadores[i].IsEnable(true);
+            }
+
+            yield return new WaitForSeconds(2f);
+
+            SistemaDeVida.Instance.HacerDañoEnemigo(choqueDeDaños[0] - choqueDeDaños[3]);  
+            SistemaDeVida.Instance.HacerDañoPlayer(choqueDeDaños[2] - choqueDeDaños[1]);  
         }
+        else if (valorTurno == 1)
+        {
+            int temp4 = 0;
+            for (int i = choqueDeDaños.Length - 1; i >= 0 ; i--)
+            {
+                //0 ataque enemigo      //0 ataque jugador
+                //1 defensa enemigo     //1 defensa jugador
+                //2 ataque jugador      //2 ataque enemigo
+                //3 defensa jugador     //3 defensa enemigo
+                //0 => 2
+                //1 => 3
+                //2 => 0
+                //3 => 1
+
+                comparadores[i].text = choqueDeDaños[Mathf.Abs(i-2)].ToString();
+                comparadores[1].text = choqueDeDaños[3].ToString();
+                temp4++;
+            }
+
+            yield return new WaitForSeconds(2f);
+
+            SistemaDeVida.Instance.HacerDañoPlayer(choqueDeDaños[0] - choqueDeDaños[3]);  
+            SistemaDeVida.Instance.HacerDañoEnemigo(choqueDeDaños[2] - choqueDeDaños[1]); 
+        } 
+
+        for (int i = 0; i < choqueDeDaños.Length; i++)
+        {
+            comparadores[i].text = " ";
+            //comparadores[i].IsEnable(true);
+        }
+        
     }
 
     

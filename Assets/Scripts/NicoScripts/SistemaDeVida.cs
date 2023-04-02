@@ -29,6 +29,7 @@ public class SistemaDeVida : MonoBehaviour
     float lerpSpeed;
     [SerializeField]TMP_Text numero_vidaP;
     [SerializeField]TMP_Text numero_vidaE;
+    [SerializeField] TMP_Text com_ResultadoP, com_ResultadoE;
 
 
     public Image e_healthBar;
@@ -72,11 +73,14 @@ public class SistemaDeVida : MonoBehaviour
 
   public void HacerDañoPlayer(int daño)
   {
+
     if (daño > 0)
     {
         p_health = p_health - daño;
         numero_vidaP.text = p_health.ToString();
+        StartCoroutine(DañoTempoP(daño));
     }
+    
 
     if (p_health <= 0)
     {
@@ -91,7 +95,10 @@ public class SistemaDeVida : MonoBehaviour
     {
         e_health = e_health - daño;
         numero_vidaE.text = e_health.ToString();
+        StartCoroutine(DañoTempoE(daño));
     }
+
+    
 
     if (e_health <= 0)
     {
@@ -105,6 +112,22 @@ public class SistemaDeVida : MonoBehaviour
     e_maxHealth = vidaMax;
     e_health = vidaMax;
     numero_vidaE.text = e_health.ToString();
+  }
+
+
+
+
+  IEnumerator DañoTempoE(int daño)
+  {
+    com_ResultadoE.text = daño.ToString();
+    yield return new WaitForSeconds(1.2f);
+    com_ResultadoE.text = " ";
+  }
+  IEnumerator DañoTempoP(int daño)
+  {
+    com_ResultadoP.text = daño.ToString();
+    yield return new WaitForSeconds(1.2f);
+    com_ResultadoP.text = " ";
   }
 
 }

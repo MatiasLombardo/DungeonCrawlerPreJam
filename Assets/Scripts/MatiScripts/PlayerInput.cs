@@ -8,16 +8,6 @@ public class PlayerInput : MonoBehaviour
 {
 
 
-<<<<<<< HEAD:Assets/Scripts/PlayerInput.cs
-    public KeyCode forward = KeyCode.W;
-    public KeyCode back = KeyCode.S;
-    public KeyCode left = KeyCode.A;
-    public KeyCode right = KeyCode.D;
-    public KeyCode turnLeft = KeyCode.Q;
-    public KeyCode turnRight = KeyCode.E;
-  
-    public float range=2;
-=======
     KeyCode forward = KeyCode.W;
     KeyCode back = KeyCode.S;
     KeyCode left = KeyCode.A;
@@ -28,7 +18,6 @@ public class PlayerInput : MonoBehaviour
 
     public bool sePuedeMover;
     [SerializeField] float rotationSpeed;
->>>>>>> NicoDev:Assets/Scripts/MatiScripts/PlayerInput.cs
 
     PlayerController controller;
     public GameObject camaraPlayer; 
@@ -60,28 +49,11 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyUp(turnRight) && sePuedeMover) controller.RotateRight();
 
         //Rayo adelante
-<<<<<<< HEAD:Assets/Scripts/PlayerInput.cs
-
-        if (controller.smoothTransition)
-=======
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * range);
         if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward) , out hitForward, range)&& Input.GetKey(forward) && sePuedeMover)
->>>>>>> NicoDev:Assets/Scripts/MatiScripts/PlayerInput.cs
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * range);
-            if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hitForward, range) && Input.GetKey(forward))
-            {
-                controller.MoveForward();
-
-            }
-        }
-        else {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * range);
-            if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hitForward, range) && Input.GetKeyUp(forward))
-            {
-                controller.MoveForward();
-
-            }
+            controller.MoveForward();
+            
         }
 
         //Rayo atras
@@ -108,9 +80,6 @@ public class PlayerInput : MonoBehaviour
 
         }
 
-<<<<<<< HEAD:Assets/Scripts/PlayerInput.cs
-       
-=======
         
 
         /*if (Input.GetKeyUp(forward)) controller.MoveForward();
@@ -123,7 +92,6 @@ public class PlayerInput : MonoBehaviour
         
 
         
->>>>>>> NicoDev:Assets/Scripts/MatiScripts/PlayerInput.cs
     }
 
     public void GirarCamaraA(Transform pointer)
