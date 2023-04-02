@@ -11,8 +11,8 @@ public class Compass : MonoBehaviour
 
     [SerializeField] Sprite north;
     [SerializeField] Sprite south;
-    [SerializeField] Sprite west;
     [SerializeField] Sprite east;
+    [SerializeField] Sprite west;
 
     public KeyCode change = KeyCode.J;
   
@@ -27,8 +27,8 @@ public class Compass : MonoBehaviour
         switch (playerController.targetRotation.y)
         {
             case 0f: compass.sprite = north; break;
-            case 90f: compass.sprite = west; break;
-            case 270f: compass.sprite= east; break;
+            case 90f: compass.sprite = east; break;
+            case 270f: compass.sprite= west; break;
             case 180f: compass.sprite= south; break;
                 default: break;
         }
