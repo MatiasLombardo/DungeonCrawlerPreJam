@@ -13,6 +13,8 @@ namespace Tools.UI.Card
 
         int Count { get; set; }
 
+        [SerializeField] AudioClip au_AgarrarCarta, au_JugarCarta;
+
         [SerializeField] [Tooltip("Prefab of the Card C#")]
         GameObject cardPrefabCs;
 
@@ -58,6 +60,7 @@ namespace Tools.UI.Card
             if ((SistemaDeTurnos.Instance.Get_TurnoPlayer() && SistemaDeTurnos.Instance.Get_AgarrarCarta()) || inicial)
             {
                 //TODO: Consider replace Instantiate by an Object Pool Pattern
+                AudioManager.Instance.Play(au_AgarrarCarta);
                 var cardGo = Instantiate(cardPrefabCs, gameView);
                 cardGo.name = "Card_" + Count;
                 var card = cardGo.GetComponent<IUiCard>();
@@ -73,6 +76,7 @@ namespace Tools.UI.Card
         public void DrawCardEnemigo()
         {
                 //TODO: Consider replace Instantiate by an Object Pool Pattern
+                
                 var cardGo = Instantiate(cardPrefabCs, gameView);
                 cardGo.name = "Card_" + Count;
                 var card = cardGo.GetComponent<IUiCard>();
@@ -88,6 +92,7 @@ namespace Tools.UI.Card
         {
             if (PlayerHand.Cards.Count > 0 && !isPlayer)
             {
+                AudioManager.Instance.Play(au_JugarCarta);
                 var randomCard = PlayerHand.Cards.RandomItem();
                 PlayerHand.PlayCard(randomCard);
             }

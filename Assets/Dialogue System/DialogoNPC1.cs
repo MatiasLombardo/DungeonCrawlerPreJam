@@ -125,37 +125,7 @@ namespace RedBlueGames.Tools.TextTyper
 
             dialogueLines.Enqueue("Miau, buenas tardes, encontré esta caseta y decía que es una clínica, ¿correcto?");
             dialogueLines.Enqueue("Estoy buscando algo para los mareos <i>miau</i>");
-
-            dialogueLinesRes1.Enqueue("Hace un par de días.");
-
-            dialogueLinesRes2.Enqueue("A veces me duele todo el cuerpo.");
-
-            dialogueLinesRes3.Enqueue("Nada de nada... bueno capaz recorrer todo el reino helado...");
-            dialogueLinesRes3.Enqueue("Buscando un grimorio de hielo se considere actividad");
-
-            dialogueLinesRes4.Enqueue("<i>Gato demonio</i>");
-
-            dialogueLinesRes5.Enqueue("<i>Miau</i>\nSi y escalofrios");
-
-            dialogueLinesRes6.Enqueue("Nop. Pero me dijeron que irradio más calor de lo normal");
-            dialogueLinesRes6.Enqueue("Será por el maná?");
-
-
-            dialogueLinesRes1Cansado.Enqueue("No sé, estoy cansado.");
-
-            dialogueLinesRes2Cansado.Enqueue("¿Vas a curarme, cierto?");
-
-            dialogueLinesRes3Cansado.Enqueue("¿Solo me preguntaras cosas?");
-
-            dialogueLinesRes4Cansado.Enqueue("<i>Miau</i>");
-
-            dialogueLinesRes5Cansado.Enqueue("Si y mucho");
-            dialogueLinesRes5Cansado.Enqueue("Se terminaron las preguntas?");
-
-            dialogueLinesRes6Cansado.Enqueue("No sé cómo se hace");
             
-
-           
            
             ShowScript();
         }
@@ -180,11 +150,7 @@ namespace RedBlueGames.Tools.TextTyper
                 LogTag(tag);
             }
 
-            // Activar en caso de que se necesite activar un boton de basta de preguntas. LNK~
-            if(count > 3)
-            {
-                botonBastaDePreguntas.SetActive(true);
-            }
+
         }
 
         private void HandlePrintNextClicked()
@@ -206,16 +172,6 @@ namespace RedBlueGames.Tools.TextTyper
 
         private void ShowScript()
         {
-
-            // Activar en caso de que se necesite la funcoin libreta. LNK~
-            if (dialogueLines.Count <= 0)
-            {
-
-                libreta.SetActive(true);
-
-                return;
-            }
-            libreta.SetActive(false);
                 this.testTextTyper.TypeText(dialogueLines.Dequeue());
         }
 
@@ -253,112 +209,7 @@ namespace RedBlueGames.Tools.TextTyper
 
 
         // Aqui van las respuestas (no descartar cambiarlo por un switch). LNK~
-        private void Respuesta1 ()
-        {
-            if(count <= 3)
-            {
-                dialogueLines = dialogueLinesRes1;
-                ShowScript();
-            }
-            else
-            {
-                dialogueLines = dialogueLinesRes1Cansado;
-                ShowScript();
-            }
-            pregunta1.SetActive(false);
-            count++;
-            Debug.Log(count);
-        }
-
-
-                private void Respuesta2 ()
-        {
-            if(count <= 3)
-            {
-                dialogueLines = dialogueLinesRes2;
-                ShowScript();
-            }
-            else
-            {
-                dialogueLines = dialogueLinesRes2Cansado;
-                ShowScript();
-            }
-            pregunta2.SetActive(false);
-            count++; 
-            Debug.Log(count);
-        }
-
-
-                private void Respuesta3 ()
-        {
-            if(count <= 3)
-            {
-                dialogueLines = dialogueLinesRes3;
-                ShowScript();
-            }
-            else
-            {
-                dialogueLines = dialogueLinesRes3Cansado;
-                ShowScript();
-            }
-            pregunta3.SetActive(false);
-            count++;
-            Debug.Log(count);
-        }
-
-
-                private void Respuesta4 ()
-        {
-            if(count <= 3)
-            {
-                dialogueLines = dialogueLinesRes4;
-                ShowScript();
-            }
-            else
-            {
-                dialogueLines = dialogueLinesRes4Cansado;
-                ShowScript();
-            }
-            pregunta4.SetActive(false);
-            count++;
-            Debug.Log(count);
-        }
-
-
-                private void Respuesta5 ()
-        {
-            if(count <= 3)
-            {
-                dialogueLines = dialogueLinesRes5;
-                ShowScript();
-            }
-            else
-            {
-                dialogueLines = dialogueLinesRes5Cansado;
-                ShowScript();
-            }
-            pregunta5.SetActive(false);
-            count++;
-            Debug.Log(count);
-        }
-
-
-                private void Respuesta6 ()
-        {
-            if(count <= 3)
-            {
-                dialogueLines = dialogueLinesRes6;
-                ShowScript();
-            }
-            else
-            {
-                dialogueLines = dialogueLinesRes6Cansado;
-                ShowScript();
-            }
-            pregunta6.SetActive(false);
-            count++;
-            Debug.Log(count);
-        }
+        
 
 
 

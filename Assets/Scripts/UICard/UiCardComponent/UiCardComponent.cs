@@ -89,6 +89,7 @@ namespace Tools.UI.Card
 
         public int daño;
         public int absorber;
+        [SerializeField] AudioClip au_PasarClick, au_Discard;
 
         #endregion
 
@@ -111,7 +112,11 @@ namespace Tools.UI.Card
 
         #region Operations
 
-        public void Hover() => Fsm.Hover();
+        public void Hover() 
+        {
+            AudioManager.Instance.Play(au_PasarClick);
+            Fsm.Hover();
+        } 
 
         public void Disable() => Fsm.Disable();
 
@@ -134,6 +139,8 @@ namespace Tools.UI.Card
 
         public void Discard()
         {
+            
+            AudioManager.Instance.Play(au_Discard);
             SistemaDeTurnos.Instance.DañoAlEnemigo(this.gameObject);
             Fsm.Discard();
             
