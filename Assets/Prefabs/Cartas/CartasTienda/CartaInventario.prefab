@@ -32,7 +32,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5969658432887030358}
-  m_Father: {fileID: 8954634450396447100}
+  m_Father: {fileID: 837849628277627344}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -301,7 +301,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4982807851189854136}
-  m_Father: {fileID: 8954634450396447100}
+  m_Father: {fileID: 837849628277627344}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -433,7 +433,7 @@ RectTransform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8954634450396447100}
+  m_Father: {fileID: 837849628277627344}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -681,9 +681,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8954634450396447100}
+  - component: {fileID: 837849628277627344}
   - component: {fileID: 8954634450396447103}
   - component: {fileID: 255035956792788116}
+  - component: {fileID: 8754639047621982285}
   m_Layer: 5
   m_Name: CartaInventario
   m_TagString: Untagged
@@ -691,17 +692,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8954634450396447100
-Transform:
+--- !u!224 &837849628277627344
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8954634450396447101}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 318, y: 425, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8724601195987820868}
   - {fileID: 8261914656456364412}
@@ -709,6 +710,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -382, y: 254.00002}
+  m_SizeDelta: {x: 9.391304, y: 12.521739}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &8954634450396447103
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -797,3 +803,11 @@ MonoBehaviour:
   mazoBehaviour: {fileID: 0}
   "botonA\xF1adir": {fileID: 1522391420238232478}
   botonQuitar: {fileID: 823058831861403126}
+--- !u!222 &8754639047621982285
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8954634450396447101}
+  m_CullTransparentMesh: 1

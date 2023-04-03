@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class MazoBehaviour : MonoBehaviour
 {
@@ -96,6 +97,15 @@ public class MazoBehaviour : MonoBehaviour
         
     }
 
+    public void ResetMazo ()
+    {
+        mazo.Clear();
+        for(int i = 0; i < 12; i++)
+     {
+         mazo.Add(null);
+     }
+    }
+
 
     private string ContarATexto()
     {
@@ -107,6 +117,7 @@ public class MazoBehaviour : MonoBehaviour
 
         return (mazo.Count - _count).ToString();
     }
+    
 
 
 
