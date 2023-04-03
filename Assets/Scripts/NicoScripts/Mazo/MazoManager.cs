@@ -14,6 +14,9 @@
     //private List<Sprite> mazoExportado = new List<Sprite>();
     public List<Sprite> cartasParaInventario = new List<Sprite>();
 
+    [SerializeField] Sprite tinyBailarina;
+
+
 
     private void Awake() 
     {
@@ -66,6 +69,16 @@
 
      public void ContadorDeCartas()
      {
+
+        if (SistemaDeTurnos.Instance.bailarinaON)
+        {
+            mazoGuardado[0] = tinyBailarina;
+            mazoGuardado[4] = tinyBailarina;
+            mazoGuardado[7] = tinyBailarina;
+            mazoGuardado[11] = tinyBailarina;
+
+        }
+
         if(numeroDeCarta == 0)
         {
             mazoGuardado = Barajar();

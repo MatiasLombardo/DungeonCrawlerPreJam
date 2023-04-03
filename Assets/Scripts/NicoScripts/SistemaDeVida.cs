@@ -29,7 +29,9 @@ public class SistemaDeVida : MonoBehaviour
     //public Text healthText;
     public Image p_healthBar;
     float p_health, p_maxHealth = 10;
+    float temp_VidaJugador;
     float lerpSpeed;
+    public bool isBailarina;
     [SerializeField]TMP_Text numero_vidaP;
     [SerializeField]TMP_Text numero_vidaE;
     [SerializeField] TMP_Text com_ResultadoP, com_ResultadoE;
@@ -103,6 +105,13 @@ public class SistemaDeVida : MonoBehaviour
         StartCoroutine(DañoTempoE(daño));
     }
 
+    if (isBailarina && e_health <= 7)
+    {
+        float v1 = p_health;
+        float v2 = e_health;
+        e_health = v1;
+        p_health = v2;
+    }
     
 
     if (e_health <= 0)
@@ -121,14 +130,36 @@ public class SistemaDeVida : MonoBehaviour
 
     public void Set_vidaMaxPLOBO()
     {
+        temp_VidaJugador = p_maxHealth;
         p_maxHealth = p_maxHealth/2;
     }
 
+    // public Set_vidaMaxPBAILARINA()
+    // {
+    //     isBailarina = true;
+    // }
+
+
+
+
+    public void Set_vidaNormal()
+    {
+        isBailarina = false;
+        p_maxHealth = temp_VidaJugador;
+    } 
+
+
+
+
     public void SubirNivel()
     {
-        p_maxHealth ++;
+        p_maxHealth =+ 5;
     }
 
+    public void CurarTodaLaVida()
+    {
+        p_health = p_maxHealth;
+    }
 
 
   IEnumerator DañoTempoE(int daño)

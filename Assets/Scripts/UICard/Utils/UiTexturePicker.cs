@@ -159,6 +159,32 @@ namespace Tools.UI.Card
                     cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
                 break;
 
+                //cartas estados anormales
+                case var value when value == posiblesCartas[19].name :
+                    daño = 1;
+                    absorber = 1;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[20].name :
+                    daño = 1;
+                    absorber = 1;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+
+
+                //cartas enemigos
+                case var value when value == posiblesCartas[21].name :
+                    daño = 99;
+                    absorber = 10;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[22].name :
+                    daño = 10;
+                    absorber = 99;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+
+
                 default:
                     Debug.LogError("Error UITexturePicker");
                 break;

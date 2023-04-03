@@ -19,6 +19,11 @@ using TMPro;
     [SerializeField] GameObject[] desactivarCosasAlIniciarCombate;
 
     [SerializeField] TMP_Text[] comparadores;
+    [SerializeField] SistemaDeVida sisVida;
+    [SerializeField] Sprite pocionSpr;
+
+    [SerializeField] GameObject contenedorDeMedidores;
+    [SerializeField] TMP_Text medidorXP, medidorDinero;
 
 
     
@@ -29,6 +34,7 @@ using TMPro;
 
     public BOSS estadoB;
 
+    public bool bailarinaON;
 
     [SerializeField] int dineroTotal;
 
@@ -45,41 +51,75 @@ using TMPro;
     }
 
 
-     public void IniciarCombate(int enemigoTipo, float vidaTotal)
+     public void IniciarCombate(int enemigoTipo, float vidaTotal, AudioClip musica)
      {
+        
+        
+        StartCoroutine(TransicionIniciarCombate(enemigoTipo, vidaTotal, musica));
 
+
+
+     }
+
+
+    IEnumerator TransicionIniciarCombate(int enemigoTipo, float vidaTotal, AudioClip musica)
+    {
+        //El jugador mira al enemigo
+        //Este le dice un par de cosas
         MazoEnemigoManager.Instance.Set_TipoEnemigo(enemigoTipo);
         //Setea el tipo de enemigo
         MazoEnemigoManager.Instance.MazosEnemigos();
         //Setea el mazo
         SistemaDeVida.Instance.Set_VidaMaxEnemigo(vidaTotal);
         //seteo su vida
-        
-        
-        /// transicion fade negro ******************************************************************///
-        // ademas meter un ienumerator
+        //desactiva los objetos y activa el combate
         foreach (GameObject a in desactivarCosasAlIniciarCombate)
         {
             a.SetActive(false);
         }
+        yield return new WaitForSeconds(1f);
         //*playerController.SetActive(false);
+        AudioManager.Instance.PlayMusic(musica);
         sistemaDeCombate.SetActive(true);
+        yield return null;
+    }
 
 
-
-     }
 
      public void TerminarCombate()
      {
+        StartCoroutine(TransicionTerminarCombate());
+     }
+
+
+    IEnumerator TransicionTerminarCombate()
+    {
+        //Se pone todo negro menos el sprite enemigo y las vidas.
+        //animacion cuando se rompe un sprite enemigo (cuando muere, como undertale).
+        float val = nivelXP * 5 + 10;
+        float xp = Random.Range(val-val/2, val);
+        //Sube de nivel
+        int dineroNuevo = Mathf.FloorToInt(Random.Range(val-val/2, val));
+        medidorXP.text = xp.ToString();
+        medidorDinero.text = dineroNuevo.ToString();
+        contenedorDeMedidores.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        AñadirDinero(dineroNuevo);
+        //gana dinero
         foreach (GameObject a in desactivarCosasAlIniciarCombate)
         {
             a.SetActive(true);
         }
+        yield return new WaitForSeconds(1f);
+        contenedorDeMedidores.SetActive(false);
         sistemaDeCombate.SetActive(false);
-     }
+        yield return new WaitForSeconds(1f);
+        //se desactiva el negro en forma de fade rapido.
+        yield return null;
+    }
 
 
-
+ #region LogicaTurnosYDaños
 
      public bool Get_AgarrarCarta ()
      {
@@ -115,12 +155,28 @@ using TMPro;
             //Debug.Log("se tiró la carta:" + card.name);
             dañoAlEnemigo = card.GetComponent<Tools.UI.Card.UiCardComponent>().Get_Daño();
             int bloqueoMio = card.GetComponent<Tools.UI.Card.UiCardComponent>().Get_Absorber();
-    
-            choqueDeDaños[0] = dañoAlEnemigo;
-            choqueDeDaños[1] = bloqueoMio;
 
-            //0 y 1 es un par
-            //2 y 3 otro par
+            string pocion = card.GetComponent<SpriteRenderer>().sprite.name;
+            if (pocion == pocionSpr.name)
+            {
+                sisVida.CurarTodaLaVida();
+            }
+
+            
+            
+            if (estadoB == BOSS.NONE || estadoB == BOSS.BAILARINA || estadoB == BOSS.BFINAL)
+            {
+                choqueDeDaños[0] = dañoAlEnemigo;
+                choqueDeDaños[1] = bloqueoMio;
+            }
+            else if (estadoB == BOSS.LOBO)
+            {
+                choqueDeDaños[1] = dañoAlEnemigo;
+                choqueDeDaños[0] = bloqueoMio;
+            }
+
+            //0 y 1 es un par JUGADOR
+            //2 y 3 otro par ENEMIGO
     
             //Debug.Log("El daño que hace es: " + dañoAlEnemigo);
     
@@ -133,9 +189,28 @@ using TMPro;
             temp = 0;
             dañoAlEnemigo = card.GetComponent<Tools.UI.Card.UiCardComponent>().Get_Daño();
             int bloqueoMio = card.GetComponent<Tools.UI.Card.UiCardComponent>().Get_Absorber();
-            choqueDeDaños[2] = dañoAlEnemigo;
-            choqueDeDaños[3] = bloqueoMio;
-            Debug.Log("El daño que hace es: " + dañoAlEnemigo);
+
+            
+
+            if (estadoB == BOSS.BFINAL && dañoAlEnemigo == 99)
+            {
+                dañoAlEnemigo = 2;
+                choqueDeDaños[2] = dañoAlEnemigo + choqueDeDaños[1];
+                choqueDeDaños[3] = bloqueoMio;
+            }
+            else if (estadoB == BOSS.BFINAL && bloqueoMio == 99)
+            {
+                choqueDeDaños[2] = dañoAlEnemigo;
+                choqueDeDaños[3] = choqueDeDaños[0];
+            }
+            else
+            {
+                choqueDeDaños[2] = dañoAlEnemigo;
+                choqueDeDaños[3] = bloqueoMio;
+                Debug.Log("El daño que hace es: " + dañoAlEnemigo); 
+            }
+
+            
 
         }
     }
@@ -206,6 +281,8 @@ using TMPro;
 
     IEnumerator EfectoComparadores()
     {
+        
+        
         if (valorTurno == 0)
         {
 
@@ -252,27 +329,6 @@ using TMPro;
         }
         
     }
-
-    
-    //Intercalar turnos
-
-
-
-     // mientras el turno sea true el juegador va a poder jugar sus cartas, si es una carta de combate el turno termina automaticamente
-     //si no es carta de combate no pasa nada.
-     //solo puede agarrar una carta por turno.
-     //un boton acciona para terminar el turno, al terminarlo el enemigo juega su turno y acciona la IA,
-/*     private void Update() 
-     {
-        if(!turnoPlayer)
-        {
-            scriptMano.DisableCards();
-        }
-     }*/
-
-
-     /// aca va la IA y sus cosas
-
 
 
     int valorTurno = 0;
@@ -351,8 +407,9 @@ using TMPro;
     }
 
     //hacer el sistema de ABBA, turno player enemigo, enemigo player, player enemigo...
-    //Sistema de vida
+ #endregion
 
+ #region DineroManager
     public void AñadirDinero(int dineroNuevo)
     {
         dineroTotal =+ dineroNuevo;
@@ -365,11 +422,93 @@ using TMPro;
     {
         dineroTotal = dineroTotal - dineroNuevo;
     }
+ #endregion
 
+ #region SetearEstados
 
-    public BOSS Get_EstadoBOSS()
+    public void Set_EstadoBALOBO ()
+    {
+        estadoB = BOSS.LOBO;
+        //LOBO te baja la vida a la mitad
+        sisVida.Set_vidaMaxPLOBO();
+    }
+
+    public void Set_EstadoBABAILARINA()
+    {
+        //agarra cartas random y las da vuelta
+        //da vuelta el sistema de vida
+        bailarinaON = true;
+        sisVida.isBailarina = true;
+    }
+
+    public void Set_EstadoBANONE()
+    {
+        bailarinaON = false;
+        estadoB = BOSS.NONE;
+
+        sisVida.Set_vidaNormal();
+    }
+
+    public void Set_EstadoBABFINAL()
+    {
+        estadoB = BOSS.BFINAL;
+    }
+
+    public BOSS Get_EstadoBBOSS()
     {
         return estadoB;
     }
+
+ #endregion
+
+
+ #region NivelManager
+
+    [SerializeField] float nivelXP = 0;
+    [SerializeField] float puntosGuardados = 0;
+
+    public float Get_NivelXP()
+    {
+        return nivelXP;
+    }
+
+    public void Set_NivelXP(float nuevoNivel)
+    {
+        nivelXP = nuevoNivel;
+    }
+
+    public void SubirNivel ()
+    {
+        nivelXP =+ 1f;
+        SistemaDeVida.Instance.SubirNivel();
+        SistemaDeVida.Instance.CurarTodaLaVida();
+        
+    }
+
+    public void SumarPuntosXP (float puntos)
+    {
+        //nivel 0 toma 10 puntos subir de nivel
+        //nivel 1 toma 15 puntos subir de nivel
+        //nivel 2 toma 20 puntos subir de nivel
+        float puntosBase = (nivelXP * 5 + 10);
+
+        puntosGuardados =+ puntos;
+
+        while (puntosGuardados >= puntosBase)
+        {
+            puntosGuardados =- puntosBase;
+            SubirNivel();
+        }
+
+    }
+
+
+
+
+
+
+ #endregion
+
+
 
 }
