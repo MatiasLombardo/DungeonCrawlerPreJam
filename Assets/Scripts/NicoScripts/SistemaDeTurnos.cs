@@ -20,13 +20,18 @@ using TMPro;
 
     [SerializeField] TMP_Text[] comparadores;
 
+
     
+    public enum BOSS
+    {
+    LOBO, BAILARINA, BFINAL, NONE
+    }
+
+    public BOSS estadoB;
 
 
     [SerializeField] int dineroTotal;
 
-
- 
     private void Awake() 
     {
         if(Instance != null && Instance != this)
@@ -359,6 +364,12 @@ using TMPro;
     public void RestarDinero(int dineroNuevo)
     {
         dineroTotal = dineroTotal - dineroNuevo;
+    }
+
+
+    public BOSS Get_EstadoBOSS()
+    {
+        return estadoB;
     }
 
 }

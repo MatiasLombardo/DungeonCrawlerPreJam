@@ -112,13 +112,22 @@ public class SistemaDeVida : MonoBehaviour
     }
   }
 
-  public void Set_VidaMaxEnemigo(float vidaMax)
-  {
-    e_maxHealth = vidaMax;
-    e_health = vidaMax;
-    numero_vidaE.text = e_health.ToString();
-  }
+    public void Set_VidaMaxEnemigo(float vidaMax)
+    {
+            e_maxHealth = vidaMax;
+            e_health = vidaMax;
+            numero_vidaE.text = e_health.ToString();
+    }
 
+    public void Set_vidaMaxPLOBO()
+    {
+        p_maxHealth = p_maxHealth/2;
+    }
+
+    public void SubirNivel()
+    {
+        p_maxHealth ++;
+    }
 
 
 

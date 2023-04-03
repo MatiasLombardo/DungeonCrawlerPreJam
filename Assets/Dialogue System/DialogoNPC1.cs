@@ -28,26 +28,7 @@ namespace RedBlueGames.Tools.TextTyper
 
         [Header("Ref de UI | botones de acciones")]
         [SerializeField] private Button printNextButton;
-        [SerializeField] private GameObject libreta;
 
-        [Header("Ref de UI | Botones de preguntas")]
-
-        [SerializeField] private Button pregunta1boton;
-        [SerializeField] private Button pregunta2boton;
-        [SerializeField] private Button pregunta3boton;
-        [SerializeField] private Button pregunta4boton;
-        [SerializeField] private Button pregunta5boton;
-        [SerializeField] private Button pregunta6boton;
-        [SerializeField] private GameObject botonBastaDePreguntas;
-
-        [Header("Ref de preguntas (en caso de que haya)")]
-        //Esta parte se puede simplificar pero me dio paja hacerlo. LNK~
-        [SerializeField] private GameObject pregunta1;
-        [SerializeField] private GameObject pregunta2;
-        [SerializeField] private GameObject pregunta3;
-        [SerializeField] private GameObject pregunta4;
-        [SerializeField] private GameObject pregunta5;
-        [SerializeField] private GameObject pregunta6;
 
         //activar esto en caso de que se necesite desactivar el panel de dialogos cada vez que se abra la libreta
         //[SerializeField] private GameObject panelDeDialogos;
@@ -57,21 +38,6 @@ namespace RedBlueGames.Tools.TextTyper
         //lineas de dialogo introductorios. LNK~
         private Queue<string> dialogueLines = new Queue<string>();
 
-        //lineas de dialogos respuestas. LNK~
-        private Queue<string> dialogueLinesRes1 = new Queue<string>();
-        private Queue<string> dialogueLinesRes2 = new Queue<string>();
-        private Queue<string> dialogueLinesRes3 = new Queue<string>();
-        private Queue<string> dialogueLinesRes4 = new Queue<string>();
-        private Queue<string> dialogueLinesRes5 = new Queue<string>();
-        private Queue<string> dialogueLinesRes6 = new Queue<string>();
-
-        //lineas de dialogo cansados. LNK~
-        private Queue<string> dialogueLinesRes1Cansado = new Queue<string>();
-        private Queue<string> dialogueLinesRes2Cansado = new Queue<string>();
-        private Queue<string> dialogueLinesRes3Cansado = new Queue<string>();
-        private Queue<string> dialogueLinesRes4Cansado = new Queue<string>();
-        private Queue<string> dialogueLinesRes5Cansado = new Queue<string>();
-        private Queue<string> dialogueLinesRes6Cansado = new Queue<string>();
         
 
         [SerializeField]
@@ -98,12 +64,6 @@ namespace RedBlueGames.Tools.TextTyper
 
 
             //aqui se añade y configura el boton de las respuestas. LNK~
-            this.pregunta1boton.onClick.AddListener(this.Respuesta1);
-            this.pregunta2boton.onClick.AddListener(this.Respuesta2);
-            this.pregunta3boton.onClick.AddListener(this.Respuesta3);
-            this.pregunta4boton.onClick.AddListener(this.Respuesta4);
-            this.pregunta5boton.onClick.AddListener(this.Respuesta5);
-            this.pregunta6boton.onClick.AddListener(this.Respuesta6);
             
             // Lista de efectos. LNK~
             // aplicar delay: <delay=0.5>NPC</delay>
