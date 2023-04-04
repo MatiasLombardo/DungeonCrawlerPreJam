@@ -343,6 +343,8 @@ MonoBehaviour:
   cardConfigsParameters: {fileID: 11400000, guid: f79f21692e2d8a746b39e9a2eadfd5df, type: 2}
   "da\xF1o": 0
   absorber: 0
+  au_PasarClick: {fileID: 8300000, guid: 73ff0c0e0bc945640bcdd8c3419fff1d, type: 3}
+  au_Discard: {fileID: 8300000, guid: 73ff0c0e0bc945640bcdd8c3419fff1d, type: 3}
 --- !u!114 &3061994033972836288
 MonoBehaviour:
   m_ObjectHideFlags: 0
