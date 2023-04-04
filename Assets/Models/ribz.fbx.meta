@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94e0f07d6eae21f4dbaa1d07b6941ccd
+guid: 993182d1ecd64204aa7e7b624f9e1534
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.005
-    second: {fileID: 2100000, guid: 4d2a8e69483469b4284c26e2a511d294, type: 2}
+      name: ribz.003
+    second: {fileID: 2100000, guid: 9da0d5ff708da93469e7a66a79778372, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

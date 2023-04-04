@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94e0f07d6eae21f4dbaa1d07b6941ccd
+guid: 30c27f8dc2e818543aeba9efa1146460
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.005
-    second: {fileID: 2100000, guid: 4d2a8e69483469b4284c26e2a511d294, type: 2}
+      name: grave stone.001
+    second: {fileID: 2100000, guid: 4db879280ba0a4e4da0fdab0289140ed, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
