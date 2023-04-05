@@ -9,8 +9,6 @@ namespace RedBlueGames.Tools.TextTyper
 
     public class DialogoNPC1 : MonoBehaviour
     {
-
-
         /*--TABLA-DE-REFERENCIAS-DE-COMENTARIOS-//
 
             LNK = ~LNK
@@ -30,13 +28,14 @@ namespace RedBlueGames.Tools.TextTyper
         [SerializeField] private Button printNextButton;
 
 
-        //activar esto en caso de que se necesite desactivar el panel de dialogos cada vez que se abra la libreta
-        //[SerializeField] private GameObject panelDeDialogos;
-
-
 
         //lineas de dialogo introductorios. LNK~
         private Queue<string> dialogueLines = new Queue<string>();
+
+        [SerializeField]string dialogo1;
+        [SerializeField]string dialogo2;
+        [SerializeField]string dialogo3;
+        [SerializeField]string dialogo4;
 
         
 
@@ -46,14 +45,10 @@ namespace RedBlueGames.Tools.TextTyper
 
 
 
-        //este count define la cantidad de preguntas que se hicieron. LNK~
-        private int count = 1;
-
-
 
 
 #pragma warning restore 0649
-        public void Start()
+        public void Awake()
         {
 
 
@@ -83,8 +78,11 @@ namespace RedBlueGames.Tools.TextTyper
 
             // Aqui se crean las lineas de dialogos, cada una con su respectiva respuesta. LNK~
 
-            dialogueLines.Enqueue("Miau, buenas tardes, encontré esta caseta y decía que es una clínica, ¿correcto?");
-            dialogueLines.Enqueue("Estoy buscando algo para los mareos <i>miau</i>");
+            dialogueLines.Enqueue(dialogo1);
+            dialogueLines.Enqueue(dialogo2);
+            dialogueLines.Enqueue(dialogo3);
+            dialogueLines.Enqueue(dialogo4);
+            //dialogueLines.Enqueue(dialogo);
             
            
             ShowScript();
@@ -132,7 +130,11 @@ namespace RedBlueGames.Tools.TextTyper
 
         private void ShowScript()
         {
-                this.testTextTyper.TypeText(dialogueLines.Dequeue());
+            if (dialogueLines.Count <= 0)
+            {
+                return;
+            }
+            this.testTextTyper.TypeText(dialogueLines.Dequeue());
         }
 
         private void LogTag(RichTextTag tag)
@@ -168,7 +170,6 @@ namespace RedBlueGames.Tools.TextTyper
         }
 
 
-        // Aqui van las respuestas (no descartar cambiarlo por un switch). LNK~
         
 
 
