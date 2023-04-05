@@ -77,14 +77,23 @@
         {
             mazoGuardado = new List<Sprite>(mazoEne5);
         }
-        if (tipoEnemigo == 5)
+
+
+
+        if (tipoEnemigo == 11)
         {
             mazoGuardado = new List<Sprite>(mazoBoss1);
         }
-        if (tipoEnemigo == 6)
+        if (tipoEnemigo == 22)
         {
             mazoGuardado = new List<Sprite>(mazoBoss2);
         }
+        if (tipoEnemigo == 33)
+        {
+            mazoGuardado = new List<Sprite>(mazoBoss2);
+        }
+
+
     }
 
     private void OnEnable() 

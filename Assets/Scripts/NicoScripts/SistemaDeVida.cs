@@ -41,6 +41,15 @@ public class SistemaDeVida : MonoBehaviour
     float e_health, e_maxHealth = 10;
 
 
+    /*public void EncontrarObjetos(string a, string b, string c, string d, string e)
+    {
+        numero_vidaP = GameObject.FindObjectsOfType(typeof(MonoBehaviour));
+        numero_vidaE = GameObject.FindObjectsOfType(typeof(MonoBehaviour));
+        com_ResultadoP = GameObject.FindObjectsOfType(typeof(MonoBehaviour));
+        com_ResultadoE = GameObject.FindObjectsOfType(typeof(MonoBehaviour));
+        p_healthBar = GameObject.FindObjectsOfType(typeof(MonoBehaviour));
+    }*/
+
     private void Start()
     {
         p_health = p_maxHealth;
@@ -75,6 +84,12 @@ public class SistemaDeVida : MonoBehaviour
 
             healthBar.color = healthColor;
         }
+
+
+    public float Get_VidaJugador()
+    {
+        return p_health;
+    }
 
   public void HacerDañoPlayer(int daño)
   {

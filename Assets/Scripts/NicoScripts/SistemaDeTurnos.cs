@@ -26,6 +26,8 @@ using TMPro;
     [SerializeField] TMP_Text medidorXP, medidorDinero;
 
     [SerializeField] Animator animacionFade;
+    [SerializeField] GameObject anim;
+    [SerializeField] Animator animacionFadeBoss;
 
 
     
@@ -53,22 +55,24 @@ using TMPro;
     }
 
 
-     public void IniciarCombate(int enemigoTipo, float vidaTotal, AudioClip musica, Sprite spriteNuevo)
+     public void IniciarCombate(float vidaTotal, AudioClip musica)
      {
         
         
-        StartCoroutine(TransicionIniciarCombate(enemigoTipo, vidaTotal, musica, spriteNuevo));
-
-
+        StartCoroutine(TransicionIniciarCombate(vidaTotal, musica));
 
      }
 
 
-    IEnumerator TransicionIniciarCombate(int enemigoTipo, float vidaTotal, AudioClip musica, Sprite spriteNuevo)
+    IEnumerator TransicionIniciarCombate(float vidaTotal, AudioClip musica)
     {
         //El jugador mira al enemigo
+        Debug.Log("accionar fade");
+        anim.SetActive(true);
+        animacionFade.SetTrigger("Fade");
+        yield return new WaitForSeconds(1.5f);
         //Este le dice un par de cosas
-        MazoEnemigoManager.Instance.Set_TipoEnemigo(enemigoTipo, spriteNuevo);
+        //MazoEnemigoManager.Instance.Set_TipoEnemigo(enemigoTipo, spriteNuevo);
         //Setea el tipo de enemigo
         MazoEnemigoManager.Instance.MazosEnemigos();
         //Setea el mazo
@@ -79,10 +83,54 @@ using TMPro;
         {
             a.SetActive(false);
         }
-        yield return new WaitForSeconds(1f);
         //*playerController.SetActive(false);
         AudioManager.Instance.PlayMusic(musica);
         sistemaDeCombate.SetActive(true);
+        Debug.Log("desactivar fade");
+        animacionFade.SetTrigger("Fade out");
+        yield return new WaitForSeconds(1.5f);
+        anim.SetActive(false);
+        yield return null;
+    }
+
+    public void IniciarCombateBoss(float vidaTotal, AudioClip musica)
+     {
+        
+        
+        StartCoroutine(TransicionIniciarCombateBoss(vidaTotal, musica));
+
+     }
+
+    IEnumerator TransicionIniciarCombateBoss(float vidaTotal, AudioClip musica)
+    {
+        //El jugador mira al enemigo
+        Debug.Log("accionar fade");
+        animacionFadeBoss.enabled = true;
+        animacionFadeBoss.SetTrigger("Fade");
+        yield return new WaitForSeconds(1.5f);
+        //Setea el mazo
+        MazoEnemigoManager.Instance.MazosEnemigos();
+        //seteo su vida
+        SistemaDeVida.Instance.Set_VidaMaxEnemigo(vidaTotal);
+        //desactiva los objetos y activa el combate
+        
+        if (estadoB == BOSS.LOBO)
+        {
+            
+        }
+        
+        foreach (GameObject a in desactivarCosasAlIniciarCombate)
+        {
+            a.SetActive(false);
+        }
+
+        //*playerController.SetActive(false);
+        AudioManager.Instance.PlayMusic(musica);
+        sistemaDeCombate.SetActive(true);
+        Debug.Log("desactivar fade");
+        animacionFade.SetTrigger("Fade out");
+        yield return new WaitForSeconds(1.5f);
+        animacionFade.enabled = false;
         yield return null;
     }
 
@@ -98,6 +146,8 @@ using TMPro;
     {
         //Se pone todo negro menos el sprite enemigo y las vidas.
         //animacion cuando se rompe un sprite enemigo (cuando muere, como undertale).
+        anim.SetActive(true);
+        animacionFade.SetTrigger("Fade Brusco");
         float val = nivelXP * 5 + 10;
         float xp = Random.Range(val-val/2, val);
         //Sube de nivel
@@ -114,7 +164,10 @@ using TMPro;
         }
         yield return new WaitForSeconds(1f);
         contenedorDeMedidores.SetActive(false);
+        animacionFade.SetTrigger("Fade Out");
+        yield return new WaitForSeconds(1f);
         sistemaDeCombate.SetActive(false);
+        //OnReset();
         yield return new WaitForSeconds(1f);
         //se desactiva el negro en forma de fade rapido.
         yield return null;
@@ -512,5 +565,13 @@ using TMPro;
  #endregion
 
 
+
+    /*void OnReset()
+    {
+        GameObject sistemaNuevo = sistemaDeCombate;
+        Destroy(sistemaDeCombate);
+        Instantiate(sistemaNuevo);
+        
+    }*/
 
 }

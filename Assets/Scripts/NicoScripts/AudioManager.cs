@@ -57,5 +57,16 @@ public class AudioManager : MonoBehaviour
 		EffectsSource.clip = clips[randomIndex];
 		EffectsSource.Play();
 	}
+
+
+	public bool Get_IsPlaying()
+	{
+		return MusicSource.isPlaying;
+	}
+
+	public void StopMusic()
+	{
+		MusicSource.Stop();
+	}
 	
 }
