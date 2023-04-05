@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     Vector3 targetGridPos;
     Vector3 prevTargetGridPos;
     public Vector3 targetRotation;
+    public static bool playerIsMoving;
 
     public void RotateLeft() { if (AtRest) targetRotation -= Vector3.up * 90; }
     public void RotateRight() { if (AtRest) targetRotation += Vector3.up * 90; }
@@ -67,11 +68,13 @@ public class PlayerController : MonoBehaviour
         get {
             if ((Vector3.Distance(transform.position, targetGridPos) < 0.05f) &&
                 (Vector3.Distance(transform.eulerAngles, targetRotation) < 0.05f))
-                return true;
+                {
+                    playerIsMoving = false;
+                    return true;
+                }
             else
+                playerIsMoving = true;
                 return false;
-
-            
         }
     }
 

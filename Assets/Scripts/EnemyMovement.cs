@@ -16,12 +16,11 @@ public class EnemyMovement : MonoBehaviour
     Vector3 currentDestination; // posición del nodo actual
     private NavMeshPath path;
     Vector3[] corners ;
-    private Vector3 finalPosition;
-    private Vector3 roundedActualPosition;
-    private Vector3 initialPosition;
-    private Vector3 currentPosition;
-    private Vector3 lastPosition;
-
+    private Vector3 finalPosition , initialPosition , roundedActualPosition , currentPosition , lastPosition;
+    public Transform[] waypoints ;
+    private Transform playerTransform;
+    private int waypointNumber , layerJugador;
+    public bool usaWaypoints = true;
     private float distanceX = 0;
     private float distanceZ = 0;
 
@@ -33,10 +32,13 @@ public class EnemyMovement : MonoBehaviour
         isMoving = false;
         agent = GetComponent<NavMeshAgent>();
         initialPosition = new Vector3(0,0,0);
+        waypointNumber = 0;
+        WaypointChecker(waypointNumber);
+        layerJugador = LayerMask.NameToLayer("Jugador");
     }
     void Update () 
     {
-        if (Input.GetMouseButtonDown(0) && !isMoving)
+        /* if (Input.GetMouseButtonDown(0) && !isMoving)
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -46,8 +48,27 @@ public class EnemyMovement : MonoBehaviour
                 finalPosition = new Vector3(Mathf.Round(hit.point.x),Mathf.Round(hit.point.y),Mathf.Round(hit.point.z));
                 Debug.Log("El destino es: "+finalPosition);
             }
+        } */
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
+        {
+        var right45 = (transform.forward + transform.right).normalized;
+        var left45 = (transform.forward - transform.right).normalized;
+            if (hit.transform.gameObject.layer == layerJugador) 
+            {
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                    Debug.DrawRay(transform.position, right45 * hit.distance, Color.yellow);
+                    Debug.DrawRay(transform.position, left45 * hit.distance, Color.yellow);
+                    Debug.Log("Te encontre!!");
+                    playerTransform = hit.transform;
+                    finalPosition = playerTransform.position;
+                    agent.SetDestination(finalPosition);
+                    //Debug.Log(Mathf.Ceil(hit.distance));
+            } 
         }
-        if(Input.GetKeyDown("space") && !isMoving)
+
+        if(Input.GetKeyDown(KeyCode.W) && !PlayerController.playerIsMoving)
         {
             distanceX = 0;
             distanceZ = 0;
@@ -58,6 +79,10 @@ public class EnemyMovement : MonoBehaviour
         if (Vector3.Distance(agent.transform.position, finalPosition) < distanceThreshold)
         {
             isMoving = false;
+            if(usaWaypoints)
+            {
+                WaypointChecker(++waypointNumber);
+            }
             Debug.Log("LLEGUEEE GUACHOOO");
         }
         if(isMoving)
@@ -69,7 +94,7 @@ public class EnemyMovement : MonoBehaviour
             lastPosition = currentPosition;
             /* Debug.Log("Distancia en X: " + distanceX);
             Debug.Log("Distancia en Z: " + distanceZ);  */
-            if(distanceX >= 1 || distanceZ >= 1)
+            if(distanceX >= 1.1 || distanceZ >= 1.1)
             {
                 roundedActualPosition = new Vector3(Mathf.Round(transform.position.x),transform.position.y,Mathf.Round(transform.position.z));
                 agent.SetDestination(roundedActualPosition);
@@ -97,4 +122,25 @@ public class EnemyMovement : MonoBehaviour
             }
         } */
     }
+
+        void WaypointChecker(int waypointNode)
+        {
+            if(waypointNode <= waypoints.Length)
+            {
+                if(waypoints[waypointNode]!=null)
+                {
+                    finalPosition = waypoints[waypointNode].position;
+                }
+                else
+                {
+                    finalPosition = waypoints[0].position;
+                    waypointNumber = 0;
+                }
+            }
+            else
+            {
+                finalPosition = waypoints[0].position;
+                waypointNumber = 0;
+            }
+        }
 }
