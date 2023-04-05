@@ -14,7 +14,7 @@ namespace Tools.UI.Card
 
         #region Unitycallbacks
 
-        void Awake()
+        void OnEnable()
         {
             PlayerHand = GetComponent<IUiPlayerHand>();
             CardRenderer = CardPrefab.GetComponentsInChildren<SpriteRenderer>()[0];

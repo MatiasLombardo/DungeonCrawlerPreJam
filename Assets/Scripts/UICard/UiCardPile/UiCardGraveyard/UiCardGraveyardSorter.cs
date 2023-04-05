@@ -15,7 +15,7 @@ namespace Tools.UI.Card
 
         //--------------------------------------------------------------------------------------------------------------
 
-        void Awake()
+        void OnEnable()
         {
             CardGraveyard = GetComponent<UiCardGraveyard>();
             CardGraveyard.OnPileChanged += Sort;

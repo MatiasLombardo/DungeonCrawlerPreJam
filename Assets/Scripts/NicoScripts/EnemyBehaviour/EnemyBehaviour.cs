@@ -34,11 +34,14 @@ public class EnemyBehaviour : MonoBehaviour
     private IEnumerator PrepararseParaCombate()
     {
         //que aqui haga algo raro como acercar la camara o algo que anticipe su ataque
-        MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigo);
-        yield return new WaitForSeconds(4f);
+        
+        yield return new WaitForSeconds(1f);
         
         SistemaDeTurnos.Instance.IniciarCombate(vidaMaxima, musica);
+        yield return new WaitForSeconds(2f);
+        MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigo);
         yield return new WaitForSeconds(1f);
+        
         Destroy(this.gameObject);
     }
 

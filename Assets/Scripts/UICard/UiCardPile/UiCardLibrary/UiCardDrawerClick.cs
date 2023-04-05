@@ -9,7 +9,7 @@ namespace Tools.UI.Card
         UiPlayerHandUtils CardDrawer { get; set; }
         IMouseInput Input { get; set; }
 
-        void Awake()
+        void OnEnable()
         {
             CardDrawer = transform.parent.GetComponentInChildren<UiPlayerHandUtils>();
             Input = GetComponent<IMouseInput>();

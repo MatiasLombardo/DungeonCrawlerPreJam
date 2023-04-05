@@ -35,27 +35,30 @@ public class SistemaDeVida : MonoBehaviour
     [SerializeField]TMP_Text numero_vidaP;
     [SerializeField]TMP_Text numero_vidaE;
     [SerializeField] TMP_Text com_ResultadoP, com_ResultadoE;
+    public bool cargoComponentes;
 
 
     public Image e_healthBar;
     float e_health, e_maxHealth = 10;
 
 
-    /*public void EncontrarObjetos(string a, string b, string c, string d, string e)
+    public void EncontrarObjetos()
     {
-        numero_vidaP = GameObject.FindObjectsOfType(typeof(MonoBehaviour));
-        numero_vidaE = GameObject.FindObjectsOfType(typeof(MonoBehaviour));
-        com_ResultadoP = GameObject.FindObjectsOfType(typeof(MonoBehaviour));
-        com_ResultadoE = GameObject.FindObjectsOfType(typeof(MonoBehaviour));
-        p_healthBar = GameObject.FindObjectsOfType(typeof(MonoBehaviour));
-    }*/
+        numero_vidaP = GameObject.Find("/Combate(Clone)/Canvas/Vida/BarraDeVidaPlayer/TextoVidaPlayer").GetComponent<TMP_Text>();
+        numero_vidaE = GameObject.Find("/Combate(Clone)/Canvas/Vida/BarraDeVidaEnemigo/TextoVidaEnemigo").GetComponent<TMP_Text>();
+        com_ResultadoP = GameObject.Find("/Combate(Clone)/Canvas/ComFinalP").GetComponent<TMP_Text>();
+        com_ResultadoE = GameObject.Find("/Combate(Clone)/Canvas/ComFinalE").GetComponent<TMP_Text>();
+        p_healthBar = GameObject.Find("/Combate(Clone)/Canvas/Vida/BarraDeVidaPlayer").GetComponent<Image>();
+        e_healthBar = GameObject.Find("/Combate(Clone)/Canvas/Vida/BarraDeVidaEnemigo").GetComponent<Image>();
+        cargoComponentes = true;
+    }
 
     private void Start()
     {
         p_health = p_maxHealth;
-        numero_vidaP.text = p_health.ToString();
+        //numero_vidaP.text = p_health.ToString();
         e_health = e_maxHealth;
-        numero_vidaE.text = e_health.ToString();
+        //numero_vidaE.text = e_health.ToString();
     }
 
     private void Update()
@@ -67,10 +70,13 @@ public class SistemaDeVida : MonoBehaviour
         
         lerpSpeed = 3f * Time.deltaTime;
         
-        HealthBarFiller(p_health, p_maxHealth, p_healthBar);
-        HealthBarFiller(e_health, e_maxHealth, e_healthBar);
-        ColorChanger(p_health, p_maxHealth, p_healthBar);
-        ColorChanger(e_health, e_maxHealth, e_healthBar);
+        if (cargoComponentes)
+        {
+            HealthBarFiller(p_health, p_maxHealth, p_healthBar);
+            HealthBarFiller(e_health, e_maxHealth, e_healthBar);
+            ColorChanger(p_health, p_maxHealth, p_healthBar);
+            ColorChanger(e_health, e_maxHealth, e_healthBar);
+        }
     }
     
     void HealthBarFiller(float health, float maxHealth, Image healthBar)

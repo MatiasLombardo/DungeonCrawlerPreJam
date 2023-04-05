@@ -7,7 +7,7 @@ namespace Tools.UI.Card
     {
         [SerializeField] protected UiPlayerHand CardSelector;
 
-        protected virtual void Awake()
+        protected virtual void OnEnable()
         {
             Assert.IsNotNull(CardSelector);
 

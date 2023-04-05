@@ -12,7 +12,7 @@
 
     public List<Sprite> mazoGuardado = new List<Sprite>();
 
-    [SerializeField] SpriteRenderer spriteEnemigo;
+    public SpriteRenderer spriteEnemigo;
 
     public List<Sprite> mazoEne1 = new List<Sprite>();
     public List<Sprite> mazoEne2 = new List<Sprite>();

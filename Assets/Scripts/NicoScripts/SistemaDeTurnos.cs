@@ -14,6 +14,7 @@ using TMPro;
     public bool turnoPlayer = true;
     public bool puedeAgarrarCarta = true;
     private int dañoAlEnemigo;
+    [SerializeField] GameObject prefabCombate;
     [SerializeField] GameObject handUtils;
     [SerializeField] GameObject sistemaDeCombate;
     [SerializeField] GameObject[] desactivarCosasAlIniciarCombate;
@@ -54,6 +55,35 @@ using TMPro;
         }
     }
 
+    bool tempp = true;
+    private void StartCombate()
+    {
+        
+        if (tempp)
+        {
+            Instantiate(prefabCombate);
+            tempp = false;
+        }        //prefabCombate.SetActive(true);
+        sistemaDeCombate = GameObject.Find("/Combate(Clone)");
+        handUtils = GameObject.Find("/Combate(Clone)/GameViewP1/Hand");
+        SistemaDeVida.Instance.EncontrarObjetos();
+        MazoEnemigoManager.Instance.spriteEnemigo = GameObject.Find("/Combate(Clone)/Canvas/EnemySprite").GetComponent<SpriteRenderer>();
+
+        comparadores[0] = GameObject.Find("/Combate(Clone)/Canvas/Comparador0").GetComponent<TMP_Text>();
+        comparadores[1] = GameObject.Find("/Combate(Clone)/Canvas/Comparador1").GetComponent<TMP_Text>();
+        comparadores[2] = GameObject.Find("/Combate(Clone)/Canvas/Comparador2").GetComponent<TMP_Text>();
+        comparadores[3] = GameObject.Find("/Combate(Clone)/Canvas/Comparador3").GetComponent<TMP_Text>();
+        
+
+        //("/Monster/Arm/Hand")
+    }
+
+    private void FinalCombate()
+    {
+        SistemaDeVida.Instance.cargoComponentes = false;
+        Destroy(sistemaDeCombate);
+        tempp = true;
+    }
 
      public void IniciarCombate(float vidaTotal, AudioClip musica)
      {
@@ -71,6 +101,10 @@ using TMPro;
         anim.SetActive(true);
         animacionFade.SetTrigger("Fade");
         yield return new WaitForSeconds(1.5f);
+        StartCombate();
+        //yield return new WaitForSeconds(0.5f);
+        //sistemaDeCombate.SetActive(false);
+
         //Este le dice un par de cosas
         //MazoEnemigoManager.Instance.Set_TipoEnemigo(enemigoTipo, spriteNuevo);
         //Setea el tipo de enemigo
@@ -83,9 +117,9 @@ using TMPro;
         {
             a.SetActive(false);
         }
-        //*playerController.SetActive(false);
         AudioManager.Instance.PlayMusic(musica);
-        sistemaDeCombate.SetActive(true);
+        //yield return new WaitForSeconds(1.5f);
+        //sistemaDeCombate.SetActive(true);
         Debug.Log("desactivar fade");
         animacionFade.SetTrigger("Fade out");
         yield return new WaitForSeconds(1.5f);
@@ -109,6 +143,7 @@ using TMPro;
         animacionFadeBoss.SetTrigger("Fade");
         yield return new WaitForSeconds(1.5f);
         //Setea el mazo
+        StartCombate();
         MazoEnemigoManager.Instance.MazosEnemigos();
         //seteo su vida
         SistemaDeVida.Instance.Set_VidaMaxEnemigo(vidaTotal);
@@ -167,6 +202,7 @@ using TMPro;
         animacionFade.SetTrigger("Fade Out");
         yield return new WaitForSeconds(1f);
         sistemaDeCombate.SetActive(false);
+        FinalCombate();
         //OnReset();
         yield return new WaitForSeconds(1f);
         //se desactiva el negro en forma de fade rapido.

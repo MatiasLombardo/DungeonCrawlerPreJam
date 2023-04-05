@@ -12,7 +12,7 @@ namespace Tools.UI.Card
         UiPlayerHandUtils Utils { get; set; }
         IMouseInput Input { get; set; }
 
-        void Awake()
+        void OnEnable()
         {
             Utils = transform.parent.GetComponentInChildren<UiPlayerHandUtils>();
             Input = GetComponent<IMouseInput>();

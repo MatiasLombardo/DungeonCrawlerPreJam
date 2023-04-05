@@ -13,7 +13,7 @@ namespace Tools.UI.Card
 
         //--------------------------------------------------------------------------------------------------------------
 
-        void Awake()
+        void OnEnable()
         {
             PlayerHand = GetComponent<IUiPlayerHand>();
             PlayerHand.OnPileChanged += Sort;

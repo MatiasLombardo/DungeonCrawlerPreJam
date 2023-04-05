@@ -287,6 +287,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6f45aa4de3c3ad944aa78e6b26bb71e8, type: 3}
   - {fileID: 21300000, guid: e76f424dad99e0f458c2bdf5a70adb2c, type: 3}
   - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
+  - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
+  - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
+  - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
+  - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
 --- !u!1 &3245573509686006908
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +347,8 @@ MonoBehaviour:
   cardConfigsParameters: {fileID: 11400000, guid: f79f21692e2d8a746b39e9a2eadfd5df, type: 2}
   "da\xF1o": 0
   absorber: 0
+  au_PasarClick: {fileID: 0}
+  au_Discard: {fileID: 0}
 --- !u!114 &3061994033972836288
 MonoBehaviour:
   m_ObjectHideFlags: 0

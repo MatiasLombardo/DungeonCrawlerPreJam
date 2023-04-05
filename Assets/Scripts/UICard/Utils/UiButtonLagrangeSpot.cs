@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class UiButtonLagrangeSpot : MonoBehaviour
 {
-    void Awake()
+    void OnEnable()
     {
         Application.targetFrameRate = 60;
         GetComponent<Button>().onClick.AddListener(OpenTwitter);

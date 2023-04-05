@@ -12,7 +12,7 @@ namespace Tools.UI.Card
         protected IUiPlayerHand CardHand { get; set; }
         protected IMouseInput Input { get; set; }
 
-        protected virtual void Awake()
+        protected virtual void OnEnable()
         {
             CardHand = transform.parent.GetComponentInChildren<IUiPlayerHand>();
             Input = GetComponent<IMouseInput>();

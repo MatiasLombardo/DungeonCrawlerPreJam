@@ -19,7 +19,7 @@ namespace Tools.UI.Card
         [SerializeField] Sprite[] posiblesCartas;
 
 
-        void Awake()
+        void OnEnable()
         {
 
             MyRenderer = GetComponent<SpriteRenderer>();
@@ -186,7 +186,11 @@ namespace Tools.UI.Card
 
 
                 default:
-                    Debug.LogError("Error UITexturePicker");
+                    daño = 12;
+                    absorber = 1;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+
+                    Debug.Log("Error UITexturePicker");
                 break;
 
             }

@@ -12,7 +12,7 @@ namespace Tools.UI.Card
 
         #region Unity Callbacks
 
-        void Awake()
+        void OnEnable()
         {
             //components
 

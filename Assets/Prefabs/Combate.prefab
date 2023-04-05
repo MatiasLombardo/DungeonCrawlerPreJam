@@ -1139,7 +1139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5781461765019987064
 Transform:
   m_ObjectHideFlags: 0
@@ -1169,6 +1169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnoPlayer: 1
   puedeAgarrarCarta: 1
+  prefabCombate: {fileID: 0}
   handUtils: {fileID: 5781461765713017255}
   sistemaDeCombate: {fileID: 5781461765019987046}
   desactivarCosasAlIniciarCombate: []
@@ -1177,8 +1178,20 @@ MonoBehaviour:
   - {fileID: 63021947}
   - {fileID: 1499557425}
   - {fileID: 286646751}
+  sisVida: {fileID: 0}
+  pocionSpr: {fileID: 0}
+  contenedorDeMedidores: {fileID: 0}
+  medidorXP: {fileID: 0}
+  medidorDinero: {fileID: 0}
+  animacionFade: {fileID: 0}
+  anim: {fileID: 0}
+  animacionFadeBoss: {fileID: 0}
+  estadoB: 0
+  bailarinaON: 0
   dineroTotal: 0
   "choqueDeDa\xF1os": 00000000000000000000000000000000
+  nivelXP: 0
+  puntosGuardados: 0
 --- !u!114 &5781461765019987067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1206,6 +1219,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fbd8cd4ab55686a4eae0fe1c34c7e54f, type: 3}
   - {fileID: 21300000, guid: 9994b710ca087574db85e8a499e1a9e5, type: 3}
   cartasParaInventario: []
+  tinyBailarina: {fileID: 0}
   numeroDeCarta: 0
   spriteActual: {fileID: 0}
 --- !u!114 &5781461765019987066
@@ -1221,6 +1235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazoGuardado: []
+  spriteEnemigo: {fileID: 0}
   mazoEne1:
   - {fileID: 21300000, guid: 97eed4db298436a45971e9b17442b6e5, type: 3}
   - {fileID: 21300000, guid: 97eed4db298436a45971e9b17442b6e5, type: 3}
@@ -1265,11 +1280,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 294f8339cdb846b48b98522450b1690a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  au_PerderVidaP: {fileID: 0}
+  au_PerderVidaE: {fileID: 0}
   p_healthBar: {fileID: 317249583021612206}
+  isBailarina: 0
   numero_vidaP: {fileID: 642322745}
   numero_vidaE: {fileID: 407284664}
   com_ResultadoP: {fileID: 1392499395}
   com_ResultadoE: {fileID: 163942309}
+  cargoComponentes: 0
   e_healthBar: {fileID: 317249583979349055}
 --- !u!1 &5781461765039186459
 GameObject:
@@ -1667,7 +1686,7 @@ PrefabInstance:
       objectReference: {fileID: 5781461765713017274}
     - target: {fileID: 1719348466, guid: c9682acea5399fa48b319aabcd38ed1c, type: 3}
       propertyPath: m_Name
-      value: Enemy sprite
+      value: EnemySprite
       objectReference: {fileID: 0}
     - target: {fileID: 1976675595, guid: c9682acea5399fa48b319aabcd38ed1c, type: 3}
       propertyPath: m_IsActive

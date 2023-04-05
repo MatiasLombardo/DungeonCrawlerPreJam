@@ -56,7 +56,7 @@ namespace Tools.UI
 
         #region Unity Callbacks
 
-        void Awake()
+        void OnEnable()
         {
             // Currently using PhysicsRaycaster, but can be also considered PhysicsRaycaster2D.
             if (Camera.main.GetComponent<PhysicsRaycaster>() == null)

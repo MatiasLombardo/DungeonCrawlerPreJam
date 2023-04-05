@@ -34,7 +34,7 @@ namespace Tools.UI.Card
 
         #region Unitycallbacks
 
-        void Awake() => PlayerHand = transform.parent.GetComponentInChildren<IUiPlayerHand>();
+        void OnEnable() => PlayerHand = transform.parent.GetComponentInChildren<IUiPlayerHand>();
 
         IEnumerator Start()
         {
