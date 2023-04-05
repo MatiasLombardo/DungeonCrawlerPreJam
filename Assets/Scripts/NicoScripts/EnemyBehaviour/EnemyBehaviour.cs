@@ -10,6 +10,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] PlayerInput codigoPlayer;
     [SerializeField] Transform cara;
     [SerializeField] AudioClip musica;
+    [SerializeField] Sprite spriteEnemigo;
     float oldPos, newPos;
     int temp2 = 0;
 
@@ -34,7 +35,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         //que aqui haga algo raro como acercar la camara o algo que anticipe su ataque
         yield return new WaitForSeconds(4f);
-        SistemaDeTurnos.Instance.IniciarCombate(tipoEnemigo, vidaMaxima, musica);
+        SistemaDeTurnos.Instance.IniciarCombate(tipoEnemigo, vidaMaxima, musica, spriteEnemigo);
         yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
     }

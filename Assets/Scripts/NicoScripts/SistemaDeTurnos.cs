@@ -25,6 +25,8 @@ using TMPro;
     [SerializeField] GameObject contenedorDeMedidores;
     [SerializeField] TMP_Text medidorXP, medidorDinero;
 
+    [SerializeField] Animator animacionFade;
+
 
     
     public enum BOSS
@@ -51,22 +53,22 @@ using TMPro;
     }
 
 
-     public void IniciarCombate(int enemigoTipo, float vidaTotal, AudioClip musica)
+     public void IniciarCombate(int enemigoTipo, float vidaTotal, AudioClip musica, Sprite spriteNuevo)
      {
         
         
-        StartCoroutine(TransicionIniciarCombate(enemigoTipo, vidaTotal, musica));
+        StartCoroutine(TransicionIniciarCombate(enemigoTipo, vidaTotal, musica, spriteNuevo));
 
 
 
      }
 
 
-    IEnumerator TransicionIniciarCombate(int enemigoTipo, float vidaTotal, AudioClip musica)
+    IEnumerator TransicionIniciarCombate(int enemigoTipo, float vidaTotal, AudioClip musica, Sprite spriteNuevo)
     {
         //El jugador mira al enemigo
         //Este le dice un par de cosas
-        MazoEnemigoManager.Instance.Set_TipoEnemigo(enemigoTipo);
+        MazoEnemigoManager.Instance.Set_TipoEnemigo(enemigoTipo, spriteNuevo);
         //Setea el tipo de enemigo
         MazoEnemigoManager.Instance.MazosEnemigos();
         //Setea el mazo

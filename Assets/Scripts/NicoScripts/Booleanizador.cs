@@ -5,6 +5,10 @@ using System.Collections.Generic;
 public class Booleanizador : MonoBehaviour
 {
     
+    [SerializedField] GameObject objetoAAccionar;
+
+
+    
 
 
 }

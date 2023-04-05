@@ -12,6 +12,7 @@
 
     public List<Sprite> mazoGuardado = new List<Sprite>();
 
+    [SerializeField] SpriteRenderer spriteEnemigo;
 
     public List<Sprite> mazoEne1 = new List<Sprite>();
     public List<Sprite> mazoEne2 = new List<Sprite>();
@@ -46,8 +47,9 @@
         return tipoEnemigo;
     }
 
-    public void Set_TipoEnemigo(int nuevoEnemigo)
+    public void Set_TipoEnemigo(int nuevoEnemigo, Sprite spriteNuevo)
     {
+        spriteEnemigo.sprite = spriteNuevo;
         tipoEnemigo = nuevoEnemigo;
     }
 
@@ -57,6 +59,7 @@
         if (tipoEnemigo == 0)
         {
             mazoGuardado = new List<Sprite>(mazoEne1);
+
         }
         if (tipoEnemigo == 1)
         {
