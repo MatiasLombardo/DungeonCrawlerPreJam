@@ -3,7 +3,37 @@ guid: 1ca5b76b80f98804eb89d32b1c704ea6
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cadena
+    second: {fileID: 2100000, guid: 0f47309ed601820439d35ccde12ee6e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hoja(1)
+    second: {fileID: 2100000, guid: 75c895d46e0119e42b1123bd2d2c01a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hoja(2)
+    second: {fileID: 2100000, guid: b8da6e2420251474990ad41a1550dbf0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mango(1)
+    second: {fileID: 2100000, guid: 5dcdd05fad31adf4f9c38b145c8f9788, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mango(2)
+    second: {fileID: 2100000, guid: 3dc2a17cb19132843a1b50167e44b806, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mango(3)
+    second: {fileID: 2100000, guid: 3d6d39b14b8afed49b3537d3dfcdae2b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

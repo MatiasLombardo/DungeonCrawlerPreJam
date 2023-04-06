@@ -3,7 +3,12 @@ guid: a06d0d416fe16504e9ec43edd285b1f1
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ribz.003
+    second: {fileID: 2100000, guid: 474d568d9d1324b4dbb12ae50aca0936, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
