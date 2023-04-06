@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1467,7 +1467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f6cddbf9d45274db7c673aeceb7424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 344588214}
+  lightup: {fileID: 344588214}
   minIntensity: 1
   maxIntensity: 3
   t: 0
@@ -1676,7 +1676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f6cddbf9d45274db7c673aeceb7424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 386167107}
+  lightup: {fileID: 386167107}
   minIntensity: 1
   maxIntensity: 3
   t: 0
@@ -4824,7 +4824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f6cddbf9d45274db7c673aeceb7424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 1208755196}
+  lightup: {fileID: 1208755196}
   minIntensity: 5
   maxIntensity: 8
   t: 0
@@ -4892,7 +4892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3163185574627404208, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.296246
+      value: 24.2
       objectReference: {fileID: 0}
     - target: {fileID: 3163185574627404208, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5322,6 +5322,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450d7324917583f4fae14a62dba38735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forward: 119
+  back: 115
+  left: 97
+  right: 100
+  turnLeft: 113
+  turnRight: 101
   range: 1.1
   sePuedeMover: 0
   rotationSpeed: 0.1
@@ -5341,6 +5347,7 @@ MonoBehaviour:
   smoothTransition: 1
   transitionSpeed: 5
   transitionRotationSpeed: 700
+  targetRotation: {x: 0, y: 0, z: 0}
 --- !u!136 &1503489581
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6624,6 +6631,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359d1ad19869994ea1e4cdcb6c40702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EffectsSource: {fileID: 0}
+  MusicSource: {fileID: 0}
+  LowPitchRange: 0.95
+  HighPitchRange: 1.05
 --- !u!4 &1745636903
 Transform:
   m_ObjectHideFlags: 0
@@ -8148,7 +8159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f6cddbf9d45274db7c673aeceb7424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 1983897546}
+  lightup: {fileID: 1983897546}
   minIntensity: 1
   maxIntensity: 3
   t: 0
