@@ -3,7 +3,12 @@ guid: 0cc4a7f98b53cc44e98709490dd34edc
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shrine thingy
+    second: {fileID: 2100000, guid: 4799b422ec34a494cb164a91ebe63f38, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
