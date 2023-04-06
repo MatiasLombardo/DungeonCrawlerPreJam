@@ -18,6 +18,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] float range=2;
     
     public bool sePuedeMover;
+    public static bool enemigosPuedenMover;
     [SerializeField] float rotationSpeed;
     PlayerController controller;
     public GameObject camaraPlayer; 
@@ -53,7 +54,6 @@ public class PlayerInput : MonoBehaviour
             if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward) , out hitForward, range)&& Input.GetKey(forward) && sePuedeMover)
             {
                 controller.MoveForward();
-                
             }
         }
         else {
@@ -86,7 +86,6 @@ public class PlayerInput : MonoBehaviour
         if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hitRight, range) && Input.GetKeyUp(right) && sePuedeMover)
         {
             controller.MoveRight();
-
         }
 
        

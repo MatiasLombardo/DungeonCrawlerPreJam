@@ -247,6 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3164210280265612279}
+  - component: {fileID: 2470229940724530418}
   - component: {fileID: 3164210280265612273}
   - component: {fileID: 3164210280265612278}
   - component: {fileID: 3164210280265612272}
@@ -274,6 +275,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2470229940724530418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3164210280265612276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3dbe3a42223b24a8cc44e36ba653fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPreSave:
+    m_PersistentCalls:
+      m_Calls: []
+    targetZUIDs: []
+  onPreLoad:
+    m_PersistentCalls:
+      m_Calls: []
+    targetZUIDs: []
+  onPostSave:
+    m_PersistentCalls:
+      m_Calls: []
+    targetZUIDs: []
+  onPostLoad:
+    m_PersistentCalls:
+      m_Calls: []
+    targetZUIDs: []
+  showSettings: 0
+  groupID: 0
+  _zuid: 
+  _gozuid: 
+  serializedComponents:
+  - typeFullName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    persistenceType: 0
+    component: {fileID: 3164210280265612279}
+    zuid: 
 --- !u!114 &3164210280265612273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +348,9 @@ MonoBehaviour:
   turnLeft: 113
   turnRight: 101
   range: 1.1
-  myCamera: {fileID: 3164210279789864917}
+  sePuedeMover: 0
+  rotationSpeed: 0
+  camaraPlayer: {fileID: 0}
 --- !u!114 &3164210280265612272
 MonoBehaviour:
   m_ObjectHideFlags: 0

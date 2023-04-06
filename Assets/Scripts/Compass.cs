@@ -27,8 +27,8 @@ public class Compass : MonoBehaviour
         switch (playerController.targetRotation.y)
         {
             case 0f: compass.sprite = north; break;
-            case 90f: compass.sprite = west; break;
-            case 270f: compass.sprite= east; break;
+            case 90f: compass.sprite = east; break;
+            case 270f: compass.sprite= west; break;
             case 180f: compass.sprite= south; break;
                 default: break;
         }

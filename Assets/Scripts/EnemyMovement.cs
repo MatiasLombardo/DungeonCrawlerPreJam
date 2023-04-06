@@ -68,7 +68,7 @@ public class EnemyMovement : MonoBehaviour
             } 
         }
 
-        if(Input.GetKeyDown(KeyCode.W) && !PlayerController.playerIsMoving)
+        if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) && !PlayerController.playerIsMoving)
         {
             distanceX = 0;
             distanceZ = 0;
