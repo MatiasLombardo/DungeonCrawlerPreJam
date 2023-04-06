@@ -132,6 +132,7 @@ namespace RedBlueGames.Tools.TextTyper
         {
             if (dialogueLines.Count <= 0)
             {
+                gameObject.SetActive(false);
                 return;
             }
             this.testTextTyper.TypeText(dialogueLines.Dequeue());

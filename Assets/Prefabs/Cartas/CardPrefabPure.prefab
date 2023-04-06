@@ -348,7 +348,7 @@ MonoBehaviour:
   "da\xF1o": 0
   absorber: 0
   au_PasarClick: {fileID: 0}
-  au_Discard: {fileID: 0}
+  au_Discard: {fileID: 8300000, guid: f3a43c009b00c274d89018a28202cdaf, type: 3}
 --- !u!114 &3061994033972836288
 MonoBehaviour:
   m_ObjectHideFlags: 0

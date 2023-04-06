@@ -139,33 +139,32 @@ using TMPro;
     {
         //El jugador mira al enemigo
         Debug.Log("accionar fade");
-        animacionFadeBoss.enabled = true;
+        anim.SetActive(true);
         animacionFadeBoss.SetTrigger("Fade");
         yield return new WaitForSeconds(1.5f);
-        //Setea el mazo
         StartCombate();
+        //yield return new WaitForSeconds(0.5f);
+        //sistemaDeCombate.SetActive(false);
+
+        //Este le dice un par de cosas
+        //MazoEnemigoManager.Instance.Set_TipoEnemigo(enemigoTipo, spriteNuevo);
+        //Setea el tipo de enemigo
         MazoEnemigoManager.Instance.MazosEnemigos();
-        //seteo su vida
+        //Setea el mazo
         SistemaDeVida.Instance.Set_VidaMaxEnemigo(vidaTotal);
+        //seteo su vida
         //desactiva los objetos y activa el combate
-        
-        if (estadoB == BOSS.LOBO)
-        {
-            
-        }
-        
         foreach (GameObject a in desactivarCosasAlIniciarCombate)
         {
             a.SetActive(false);
         }
-
-        //*playerController.SetActive(false);
         AudioManager.Instance.PlayMusic(musica);
-        sistemaDeCombate.SetActive(true);
+        //yield return new WaitForSeconds(1.5f);
+        //sistemaDeCombate.SetActive(true);
         Debug.Log("desactivar fade");
-        animacionFade.SetTrigger("Fade out");
+        animacionFadeBoss.SetTrigger("Fade out");
         yield return new WaitForSeconds(1.5f);
-        animacionFade.enabled = false;
+        anim.SetActive(false);
         yield return null;
     }
 
@@ -183,6 +182,8 @@ using TMPro;
         //animacion cuando se rompe un sprite enemigo (cuando muere, como undertale).
         anim.SetActive(true);
         animacionFade.SetTrigger("Fade Brusco");
+        AudioManager.Instance.StopMusic();
+        yield return new WaitForSeconds(1.5f);
         float val = nivelXP * 5 + 10;
         float xp = Random.Range(val-val/2, val);
         //Sube de nivel
@@ -192,6 +193,7 @@ using TMPro;
         contenedorDeMedidores.SetActive(true);
         yield return new WaitForSeconds(2f);
         AñadirDinero(dineroNuevo);
+        estadoB = BOSS.NONE;
         //gana dinero
         foreach (GameObject a in desactivarCosasAlIniciarCombate)
         {
@@ -199,7 +201,7 @@ using TMPro;
         }
         yield return new WaitForSeconds(1f);
         contenedorDeMedidores.SetActive(false);
-        animacionFade.SetTrigger("Fade Out");
+        animacionFade.SetTrigger("Fade out");
         yield return new WaitForSeconds(1f);
         sistemaDeCombate.SetActive(false);
         FinalCombate();

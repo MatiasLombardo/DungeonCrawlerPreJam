@@ -9,7 +9,7 @@ public class LoboBehaviour : MonoBehaviour
     [SerializeField] float vidaMaxima = 30f;
     [SerializeField] PlayerInput codigoPlayer;
     [SerializeField] Transform cara;
-    [SerializeField] AudioClip interludio;
+    [SerializeField] AudioClip preludio;
     [SerializeField] AudioClip son_Titulo;
     [SerializeField] float tiempoDeInterludio = 15;
     [SerializeField] AudioClip musicaInicioFase1;
@@ -46,9 +46,10 @@ public class LoboBehaviour : MonoBehaviour
     private IEnumerator PrepararseParaCombate()
     {
         //que aqui haga algo raro como acercar la camara o algo que anticipe su ataque
-        MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigo);
+        
         //acciona el interludio
-        AudioManager.Instance.PlayMusic(interludio);
+        yield return new WaitForSeconds(1f);
+        AudioManager.Instance.PlayMusic(preludio);
         yield return new WaitForSeconds(2f);
         //Acciona el titulo de la pelea "THE WOLF MIEDO A NO SE ALGO SE ME OCURRIRA"
         AudioManager.Instance.Play(son_Titulo);
@@ -59,10 +60,12 @@ public class LoboBehaviour : MonoBehaviour
         //acciona el dialogo
         ventanaDialogo.SetActive(true);
         //espera a que el dialogo termine, y la musica tambien
-        yield return new WaitUntil(() => AudioManager.Instance.Get_IsPlaying() && ventanaDialogo.activeSelf);
+        yield return new WaitUntil(() => AudioManager.Instance.Get_IsPlaying() && !ventanaDialogo.activeSelf);
         //activa la musica de combate y arranca el combate
         SistemaDeTurnos.Instance.Set_EstadoBALOBO();
         SistemaDeTurnos.Instance.IniciarCombateBoss(vidaMaxima, musicaInicioFase1);
+        yield return new WaitForSeconds(2f);
+        MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigo);
         yield return new WaitForSeconds(1f);
         this.gameObject.SetActive(false);
     }
