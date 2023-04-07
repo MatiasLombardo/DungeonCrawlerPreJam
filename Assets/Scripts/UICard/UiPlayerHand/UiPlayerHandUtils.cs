@@ -54,6 +54,7 @@ namespace Tools.UI.Card
 
         #region Operations
 
+
         [Button]
         public void DrawCard()
         {
@@ -66,10 +67,17 @@ namespace Tools.UI.Card
                 var card = cardGo.GetComponent<IUiCard>();
                 card.transform.position = deckPosition.position;
                 Count++;
+                //StartCoroutine(AgarrarCartaTiempo(card));
                 PlayerHand.AddCard(card);
                 SistemaDeTurnos.Instance.Set_AgarrarCartaFalse();
             }
 
+            
+        }
+
+        IEnumerator AgarrarCartaTiempo()
+        {
+            yield return new WaitForSeconds(1);
             
         }
 

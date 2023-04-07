@@ -25,7 +25,7 @@ public class IAEnemigo : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         handUtils.GetComponent<Tools.UI.Card.UiPlayerHandUtils>().DrawCardEnemigo();
         
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2.5f);
         handUtils.GetComponent<Tools.UI.Card.UiPlayerHandUtils>().PlayCard();
 
         if (SistemaDeTurnos.Instance.Get_ValorTurno() == 1)
