@@ -4732,6 +4732,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 727984057}
     m_Modifications:
+    - target: {fileID: 5205887616270151111, guid: 799e0210d3243f84f9b785377615008f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 7128140380121209449, guid: 799e0210d3243f84f9b785377615008f, type: 3}
       propertyPath: m_Name
       value: Derrota
