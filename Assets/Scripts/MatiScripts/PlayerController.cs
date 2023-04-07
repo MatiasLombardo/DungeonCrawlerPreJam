@@ -26,6 +26,13 @@ public class PlayerController : MonoBehaviour
         targetGridPos = Vector3Int.RoundToInt(transform.position);
 
     }
+    void Update()
+    {
+        if(!AtRest && Input.GetKey(KeyCode.Q))
+        {
+            
+        }
+    }
 
     
 
@@ -55,6 +62,7 @@ public class PlayerController : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * transitionSpeed);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(targetRotation), Time.deltaTime * transitionRotationSpeed);
+                
             }
 
         } else
