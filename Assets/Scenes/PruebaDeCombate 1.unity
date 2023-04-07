@@ -3634,7 +3634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnoPlayer: 1
   puedeAgarrarCarta: 1
-  prefabCombate: {fileID: 1910004091152657994, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
+  prefabCombate: {fileID: 8313449790636861424, guid: 00819c19e809c7641a163555c235cab6, type: 3}
   handUtils: {fileID: 0}
   sistemaDeCombate: {fileID: 0}
   desactivarCosasAlIniciarCombate:
@@ -8030,7 +8030,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.9260254, y: 1.4190063}
+  m_AnchoredPosition: {x: -3.926056, y: 1.4190063}
   m_SizeDelta: {x: -76.147, y: -60.838}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5310961601462504896
@@ -12104,7 +12104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.1530151, y: 4.7035217}
+  m_AnchoredPosition: {x: -2.1529846, y: 4.7035217}
   m_SizeDelta: {x: -19.37, y: -9.407}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &5310961602132949304
