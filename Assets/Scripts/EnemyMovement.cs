@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using ZSerializer;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : PersistentMonoBehaviour
 {
 
     public Camera cam;
@@ -125,7 +126,7 @@ public class EnemyMovement : MonoBehaviour
 
         void WaypointChecker(int waypointNode)
         {
-            if(waypointNode <= waypoints.Length)
+            if(waypointNode < waypoints.Length)
             {
                 if(waypoints[waypointNode]!=null)
                 {

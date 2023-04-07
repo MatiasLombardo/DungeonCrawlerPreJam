@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ZSerializer;
 
 [RequireComponent(typeof(PlayerController))]
 
-public class PlayerInput : MonoBehaviour
+public class PlayerInput : PersistentMonoBehaviour
 {
 
 

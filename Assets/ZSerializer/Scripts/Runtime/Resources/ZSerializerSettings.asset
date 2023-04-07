@@ -52,6 +52,13 @@ MonoBehaviour:
     PublicKeyToken=null
   - UnityEngine.Rigidbody2D, UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
+  - UnityEngine.CapsuleCollider, UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - UnityEngine.RectTransform, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - UnityEngine.Canvas, UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - UnityEngine.AI.NavMeshAgent, UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
   unityComponentDataList:
   - typeFullName: UnityEngine.AI.NavMeshAgent, UnityEngine.AIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -165,7 +172,13 @@ MonoBehaviour:
         PublicKeyToken=null
       - ParentTest, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       - SerializationTest, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      - PlayerController, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      - PlayerInput, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       values:
+      - isOn: 1
+        groupID: 0
+      - isOn: 1
+        groupID: 0
       - isOn: 1
         groupID: 0
       - isOn: 1
