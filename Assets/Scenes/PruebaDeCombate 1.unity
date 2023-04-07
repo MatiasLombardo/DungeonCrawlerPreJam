@@ -625,6 +625,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &237549832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8875168463664180554, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}
+  m_PrefabInstance: {fileID: 8044083018257402688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &251664470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,7 +3074,12 @@ MonoBehaviour:
   mazoEne4: []
   mazoEne5: []
   mazoBoss1: []
-  mazoBoss2: []
+  mazoBoss2:
+  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
+  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
+  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
+  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
+  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
   tipoEnemigo: 1
   numeroDeCarta: 0
   spriteActual: {fileID: 0}
@@ -3542,9 +3552,10 @@ MonoBehaviour:
   estadoB: 3
   bailarinaON: 0
   dineroTotal: 120
+  bossLobo: {fileID: 237549832}
+  bossBailarina: {fileID: 0}
+  bossFinal: {fileID: 0}
   "choqueDeDa\xF1os": 00000000000000000000000000000000
-  nivelXP: 0
-  puntosGuardados: 0
 --- !u!1 &1820933214
 GameObject:
   m_ObjectHideFlags: 0

@@ -74,12 +74,23 @@ public class LoboBehaviour : MonoBehaviour
         segundaFase = true;
         this.gameObject.SetActive(false);
     }
-
-    /*void Update()
+int temp4 = 0;
+bool temp5 = true;
+    void Update()
     {
-        Debug.Log(AudioManager.Instance.MusicSource.time);
-
-    }*/
+        
+        if (preludiob)
+        {
+            Debug.Log(AudioManager.Instance.MusicSource.time);
+            if (AudioManager.Instance.Get_IsPlaying() && temp4 > 500)
+            {
+                AudioManager.Instance.StopMusic();
+                preludiob = false;
+            }
+            temp4++;
+            
+        }
+    }
 
 
     private void OnEnable() 
@@ -92,23 +103,12 @@ public class LoboBehaviour : MonoBehaviour
 
     private IEnumerator PrepararseParaSegundaFase()
     {
-        //acciona el interludio
-        yield return new WaitForSeconds(1f);
-        AudioManager.Instance.Play(preludio);
-        yield return new WaitForSeconds(2f);
-        //Acciona el titulo de la pelea "THE WOLF MIEDO A NO SE ALGO SE ME OCURRIRA"
-        AudioManager.Instance.Play(son_Titulo);
-        tituloPelea.SetActive(true);
-        yield return new WaitForSeconds(2);
-        //se desactiva el titulo
-        tituloPelea.SetActive(false);
-        //acciona el dialogo
+
         ventanaDialogo.SetActive(true);
         //espera a que el dialogo termine, y la musica tambien
-        yield return new WaitUntil(() => !AudioManager.Instance.Get_IsPlaying() && !ventanaDialogo.activeSelf);
+        yield return new WaitUntil(() => !ventanaDialogo.activeSelf);
         //activa la musica de combate y arranca el combate
-        SistemaDeTurnos.Instance.Set_EstadoBALOBO();
-        SistemaDeTurnos.Instance.IniciarCombateBoss(vidaMaxima, musicaInicioFase1);
+        SistemaDeTurnos.Instance.IniciarCombateBoss(vidaMaxima, musicaInicioFase2);
         yield return new WaitForSeconds(2f);
         MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigo);
         yield return new WaitForSeconds(1f);

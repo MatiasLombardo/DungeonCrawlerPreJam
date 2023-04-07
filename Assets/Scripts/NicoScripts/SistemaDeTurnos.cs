@@ -47,6 +47,9 @@ using TMPro;
     public bool bailarinaON;
 
     [SerializeField] int dineroTotal;
+    [SerializeField] GameObject bossLobo;
+    [SerializeField] GameObject bossBailarina;
+    [SerializeField] GameObject bossFinal;
 
     private void Awake() 
     {
@@ -216,6 +219,31 @@ using TMPro;
         yield return new WaitForSeconds(1f);
         //se desactiva el negro en forma de fade rapido.
         yield return null;
+    }
+
+    public void TerminarCombateBossLobo()
+     {
+        StartCoroutine(TransicionTerminarCombateBossLobo());
+     }
+
+    IEnumerator TransicionTerminarCombateBossLobo()
+    {
+        //Termina la primera fase del boss
+        //animacion cuando se rompe un sprite enemigo (cuando muere, como undertale).
+        AudioManager.Instance.StopTodo();
+        anim.SetActive(true);
+        animacionFade.SetTrigger("Fade Brusco");
+        yield return new WaitForSeconds(0.5f);
+        sistemaDeCombate.SetActive(false);
+        bossLobo.SetActive(true);
+        foreach (GameObject a in desactivarCosasAlIniciarCombate)
+        {
+            a.SetActive(true);
+        }
+        FinalCombate();
+        //anim.SetActive(false);
+
+
     }
 
 

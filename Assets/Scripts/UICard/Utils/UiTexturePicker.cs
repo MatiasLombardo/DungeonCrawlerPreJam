@@ -17,6 +17,7 @@ namespace Tools.UI.Card
         public bool isPlayer = true;
 
         [SerializeField] Sprite[] posiblesCartas;
+        [SerializeField] int cartaElegida;
 
 
         void OnEnable()

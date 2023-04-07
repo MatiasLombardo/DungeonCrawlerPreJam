@@ -72,5 +72,9 @@ public class AudioManager : MonoBehaviour
 	{
 		MusicSource.Stop();
 	}
-	
+	public void StopTodo()
+	{
+		MusicSource.Stop();
+		EffectsSource.Stop();
+	}
 }

@@ -22,7 +22,7 @@ public class IAEnemigo : MonoBehaviour
 
     IEnumerator JugarCartas()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         handUtils.GetComponent<Tools.UI.Card.UiPlayerHandUtils>().DrawCardEnemigo();
         
         yield return new WaitForSeconds(1f);

@@ -138,7 +138,25 @@ public class SistemaDeVida : MonoBehaviour
     if (e_health <= 0)
     {
         Debug.Log("Has ganado");
-        SistemaDeTurnos.Instance.TerminarCombate();
+        if (isLobo)
+        {
+            SistemaDeTurnos.Instance.TerminarCombateBossLobo();
+            isLobo = false;
+        }
+        else if (isBailarina)
+        {
+
+            isBailarina = false;
+        }
+        else if (isFinalBoss)
+        {
+            isFinalBoss = false;
+        }
+        else
+        {
+            SistemaDeTurnos.Instance.TerminarCombate();    
+        }
+        
     }
   }
 
@@ -149,8 +167,12 @@ public class SistemaDeVida : MonoBehaviour
             numero_vidaE.text = e_health.ToString();
     }
 
+    bool isLobo;
+    bool isFinalBoss;
+
     public void Set_vidaMaxPLOBO()
     {
+        isLobo = true;
         temp_VidaJugador = p_maxHealth;
         p_maxHealth = p_maxHealth/2;
     }
