@@ -287,10 +287,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6f45aa4de3c3ad944aa78e6b26bb71e8, type: 3}
   - {fileID: 21300000, guid: e76f424dad99e0f458c2bdf5a70adb2c, type: 3}
   - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
+  - {fileID: 21300000, guid: 6f45aa4de3c3ad944aa78e6b26bb71e8, type: 3}
   - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
   - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
   - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
-  - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
+  cartaElegida: 0
 --- !u!1 &3245573509686006908
 GameObject:
   m_ObjectHideFlags: 0

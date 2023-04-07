@@ -44,12 +44,12 @@ public class SistemaDeVida : MonoBehaviour
 
     public void EncontrarObjetos()
     {
-        numero_vidaP = GameObject.Find("/Combate(Clone)/Canvas/Vida/BarraDeVidaPlayer/TextoVidaPlayer").GetComponent<TMP_Text>();
-        numero_vidaE = GameObject.Find("/Combate(Clone)/Canvas/Vida/BarraDeVidaEnemigo/TextoVidaEnemigo").GetComponent<TMP_Text>();
-        com_ResultadoP = GameObject.Find("/Combate(Clone)/Canvas/ComFinalP").GetComponent<TMP_Text>();
-        com_ResultadoE = GameObject.Find("/Combate(Clone)/Canvas/ComFinalE").GetComponent<TMP_Text>();
-        p_healthBar = GameObject.Find("/Combate(Clone)/Canvas/Vida/BarraDeVidaPlayer").GetComponent<Image>();
-        e_healthBar = GameObject.Find("/Combate(Clone)/Canvas/Vida/BarraDeVidaEnemigo").GetComponent<Image>();
+        numero_vidaP = GameObject.Find("/CombateUI(Clone)/Canvas/Vida/BarraDeVidaPlayer/TextoVidaPlayer").GetComponent<TMP_Text>();
+        numero_vidaE = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/EnemySpriteContainer/Text (TMP)").GetComponent<TMP_Text>();
+        com_ResultadoP = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/comparadores/ComFinalP").GetComponent<TMP_Text>();
+        com_ResultadoE = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/comparadores/ComFinalE").GetComponent<TMP_Text>();
+        p_healthBar = GameObject.Find("/CombateUI(Clone)/Canvas/Vida/BarraDeVidaPlayer").GetComponent<Image>();
+        e_healthBar = GameObject.Find("/CombateUI(Clone)/Canvas/Vida/BarraDeVidaEnemigo").GetComponent<Image>();
         cargoComponentes = true;
     }
 
@@ -115,7 +115,7 @@ public class SistemaDeVida : MonoBehaviour
     }
   }
 
-
+    bool temp7 = true;
   public void HacerDañoEnemigo(int daño)
   {
     if (daño > 0)
@@ -126,12 +126,13 @@ public class SistemaDeVida : MonoBehaviour
         StartCoroutine(DañoTempoE(daño));
     }
 
-    if (isBailarina && e_health <= 7)
+    if (isBailarina && e_health <= 7 && temp7)
     {
         float v1 = p_health;
         float v2 = e_health;
         e_health = v1;
         p_health = v2;
+        temp7 = false;
     }
     
 
@@ -145,7 +146,7 @@ public class SistemaDeVida : MonoBehaviour
         }
         else if (isBailarina)
         {
-            SistemaDeTurnos.Instance.TerminarCombateBossLobo();
+            SistemaDeTurnos.Instance.TerminarCombateBossBailarina();
             isBailarina = false;
         }
         else if (isFinalBoss)

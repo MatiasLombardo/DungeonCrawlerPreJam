@@ -1,6 +1,8 @@
 ﻿using Patterns.StateMachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Tools.UI.Card
 {
@@ -47,18 +49,44 @@ namespace Tools.UI.Card
 
         //--------------------------------------------------------------------------------------------------------------
 
+
+        
+        public float timeRemaining = 10;
+
         void OnPointerEnter(PointerEventData obj)
         {
+            
             if (Fsm.IsCurrent(this))
-                Handler.Hover();
+            {
+                
+            Handler.Hover();
+
+            }
+                
         }
+
+        
+
+        
 
         void OnPointerDown(PointerEventData eventData)
         {
-            if (Fsm.IsCurrent(this))
+            if (Fsm.IsCurrent(this))      
+
+            timeRemaining = 10;
+            while (timeRemaining > 0)
+                {
+                    timeRemaining -= Time.deltaTime;
+                }
                 Handler.Select();
+                            
+        }
+
+                
         }
 
         //--------------------------------------------------------------------------------------------------------------
     }
-}
+
+
+
