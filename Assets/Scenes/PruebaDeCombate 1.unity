@@ -3007,7 +3007,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1606659570
 MonoBehaviour:
@@ -3251,7 +3251,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.479
   m_Pitch: 0.85
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3361,9 +3361,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.144
+  m_Volume: 0.032
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3475,8 +3475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 294f8339cdb846b48b98522450b1690a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  au_PerderVidaP: {fileID: 0}
-  au_PerderVidaE: {fileID: 0}
+  au_PerderVidaP: {fileID: 8300000, guid: 2a79d71438d29e843bcd81e2726a8b10, type: 3}
+  au_PerderVidaE: {fileID: 8300000, guid: 2a79d71438d29e843bcd81e2726a8b10, type: 3}
   p_healthBar: {fileID: 0}
   isBailarina: 0
   numero_vidaP: {fileID: 0}
@@ -3499,7 +3499,7 @@ Transform:
   m_Children:
   - {fileID: 727984057}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1760917837
 MonoBehaviour:
@@ -3535,6 +3535,10 @@ MonoBehaviour:
   animacionFade: {fileID: 1820933219}
   anim: {fileID: 727984056}
   animacionFadeBoss: {fileID: 897781516}
+  au_Comparadores: {fileID: 8300000, guid: ee36b46cea179cc48808b0b3e55b6e05, type: 3}
+  "au_Da\xF1o": {fileID: 8300000, guid: 2a79d71438d29e843bcd81e2726a8b10, type: 3}
+  au_JugarCarta: {fileID: 0}
+  au_AgarrarCarta: {fileID: 8300000, guid: 278cf139b08e9e54680fcd8d4143800e, type: 3}
   estadoB: 3
   bailarinaON: 0
   dineroTotal: 120
@@ -4813,6 +4817,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1933485099, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}
+      propertyPath: preludio
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e8de044e890eb44a805ad3da684f81b, type: 3}
     - target: {fileID: 1933485099, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}
       propertyPath: interludio
       value: 

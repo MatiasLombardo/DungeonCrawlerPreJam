@@ -38,9 +38,10 @@ namespace Tools.UI.Card
 
         public override void OnEnterState()
         {
+
             //stop any movement
             Handler.Movement.StopMotion();
-
+            AudioManager.Instance.Play(SistemaDeTurnos.Instance.au_AgarrarCarta);
             //cache old values
             StartEuler = Handler.transform.eulerAngles;
 

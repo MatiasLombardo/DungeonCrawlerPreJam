@@ -31,6 +31,11 @@ using TMPro;
     [SerializeField] Animator animacionFadeBoss;
 
 
+    [SerializeField] AudioClip au_Comparadores;
+    [SerializeField] AudioClip au_Daño;
+    public AudioClip au_JugarCarta;
+    public AudioClip au_AgarrarCarta;
+
     
     public enum BOSS
     {
@@ -159,6 +164,7 @@ using TMPro;
             a.SetActive(false);
         }
         AudioManager.Instance.PlayMusic(musica);
+
         //yield return new WaitForSeconds(1.5f);
         //sistemaDeCombate.SetActive(true);
         Debug.Log("desactivar fade");
@@ -180,11 +186,12 @@ using TMPro;
     {
         //Se pone todo negro menos el sprite enemigo y las vidas.
         //animacion cuando se rompe un sprite enemigo (cuando muere, como undertale).
+        SistemaDeVida.Instance.Set_vidaNormal();
         anim.SetActive(true);
         animacionFade.SetTrigger("Fade Brusco");
         AudioManager.Instance.StopMusic();
         yield return new WaitForSeconds(1.5f);
-        float val = nivelXP * 5 + 10;
+        float val = 2 * 5 + 10;
         float xp = Random.Range(val-val/2, val);
         //Sube de nivel
         int dineroNuevo = Mathf.FloorToInt(Random.Range(val-val/2, val));
@@ -372,6 +379,7 @@ using TMPro;
         StartCoroutine(EfectoComparadores());
     }
 
+
     IEnumerator EfectoComparadores()
     {
         
@@ -379,6 +387,7 @@ using TMPro;
         if (valorTurno == 0)
         {
 
+            AudioManager.Instance.Play(au_Comparadores);
             for (int i = 0; i < choqueDeDaños.Length; i++)
             {
                 comparadores[i].text = choqueDeDaños[i].ToString();
@@ -410,7 +419,8 @@ using TMPro;
             }
 
             yield return new WaitForSeconds(2f);
-
+            AudioManager.Instance.Play(au_Daño);
+            
             SistemaDeVida.Instance.HacerDañoPlayer(choqueDeDaños[0] - choqueDeDaños[3]);  
             SistemaDeVida.Instance.HacerDañoEnemigo(choqueDeDaños[2] - choqueDeDaños[1]); 
         } 
@@ -536,6 +546,7 @@ using TMPro;
 
     public void Set_EstadoBANONE()
     {
+        SistemaDeVida.Instance.Set_vidaNormal();
         bailarinaON = false;
         estadoB = BOSS.NONE;
 
@@ -556,7 +567,7 @@ using TMPro;
 
 
  #region NivelManager
-
+    /*
     [SerializeField] float nivelXP = 0;
     [SerializeField] float puntosGuardados = 0;
 
@@ -594,7 +605,7 @@ using TMPro;
         }
 
     }
-
+    */
 
 
 

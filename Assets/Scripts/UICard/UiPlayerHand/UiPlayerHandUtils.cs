@@ -76,7 +76,7 @@ namespace Tools.UI.Card
         public void DrawCardEnemigo()
         {
                 //TODO: Consider replace Instantiate by an Object Pool Pattern
-                
+                AudioManager.Instance.Play(au_AgarrarCarta);
                 var cardGo = Instantiate(cardPrefabCs, gameView);
                 cardGo.name = "Card_" + Count;
                 var card = cardGo.GetComponent<IUiCard>();

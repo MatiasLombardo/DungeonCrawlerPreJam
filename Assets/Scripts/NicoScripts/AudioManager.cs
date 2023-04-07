@@ -61,7 +61,11 @@ public class AudioManager : MonoBehaviour
 
 	public bool Get_IsPlaying()
 	{
-		return MusicSource.isPlaying;
+		if (MusicSource.time <= 0.2)
+		{
+			return true;	
+		}
+		return false;
 	}
 
 	public void StopMusic()

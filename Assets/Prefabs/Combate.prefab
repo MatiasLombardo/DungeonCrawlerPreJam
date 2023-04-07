@@ -1186,6 +1186,10 @@ MonoBehaviour:
   animacionFade: {fileID: 0}
   anim: {fileID: 0}
   animacionFadeBoss: {fileID: 0}
+  au_Comparadores: {fileID: 0}
+  "au_Da\xF1o": {fileID: 0}
+  au_JugarCarta: {fileID: 0}
+  au_AgarrarCarta: {fileID: 0}
   estadoB: 0
   bailarinaON: 0
   dineroTotal: 0
@@ -1862,42 +1866,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3163185574627404208}
     m_Modifications:
-    - target: {fileID: 7298798166942679553, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298798167429278210, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
-      propertyPath: isPlayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298798167429278223, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
-      propertyPath: isPlayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298798167439824414, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298798167439824414, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298798167439824414, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298798167439824414, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298798167439824414, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298798167439824414, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7298798168462864442, guid: c2a0b37eba1251a46a64e392446365df, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1987,38 +1955,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3163185574627404208}
     m_Modifications:
-    - target: {fileID: 2144038176305545776, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144038176815076907, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
-      propertyPath: graveyardPosition
-      value: 
-      objectReference: {fileID: 5781461765380224830}
-    - target: {fileID: 2144038176815076911, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144038176815076911, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144038176815076911, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144038176815076911, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144038176815076911, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.41
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144038176815076911, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2144038177838837770, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
       propertyPath: m_Name
       value: GameViewP1
@@ -2069,11 +2005,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
---- !u!4 &5781461765380224830 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2144038176305545777, guid: eb28f796948c44448b637d3b83f3204e, type: 3}
-  m_PrefabInstance: {fileID: 5619022857203627279}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5781461765713017255 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2144038176509889704, guid: eb28f796948c44448b637d3b83f3204e, type: 3}

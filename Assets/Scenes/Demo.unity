@@ -240,5 +240,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5781461765866741553, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
+      propertyPath: au_JugarCarta
+      value: 
+      objectReference: {fileID: 8300000, guid: 16201f5da5bd58d4da06009acae98dc4, type: 3}
+    - target: {fileID: 5781461765866741553, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}
+      propertyPath: au_AgarrarCarta
+      value: 
+      objectReference: {fileID: 8300000, guid: f3a43c009b00c274d89018a28202cdaf, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e3562595f495d64f8b9f2e76c8e23db, type: 3}

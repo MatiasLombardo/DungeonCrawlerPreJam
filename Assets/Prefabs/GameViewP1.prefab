@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2144038176305545777
 Transform:
   m_ObjectHideFlags: 0
@@ -105,8 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameters: {fileID: 11400000, guid: f79f21692e2d8a746b39e9a2eadfd5df, type: 2}
-  CardPrefab: {fileID: 3245573509686006908, guid: da89c93580533da4abe22dd655a7d0ca,
-    type: 3}
+  CardPrefab: {fileID: 3245573509686006908, guid: da89c93580533da4abe22dd655a7d0ca, type: 3}
   pivot: {fileID: 2144038177925343303}
 --- !u!1 &2144038176727728455
 GameObject:
@@ -220,8 +219,7 @@ MonoBehaviour:
   m_text: Play Card Zone
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9a45e118c17253a4c91b2bcf7da4d956, type: 2}
-  m_sharedMaterial: {fileID: 21817435741267842, guid: 9a45e118c17253a4c91b2bcf7da4d956,
-    type: 2}
+  m_sharedMaterial: {fileID: 21817435741267842, guid: 9a45e118c17253a4c91b2bcf7da4d956, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -406,8 +404,7 @@ MonoBehaviour:
     (Tab)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9a45e118c17253a4c91b2bcf7da4d956, type: 2}
-  m_sharedMaterial: {fileID: 21817435741267842, guid: 9a45e118c17253a4c91b2bcf7da4d956,
-    type: 2}
+  m_sharedMaterial: {fileID: 21817435741267842, guid: 9a45e118c17253a4c91b2bcf7da4d956, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -562,8 +559,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4e6242e55c49f4196ccec629c5b6b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefabCs: {fileID: 3245573509686006908, guid: da89c93580533da4abe22dd655a7d0ca,
-    type: 3}
+  au_AgarrarCarta: {fileID: 8300000, guid: f3a43c009b00c274d89018a28202cdaf, type: 3}
+  au_JugarCarta: {fileID: 8300000, guid: 16201f5da5bd58d4da06009acae98dc4, type: 3}
+  cardPrefabCs: {fileID: 3245573509686006908, guid: da89c93580533da4abe22dd655a7d0ca, type: 3}
   deckPosition: {fileID: 2144038176792078898}
   gameView: {fileID: 2144038177838837771}
   isPlayer: 1
@@ -596,9 +594,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144038176815076910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14, y: -5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -4.44, y: -0.41, z: 0}
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2144038176305545777}
   m_Father: {fileID: 2144038177838837771}
@@ -666,7 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5d9381ee7c4a449bdc58df6fef0101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  graveyardPosition: {fileID: 2144038176815076911}
+  graveyardPosition: {fileID: 2144038176305545777}
   parameters: {fileID: 11400000, guid: f79f21692e2d8a746b39e9a2eadfd5df, type: 2}
 --- !u!1 &2144038176903651576
 GameObject:
@@ -993,8 +991,7 @@ MonoBehaviour:
     (Space)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9a45e118c17253a4c91b2bcf7da4d956, type: 2}
-  m_sharedMaterial: {fileID: 21817435741267842, guid: 9a45e118c17253a4c91b2bcf7da4d956,
-    type: 2}
+  m_sharedMaterial: {fileID: 21817435741267842, guid: 9a45e118c17253a4c91b2bcf7da4d956, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1208,8 +1205,7 @@ MonoBehaviour:
   m_text: Hand Card Zone
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9a45e118c17253a4c91b2bcf7da4d956, type: 2}
-  m_sharedMaterial: {fileID: 21817435741267842, guid: 9a45e118c17253a4c91b2bcf7da4d956,
-    type: 2}
+  m_sharedMaterial: {fileID: 21817435741267842, guid: 9a45e118c17253a4c91b2bcf7da4d956, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

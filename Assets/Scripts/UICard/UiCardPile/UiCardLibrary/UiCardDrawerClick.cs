@@ -20,6 +20,7 @@ namespace Tools.UI.Card
         {
             if (isPlayer)
             {
+                AudioManager.Instance.Play(SistemaDeTurnos.Instance.au_AgarrarCarta);
                 CardDrawer.DrawCard();
             }
         }
