@@ -2885,3 +2885,125 @@ Received Import Request.
   path: Assets/Scenes/PruebaDeCombate 1 viejo.unity
   artifactKey: Guid(fe47366b793704d41b8f13c9e399a209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/PruebaDeCombate 1 viejo.unity using Guid(fe47366b793704d41b8f13c9e399a209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '521dbb68ec9cdc030c863fdb6887baeb') in 0.008259 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007196 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\LENOVO\Documents\GitHub\DungeonCrawlerPreJam\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\LENOVO\Documents\GitHub\DungeonCrawlerPreJam\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.082 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1082ms)
+		BeginReloadAssembly (148ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (826ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (252ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (377ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (95ms)
+				ProcessInitializeOnLoadAttributes (213ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.75 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4292 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 48 unused Assets / (1.8 MB). Loaded Objects now: 4954.
+Memory consumption went from 172.2 MB to 170.4 MB.
+Total: 4.388400 ms (FindLiveObjects: 0.508200 ms CreateObjectMapping: 0.179600 ms MarkObjects: 2.995700 ms  DeleteObjects: 0.703500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 782.242220 seconds.
+  path: Assets/Scenes/Demo vieja.unity
+  artifactKey: Guid(eed21f0430328a14084a3b385391340d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Demo vieja.unity using Guid(eed21f0430328a14084a3b385391340d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f22de594b3d0ef680241e505a072142') in 0.013747 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.218582 seconds.
+  path: Assets/Scenes/PruebaDeCombate 1 viejo.unity
+  artifactKey: Guid(fe47366b793704d41b8f13c9e399a209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/PruebaDeCombate 1 viejo.unity using Guid(fe47366b793704d41b8f13c9e399a209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00f03a1612b0039cdbce95addae222c3') in 0.002820 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.630506 seconds.
+  path: Assets/Scenes/PruebaDeDialogos.unity
+  artifactKey: Guid(3620dcd0dc6291e4dac6433ee7e19968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/PruebaDeDialogos.unity using Guid(3620dcd0dc6291e4dac6433ee7e19968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86cae8a7971068d9e106ca73cacc91a4') in 0.011803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.977576 seconds.
+  path: Assets/Prefabs/Combate.prefab
+  artifactKey: Guid(7e3562595f495d64f8b9f2e76c8e23db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Combate.prefab using Guid(7e3562595f495d64f8b9f2e76c8e23db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74d76a113e927c71a804c096f5ea6a61') in 0.291749 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Prefabs/GameViewP2.prefab
+  artifactKey: Guid(c2a0b37eba1251a46a64e392446365df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameViewP2.prefab using Guid(c2a0b37eba1251a46a64e392446365df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6139b84d989047c3ec7fb7deb4ff6e96') in 0.136895 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Prefabs/GameViewP1.prefab
+  artifactKey: Guid(eb28f796948c44448b637d3b83f3204e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameViewP1.prefab using Guid(eb28f796948c44448b637d3b83f3204e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2914a2572700fb2d1104f45d0404da91') in 0.126826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.770399 seconds.
+  path: Assets/Prefabs/Combate viejo.prefab
+  artifactKey: Guid(7e3562595f495d64f8b9f2e76c8e23db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Combate viejo.prefab using Guid(7e3562595f495d64f8b9f2e76c8e23db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fece5664a6075dc5a23f2d353af61d43') in 0.185363 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.524174 seconds.
+  path: Assets/Prefabs/Cartas/CardPrefabEnemigo.prefab
+  artifactKey: Guid(6ce189c3ee73ca044bbda872b03fc4f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Cartas/CardPrefabEnemigo.prefab using Guid(6ce189c3ee73ca044bbda872b03fc4f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '474a26a8144d0d6547e61b123bb43e34') in 0.107307 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Prefabs/Cartas/CardPrefabPure.prefab
+  artifactKey: Guid(da89c93580533da4abe22dd655a7d0ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Cartas/CardPrefabPure.prefab using Guid(da89c93580533da4abe22dd655a7d0ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78a8f9c7b1f11dfc91b5cbcb4db27e50') in 0.110073 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.409792 seconds.
+  path: Assets/Prefabs/Cartas/CartaPlayer.prefab
+  artifactKey: Guid(da89c93580533da4abe22dd655a7d0ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Cartas/CartaPlayer.prefab using Guid(da89c93580533da4abe22dd655a7d0ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a81ea0c5839b21629751d6afa4cfbe7') in 0.121860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.528482 seconds.
+  path: Assets/Prefabs/Cartas/CartaEnemigo.prefab
+  artifactKey: Guid(6ce189c3ee73ca044bbda872b03fc4f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Cartas/CartaEnemigo.prefab using Guid(6ce189c3ee73ca044bbda872b03fc4f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15d97a3287af6760d4d075e6e71751cf') in 0.122033 seconds 
