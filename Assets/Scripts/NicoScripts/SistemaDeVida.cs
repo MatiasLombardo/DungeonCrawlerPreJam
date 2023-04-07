@@ -145,7 +145,7 @@ public class SistemaDeVida : MonoBehaviour
         }
         else if (isBailarina)
         {
-
+            SistemaDeTurnos.Instance.TerminarCombateBossLobo();
             isBailarina = false;
         }
         else if (isFinalBoss)

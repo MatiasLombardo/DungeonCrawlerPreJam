@@ -153,7 +153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2081901077
 RectTransform:
   m_ObjectHideFlags: 0
@@ -303,6 +303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogos
       objectReference: {fileID: 0}
+    - target: {fileID: 8138836851391405805, guid: 285a14b5c49c6f44e9a5a7baddcf9bfe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 285a14b5c49c6f44e9a5a7baddcf9bfe, type: 3}
 --- !u!1 &2256486053388965225 stripped
@@ -401,11 +405,11 @@ MonoBehaviour:
   vidaMaxima: 30
   codigoPlayer: {fileID: 0}
   cara: {fileID: 8875168463774215538}
-  interludio: {fileID: 0}
+  preludio: {fileID: 8300000, guid: 2e8de044e890eb44a805ad3da684f81b, type: 3}
   son_Titulo: {fileID: 0}
   tiempoDeInterludio: 15
   musicaInicioFase1: {fileID: 8300000, guid: 8add010b308b13a4d92805f9521f4c7d, type: 3}
-  musicaInicioFase2: {fileID: 0}
+  musicaInicioFase2: {fileID: 8300000, guid: f1f416972268b2c44955fb7f078bf530, type: 3}
   spriteEnemigo: {fileID: 21300000, guid: cee9dbe90b270c944ae1dabf41c93b10, type: 3}
   ventanaDialogo: {fileID: 2256486053388965225}
   tituloPelea: {fileID: 2081901073}
