@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Models/PillarElixir.fbx.meta
-guid: c97e43fbd98d41c4bb9d53732770f3b9
-========
-guid: 721649b6904a1fd45944b29f29a0ad9f
->>>>>>>> NicoDev:Assets/Prefabs/WallSand3Dfbx.fbx.meta
+guid: 94599e509abbc33429384caeae5ab1ec
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
