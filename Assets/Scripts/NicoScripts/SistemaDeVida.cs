@@ -11,6 +11,7 @@ public class SistemaDeVida : MonoBehaviour
     [SerializeField] AudioClip au_PerderVidaP, au_PerderVidaE;
     
     public static SistemaDeVida Instance { get; private set; }
+    public GameObject condicionDerrota;
 
     private void Awake() 
     {
@@ -23,6 +24,7 @@ public class SistemaDeVida : MonoBehaviour
             Instance = this;
         }
 
+        condicionDerrota.SetActive(false);
     }
 
 
@@ -36,7 +38,7 @@ public class SistemaDeVida : MonoBehaviour
     [SerializeField]TMP_Text numero_vidaE;
     [SerializeField] TMP_Text com_ResultadoP, com_ResultadoE;
     public bool cargoComponentes;
-
+    
 
     public Image e_healthBar;
     float e_health, e_maxHealth = 10;
@@ -112,6 +114,8 @@ public class SistemaDeVida : MonoBehaviour
     if (p_health <= 0)
     {
         Debug.Log("Has muerto");
+        condicionDerrota.SetActive(true);
+
     }
   }
 
