@@ -1090,7 +1090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3163185574627404208}
   m_Layer: 0
-  m_Name: Combate
+  m_Name: Combate viejo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
