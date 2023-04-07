@@ -37,7 +37,7 @@ namespace Tools.UI.Card
             Handler.transform.localScale *= Parameters.StartSizeWhenDraw;
         }
 
-        void SetScale() => Handler.ScaleTo(StartScale, Parameters.ScaleSpeed);
+        void SetScale() => Handler.ScaleTo(StartScale, Parameters.ScaleSpeed*5);
 
         #endregion
     }

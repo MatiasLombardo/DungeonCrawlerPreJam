@@ -72,15 +72,15 @@ using TMPro;
             Instantiate(prefabCombate);
             tempp = false;
         }        //prefabCombate.SetActive(true);
-        sistemaDeCombate = GameObject.Find("/Combate(Clone)");
-        handUtils = GameObject.Find("/Combate(Clone)/GameViewP1/Hand");
+        sistemaDeCombate = GameObject.Find("/CombateUI(Clone)");
+        handUtils = GameObject.Find("/CombateUI(Clone)/GameViewP1/Hand");
         SistemaDeVida.Instance.EncontrarObjetos();
-        MazoEnemigoManager.Instance.spriteEnemigo = GameObject.Find("/Combate(Clone)/Canvas/EnemySprite").GetComponent<SpriteRenderer>();
+        MazoEnemigoManager.Instance.spriteEnemigo = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/EnemySpriteContainer/Sprite").GetComponent<SpriteRenderer>();
 
-        comparadores[0] = GameObject.Find("/Combate(Clone)/Canvas/Comparador0").GetComponent<TMP_Text>();
-        comparadores[1] = GameObject.Find("/Combate(Clone)/Canvas/Comparador1").GetComponent<TMP_Text>();
-        comparadores[2] = GameObject.Find("/Combate(Clone)/Canvas/Comparador2").GetComponent<TMP_Text>();
-        comparadores[3] = GameObject.Find("/Combate(Clone)/Canvas/Comparador3").GetComponent<TMP_Text>();
+        comparadores[0] = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/comparadores/Comparador0").GetComponent<TMP_Text>();
+        comparadores[1] = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/comparadores/Comparador1").GetComponent<TMP_Text>();
+        comparadores[2] = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/comparadores/Comparador2").GetComponent<TMP_Text>();
+        comparadores[3] = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/comparadores/Comparador3").GetComponent<TMP_Text>();
         
 
         //("/Monster/Arm/Hand")
@@ -198,7 +198,7 @@ using TMPro;
         float xp = Random.Range(val-val/2, val);
         //Sube de nivel
         int dineroNuevo = Mathf.FloorToInt(Random.Range(val-val/2, val));
-        medidorXP.text = xp.ToString();
+        //medidorXP.text = xp.ToString();
         medidorDinero.text = dineroNuevo.ToString();
         contenedorDeMedidores.SetActive(true);
         yield return new WaitForSeconds(2f);
@@ -213,6 +213,7 @@ using TMPro;
         contenedorDeMedidores.SetActive(false);
         animacionFade.SetTrigger("Fade out");
         yield return new WaitForSeconds(1f);
+        anim.SetActive(false);
         sistemaDeCombate.SetActive(false);
         FinalCombate();
         //OnReset();
@@ -247,11 +248,44 @@ using TMPro;
     }
 
 
+
+    public void TerminarCombateBossBailarina()
+     {
+        StartCoroutine(TransicionTerminarCombateBossBailarina());
+     }
+
+    IEnumerator TransicionTerminarCombateBossBailarina()
+    {
+        //Termina la primera fase del boss
+        //animacion cuando se rompe un sprite enemigo (cuando muere, como undertale).
+        AudioManager.Instance.StopTodo();
+        anim.SetActive(true);
+        animacionFade.SetTrigger("Fade Brusco");
+        yield return new WaitForSeconds(0.5f);
+        sistemaDeCombate.SetActive(false);
+        bossBailarina.SetActive(true);
+        foreach (GameObject a in desactivarCosasAlIniciarCombate)
+        {
+            a.SetActive(true);
+        }
+        FinalCombate();
+        //anim.SetActive(false);
+
+
+    }
+
+
  #region LogicaTurnosYDaños
 
      public bool Get_AgarrarCarta ()
      {
         return puedeAgarrarCarta;
+     }
+
+     IEnumerator TurnoJ()
+     {
+        yield return new WaitForSeconds(1f);
+        turnoPlayer = true;
      }
 
      public void Set_AgarrarCartaFalse()
@@ -474,7 +508,8 @@ using TMPro;
         else if (valorTurno == 1)
         {
             Set_IAEnemigo(false);
-            turnoPlayer = true;
+            //turnoPlayer = true;
+            StartCoroutine(TurnoJ());
             puedeAgarrarCarta = true;
         }
     }
@@ -543,7 +578,7 @@ using TMPro;
  #region DineroManager
     public void AñadirDinero(int dineroNuevo)
     {
-        dineroTotal =+ dineroNuevo;
+        dineroTotal = dineroTotal + dineroNuevo;
     }
     public int Get_DineroTotal()
     {
@@ -568,6 +603,7 @@ using TMPro;
     {
         //agarra cartas random y las da vuelta
         //da vuelta el sistema de vida
+        estadoB = BOSS.BAILARINA;
         bailarinaON = true;
         sisVida.isBailarina = true;
     }

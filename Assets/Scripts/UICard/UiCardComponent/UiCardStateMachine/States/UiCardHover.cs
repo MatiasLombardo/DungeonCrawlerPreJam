@@ -70,7 +70,7 @@ namespace Tools.UI.Card
         {
             var currentScale = Handler.transform.localScale;
             var finalScale = currentScale * Parameters.HoverScale;
-            Handler.ScaleTo(finalScale, Parameters.ScaleSpeed);
+            Handler.ScaleTo(finalScale, Parameters.ScaleSpeed*5);
         }
 
         void CachePreviousValues()

@@ -56,7 +56,6 @@ public class TiendaBehaviour : MonoBehaviour
         dineroTotal = SistemaDeTurnos.Instance.Get_DineroTotal();
         cantidadDineroTotal.text = dineroTotal.ToString();
         opciones.SetActive(valor);
-
     }
 
     public void SeleccionarCarta(SpriteRenderer sprite, GameObject carta, int coste)
@@ -95,10 +94,9 @@ public class TiendaBehaviour : MonoBehaviour
         codigoPlayer.camaraPlayer.transform.rotation = new Quaternion (0,0,0,0);
     }
 
-
-
-
-
-
+    public void borrar()
+    {
+        Destroy(padre);
+    }
 
 }

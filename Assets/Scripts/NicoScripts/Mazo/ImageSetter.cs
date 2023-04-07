@@ -8,7 +8,7 @@ public class ImageSetter : MonoBehaviour
     [SerializeField] Image image;
     [SerializeField]SpriteRenderer renderer;
 
-    private void OnEnable()
+    private void Awake()
     {
         image.sprite = renderer.sprite;
     }

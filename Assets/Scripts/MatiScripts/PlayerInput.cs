@@ -50,15 +50,19 @@ public class PlayerInput : MonoBehaviour
 
         //Rayo adelante
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * range);
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward) , out hitForward, range)&& Input.GetKey(forward) && sePuedeMover)
+        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward) , out hitForward, range)&& Input.GetKey(forward) && sePuedeMover && controller.smoothTransition)
         {
             controller.MoveForward();
             
         }
+        else if(!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward) , out hitForward, range)&& Input.GetKeyDown(forward) && sePuedeMover)
+        {
+            controller.MoveForward();            
+        }
 
         //Rayo atras
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward)* -1 * range);
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(-Vector3.forward), out hitBackward, range) && Input.GetKeyUp(back) && sePuedeMover)
+        if (!Physics.Raycast(transform.position, transform.TransformDirection(-Vector3.forward), out hitBackward, range) && Input.GetKeyDown(back) && sePuedeMover)
         {
             controller.MoveBack();
 
@@ -66,7 +70,7 @@ public class PlayerInput : MonoBehaviour
 
         //Rayo Izquierda
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * range);
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hitLeft, range) && Input.GetKeyUp(left) && sePuedeMover)
+        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hitLeft, range) && Input.GetKeyDown(left) && sePuedeMover)
         {
             controller.MoveLeft();
 
@@ -74,7 +78,7 @@ public class PlayerInput : MonoBehaviour
 
         //Rayo Derecha
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * range);
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hitRight, range) && Input.GetKeyUp(right) && sePuedeMover)
+        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hitRight, range) && Input.GetKeyDown(right) && sePuedeMover)
         {
             controller.MoveRight();
 
