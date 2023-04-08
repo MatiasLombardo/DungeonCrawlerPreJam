@@ -30,12 +30,6 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-<<<<<<< Updated upstream
-        if(!AtRest && Input.GetKey(KeyCode.Q))
-        {
-            
-        }
-=======
         //Buffer de giro, implementacion horrible pero simple, funciona asi que no lo miren mucho.
         if(!AtRest && Input.GetKeyDown(KeyCode.Q))
         {
@@ -56,7 +50,6 @@ public class PlayerController : MonoBehaviour
             RotateRight();
         }
         //
->>>>>>> Stashed changes
     }
 
     
