@@ -75,7 +75,7 @@ using TMPro;
         sistemaDeCombate = GameObject.Find("/CombateUI(Clone)");
         handUtils = GameObject.Find("/CombateUI(Clone)/GameViewP1/Hand");
         SistemaDeVida.Instance.EncontrarObjetos();
-        MazoEnemigoManager.Instance.spriteEnemigo = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/EnemySpriteContainer/Sprite").GetComponent<SpriteRenderer>();
+        MazoEnemigoManager.Instance.spriteEnemigo = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/EnemySpriteContainer/White/Image").GetComponent<SpriteRenderer>();
 
         comparadores[0] = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/comparadores/Comparador0").GetComponent<TMP_Text>();
         comparadores[1] = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/comparadores/Comparador1").GetComponent<TMP_Text>();
