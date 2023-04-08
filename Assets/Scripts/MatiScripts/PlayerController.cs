@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     Vector3 targetGridPos;
     Vector3 prevTargetGridPos;
     public Vector3 targetRotation;
+    private bool rotateEndQ = false;
+    private bool rotateEndE = false;
 
     public void RotateLeft() { if (AtRest) targetRotation -= Vector3.up * 90; }
     public void RotateRight() { if (AtRest) targetRotation += Vector3.up * 90; }
@@ -28,10 +30,33 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+<<<<<<< Updated upstream
         if(!AtRest && Input.GetKey(KeyCode.Q))
         {
             
         }
+=======
+        //Buffer de giro, implementacion horrible pero simple, funciona asi que no lo miren mucho.
+        if(!AtRest && Input.GetKeyDown(KeyCode.Q))
+        {
+            rotateEndQ = true;
+        }
+        else if(!AtRest && Input.GetKeyDown(KeyCode.E))
+        {
+            rotateEndE = true;
+        }
+        if(AtRest && rotateEndQ)
+        {
+            rotateEndQ = false;
+            RotateLeft();
+        }
+        if(AtRest && rotateEndE)
+        {
+            rotateEndE = false;
+            RotateRight();
+        }
+        //
+>>>>>>> Stashed changes
     }
 
     
