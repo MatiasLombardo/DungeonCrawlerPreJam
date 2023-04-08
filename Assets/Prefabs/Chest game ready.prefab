@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8933031019597350085}
   - component: {fileID: 2971626451430194322}
   - component: {fileID: 8001864681884580232}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 3775080726924682950}
   - component: {fileID: 3981987201769847626}
   - component: {fileID: 4390281708633026287}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: ButtonContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 5003423294248094760}
   - component: {fileID: 3055875895791954450}
   - component: {fileID: 2694410658125998057}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1078654242272482171}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 6839950082910180577}
   - component: {fileID: 8368744643227578394}
   - component: {fileID: 6063420739678926328}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 1351814425243242875}
   - component: {fileID: 5606564657676680434}
   - component: {fileID: 397147804991891492}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Cofreinterfaz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 180555509075430470}
   - component: {fileID: 690836930451597184}
   - component: {fileID: 561973995095133195}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Outline in
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 2406180813241602223}
   - component: {fileID: 2406180813241602220}
   - component: {fileID: 9135568158593760340}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Carta Cofre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fbd8cd4ab55686a4eae0fe1c34c7e54f, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -580,7 +580,7 @@ SpriteRenderer:
   m_Size: {x: 9.391304, y: 12.521739}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &9135568158593760340
@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 9001574169446290357}
   - component: {fileID: 7652655040506689963}
   - component: {fileID: 1206596124268947225}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,8 +701,8 @@ Transform:
   m_GameObject: {fileID: 3888225564961316099}
   m_LocalRotation: {x: -0.7071069, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0.217, z: 0.038}
-  m_LocalScale: {x: 60.81, y: 45.5, z: 51.2}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 41.6, y: 31.126457, z: 35.025814}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5573523267456215637}
   m_RootOrder: 0
@@ -770,8 +770,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.019230204, y: 0.02790799, z: 0.02421757}
-  m_Center: {x: -0.00021157936, y: 0.00036247933, z: 0.0031242464}
+  m_Size: {x: 0.019230204, y: 0.027907988, z: 0.031404253}
+  m_Center: {x: -0.00021157897, y: 0.00036247828, z: 0.006717584}
 --- !u!1 &4061017459341014466
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +783,7 @@ GameObject:
   - component: {fileID: 8119255239960484614}
   - component: {fileID: 4908299860029980997}
   - component: {fileID: 1205532289540652630}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 5079008244845839128}
   - component: {fileID: 7528418047418496574}
   - component: {fileID: 4299524528786159905}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: CantidadTXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -996,7 +996,7 @@ GameObject:
   - component: {fileID: 5378876942033936735}
   - component: {fileID: 7695887983543879761}
   - component: {fileID: 6466018380582062911}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: ComprarBUT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1187,7 +1187,7 @@ GameObject:
   - component: {fileID: 2216519434013702711}
   - component: {fileID: 330791572468390002}
   - component: {fileID: 1412026982038966431}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Pick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1336,7 +1336,7 @@ Transform:
   m_GameObject: {fileID: 5573523267456215636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: -0.4, z: -22}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.79, y: 0.79, z: 0.79}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4521068807374817209}
@@ -1356,7 +1356,7 @@ GameObject:
   - component: {fileID: 5652716875829348660}
   - component: {fileID: 5652716875829348661}
   - component: {fileID: 5652716875829348663}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CofreCollider+UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1391,8 +1391,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0734317, y: 1, z: 1.0552921}
-  m_Center: {x: 0.017931461, y: 0, z: 0.019955635}
+  m_Size: {x: 1.14, y: 1, z: 1.0552921}
+  m_Center: {x: -1.19, y: 0, z: 0.019955635}
 --- !u!114 &5652716875829348663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1412,6 +1412,10 @@ MonoBehaviour:
   cantidadDineroTotal: {fileID: 5479932443583711989}
   codigoPlayer: {fileID: 0}
   target: {fileID: 0}
+  au_CofreOpen: {fileID: 8300000, guid: 77fe4ffd60778744084fad8d2b6ef694, type: 3}
+  au_TiendaOPEN: {fileID: 0}
+  au_TiendaCLOSE: {fileID: 0}
+  musicaTienda: {fileID: 0}
 --- !u!1 &5652716876704411941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1428,7 @@ GameObject:
   - component: {fileID: 5652716876704411942}
   - component: {fileID: 5652716876704411943}
   - component: {fileID: 5652716876704411940}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Abrir cofre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1556,19 +1560,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11500000, guid: 433faa8b758afed4f9295b193c697276, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &5652716877226669335
 GameObject:
@@ -1582,7 +1574,7 @@ GameObject:
   - component: {fileID: 5652716877226669331}
   - component: {fileID: 5652716877226669328}
   - component: {fileID: 5652716877226669329}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1683,7 +1675,7 @@ GameObject:
   - component: {fileID: 5652716877490787613}
   - component: {fileID: 5652716877490787615}
   - component: {fileID: 5652716877490787612}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1820,7 +1812,7 @@ GameObject:
   - component: {fileID: 8474989809918044625}
   - component: {fileID: 18807889434841216}
   - component: {fileID: 4553629792092691051}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Outline ext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1993,7 +1985,7 @@ GameObject:
   - component: {fileID: 4688375270292098898}
   - component: {fileID: 7257221229130643256}
   - component: {fileID: 832887365373738511}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2069,7 +2061,7 @@ GameObject:
   - component: {fileID: 6786532161695034906}
   - component: {fileID: 8425659648940411805}
   - component: {fileID: 5479932443583711989}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2206,15 +2198,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99d86b0dd7f27344d86822323b414899, type: 3}
       propertyPath: m_LocalScale.x
-      value: 58.7011
+      value: 44.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99d86b0dd7f27344d86822323b414899, type: 3}
       propertyPath: m_LocalScale.y
-      value: 43.92205
+      value: 32.997036
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99d86b0dd7f27344d86822323b414899, type: 3}
       propertyPath: m_LocalScale.z
-      value: 49.424377
+      value: 37.130733
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99d86b0dd7f27344d86822323b414899, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2255,6 +2247,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 99d86b0dd7f27344d86822323b414899, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 99d86b0dd7f27344d86822323b414899, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 99d86b0dd7f27344d86822323b414899, type: 3}
       propertyPath: m_Materials.Array.data[0]

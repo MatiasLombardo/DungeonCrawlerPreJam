@@ -21,6 +21,10 @@ public class TiendaBehaviour : MonoBehaviour
     [SerializeField] PlayerInput codigoPlayer;
     [SerializeField] Transform target;
     float newPos, oldPos;
+    [SerializeField] AudioClip au_CofreOpen;
+    [SerializeField] AudioClip au_TiendaOPEN;
+    [SerializeField] AudioClip au_TiendaCLOSE;
+    [SerializeField] AudioClip musicaTienda;
     
     //[SerializeField] int dineroTotal;
 
@@ -52,10 +56,22 @@ public class TiendaBehaviour : MonoBehaviour
 
     public void ActivarTienda(bool valor)
     {
-        codigoPlayer.GirarCamaraA(target);
-        dineroTotal = SistemaDeTurnos.Instance.Get_DineroTotal();
-        cantidadDineroTotal.text = dineroTotal.ToString();
-        opciones.SetActive(valor);
+        if (isTienda)
+        {
+            AudioManager.Instance.Play(au_TiendaOPEN);
+            codigoPlayer.GirarCamaraA(target);
+            dineroTotal = SistemaDeTurnos.Instance.Get_DineroTotal();
+            cantidadDineroTotal.text = dineroTotal.ToString();
+            opciones.SetActive(valor);
+        }
+        else
+        {
+            AudioManager.Instance.Play(au_CofreOpen);
+            codigoPlayer.GirarCamaraA(target);
+            dineroTotal = SistemaDeTurnos.Instance.Get_DineroTotal();
+            cantidadDineroTotal.text = dineroTotal.ToString();
+            opciones.SetActive(valor);
+        }
     }
 
     public void SeleccionarCarta(SpriteRenderer sprite, GameObject carta, int coste)
@@ -90,6 +106,7 @@ public class TiendaBehaviour : MonoBehaviour
 
     public void SalirTienda()
     {
+        AudioManager.Instance.Play(au_TiendaCLOSE);
         codigoPlayer.sePuedeMover = true;
         codigoPlayer.camaraPlayer.transform.rotation = new Quaternion (0,0,0,0);
     }
