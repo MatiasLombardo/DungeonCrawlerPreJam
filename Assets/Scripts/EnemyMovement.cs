@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using ZSerializer;
 
-public class EnemyMovement : PersistentMonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
 
-    public Camera cam;
 
     private NavMeshAgent agent;
     private bool isMoving;
@@ -39,18 +37,6 @@ public class EnemyMovement : PersistentMonoBehaviour
     }
     void Update () 
     {
-        /* if (Input.GetMouseButtonDown(0) && !isMoving)
-        {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit) && !isMoving) 
-            {
-                finalPosition = new Vector3(Mathf.Round(hit.point.x),Mathf.Round(hit.point.y),Mathf.Round(hit.point.z));
-                Debug.Log("El destino es: "+finalPosition);
-            }
-        } */
-
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {

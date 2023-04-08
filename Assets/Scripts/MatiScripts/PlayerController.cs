@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 targetRotation;
     private bool rotateEndQ = false;
     private bool rotateEndE = false;
+    public static bool playerIsMoving;
 
     public void RotateLeft() { if (AtRest) targetRotation -= Vector3.up * 90; }
     public void RotateRight() { if (AtRest) targetRotation += Vector3.up * 90; }
