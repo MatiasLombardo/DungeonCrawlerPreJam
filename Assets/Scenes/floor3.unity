@@ -47484,7 +47484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7191236546883386117, guid: ec25a6c66cdef50469d933ee1f2aec68, type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 7191236546883386117, guid: ec25a6c66cdef50469d933ee1f2aec68, type: 3}
       propertyPath: m_LocalScale.x
@@ -81333,7 +81333,7 @@ Transform:
   - {fileID: 902415570}
   - {fileID: 1016734653}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1964428077
 PrefabInstance:
