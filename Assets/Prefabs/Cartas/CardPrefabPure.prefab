@@ -287,10 +287,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6f45aa4de3c3ad944aa78e6b26bb71e8, type: 3}
   - {fileID: 21300000, guid: e76f424dad99e0f458c2bdf5a70adb2c, type: 3}
   - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
-  - {fileID: 21300000, guid: 6f45aa4de3c3ad944aa78e6b26bb71e8, type: 3}
-  - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
-  - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
-  - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
+  - {fileID: 21300000, guid: 6203745b4a8d803498cf6130658b5df1, type: 3}
+  - {fileID: 21300000, guid: a94433a932b94cd49ad85ed3beb66448, type: 3}
+  - {fileID: 21300000, guid: 4818bb829f31e7144b3f83c19f58304b, type: 3}
+  - {fileID: 21300000, guid: 99f3446e3a3557f47bf70fb83078dd7e, type: 3}
+  - {fileID: 21300000, guid: 4c0353caba8a99941a965a1d428191de, type: 3}
+  - {fileID: 21300000, guid: 08a7e23e6319ece44b220f71a466a908, type: 3}
+  - {fileID: 21300000, guid: 826dd02e46e5cba4599f6a805881b18c, type: 3}
+  - {fileID: 21300000, guid: c7f046a301649b440b2186e7c3a19845, type: 3}
+  - {fileID: 21300000, guid: 5b0c639af144dcf42a8ab75b9ee5d15d, type: 3}
+  - {fileID: 21300000, guid: 2010dc2759ad1864bb0f4fe27705ce31, type: 3}
+  - {fileID: 21300000, guid: 85c6e72b27d28ce45a4866c6dbaaa657, type: 3}
   cartaElegida: 0
 --- !u!1 &3245573509686006908
 GameObject:

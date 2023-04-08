@@ -137,12 +137,12 @@ using TMPro;
     }
 
     public void IniciarCombateBoss(float vidaTotal, AudioClip musica)
-     {
+    {
         
         
         StartCoroutine(TransicionIniciarCombateBoss(vidaTotal, musica));
 
-     }
+    }
 
     IEnumerator TransicionIniciarCombateBoss(float vidaTotal, AudioClip musica)
     {

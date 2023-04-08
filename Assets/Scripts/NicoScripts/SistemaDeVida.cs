@@ -44,11 +44,11 @@ public class SistemaDeVida : MonoBehaviour
 
     public void EncontrarObjetos()
     {
-        numero_vidaP = GameObject.Find("/CombateUI(Clone)/Canvas/Vida/BarraDeVidaPlayer/TextoVidaPlayer").GetComponent<TMP_Text>();
+        numero_vidaP = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/Player/Text (TMP)").GetComponent<TMP_Text>();
         numero_vidaE = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/EnemySpriteContainer/Text (TMP)").GetComponent<TMP_Text>();
         com_ResultadoP = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/comparadores/ComFinalP").GetComponent<TMP_Text>();
         com_ResultadoE = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/comparadores/ComFinalE").GetComponent<TMP_Text>();
-        p_healthBar = GameObject.Find("/CombateUI(Clone)/Canvas/Vida/BarraDeVidaPlayer").GetComponent<Image>();
+        p_healthBar = GameObject.Find("/CombateUI(Clone)/CombatUICanvas/Player/Bar").GetComponent<Image>();
         e_healthBar = GameObject.Find("/CombateUI(Clone)/Canvas/Vida/BarraDeVidaEnemigo").GetComponent<Image>();
         cargoComponentes = true;
     }
