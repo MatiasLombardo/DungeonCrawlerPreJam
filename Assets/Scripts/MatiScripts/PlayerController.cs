@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     public float transitionSpeed = 7f;
     public float transitionRotationSpeed = 700f;
 
-    Vector3 targetGridPos;
-    Vector3 prevTargetGridPos;
+    public Vector3 targetGridPos;
+    public Vector3 prevTargetGridPos;
     public Vector3 targetRotation;
     private bool rotateEndQ = false;
     private bool rotateEndE = false;
