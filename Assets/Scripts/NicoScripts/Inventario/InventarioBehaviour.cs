@@ -58,7 +58,7 @@ public class InventarioBehaviour : MonoBehaviour
         {
             if (listaInventario[i] == 4)
             {
-                listaInventario.Remove(i);
+                listaInventario.Remove(4);
                 break;
             }
         }
