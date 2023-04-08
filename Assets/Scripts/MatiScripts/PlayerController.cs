@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     Vector3 targetGridPos;
     Vector3 prevTargetGridPos;
     public Vector3 targetRotation;
+    private bool rotateEndQ = false;
+    private bool rotateEndE = false;
 
     public void RotateLeft() { if (AtRest) targetRotation -= Vector3.up * 90; }
     public void RotateRight() { if (AtRest) targetRotation += Vector3.up * 90; }
@@ -25,6 +27,29 @@ public class PlayerController : MonoBehaviour
     {
         targetGridPos = Vector3Int.RoundToInt(transform.position);
 
+    }
+    void Update()
+    {
+        //Buffer de giro, implementacion horrible pero simple, funciona asi que no lo miren mucho.
+        if(!AtRest && Input.GetKeyDown(KeyCode.Q))
+        {
+            rotateEndQ = true;
+        }
+        else if(!AtRest && Input.GetKeyDown(KeyCode.E))
+        {
+            rotateEndE = true;
+        }
+        if(AtRest && rotateEndQ)
+        {
+            rotateEndQ = false;
+            RotateLeft();
+        }
+        if(AtRest && rotateEndE)
+        {
+            rotateEndE = false;
+            RotateRight();
+        }
+        //
     }
 
     
@@ -55,6 +80,7 @@ public class PlayerController : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * transitionSpeed);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(targetRotation), Time.deltaTime * transitionRotationSpeed);
+                
             }
 
         } else

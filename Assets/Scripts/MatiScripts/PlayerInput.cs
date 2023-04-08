@@ -15,6 +15,7 @@ public class PlayerInput : MonoBehaviour
     KeyCode turnLeft = KeyCode.Q;
     KeyCode turnRight = KeyCode.E;
     [SerializeField] float range=2;
+    private bool bufferRotation;
 
     public bool sePuedeMover;
     [SerializeField] float rotationSpeed;
