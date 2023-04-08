@@ -75,6 +75,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bailarina
       objectReference: {fileID: 0}
+    - target: {fileID: 8875168463664180554, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1933485099, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}

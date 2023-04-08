@@ -14,7 +14,8 @@ public class LoboBehaviour : MonoBehaviour
     [SerializeField] float tiempoDeInterludio = 15;
     [SerializeField] AudioClip musicaInicioFase1;
     [SerializeField] AudioClip musicaInicioFase2;
-    [SerializeField] Sprite spriteEnemigo;
+    [SerializeField] Sprite spriteEnemigoFase1;
+    [SerializeField] Sprite spriteEnemigoFase2;
     [SerializeField] GameObject ventanaDialogo;
     [SerializeField] GameObject tituloPelea;
     float oldPos, newPos;
@@ -69,7 +70,7 @@ public class LoboBehaviour : MonoBehaviour
         SistemaDeTurnos.Instance.Set_EstadoBALOBO();
         SistemaDeTurnos.Instance.IniciarCombateBoss(vidaMaxima, musicaInicioFase1);
         yield return new WaitForSeconds(2f);
-        MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigo);
+        MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigoFase1);
         yield return new WaitForSeconds(1f);
         segundaFase = true;
         this.gameObject.SetActive(false);
@@ -110,7 +111,7 @@ bool temp5 = true;
         //activa la musica de combate y arranca el combate
         SistemaDeTurnos.Instance.IniciarCombateBoss(vidaMaxima, musicaInicioFase2);
         yield return new WaitForSeconds(2f);
-        MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigo);
+        MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigoFase2);
         yield return new WaitForSeconds(1f);
         this.gameObject.SetActive(false);
     }
