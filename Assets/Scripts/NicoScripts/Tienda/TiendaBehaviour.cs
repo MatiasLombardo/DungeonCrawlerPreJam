@@ -13,6 +13,7 @@ public class TiendaBehaviour : MonoBehaviour
     //[SerializeField] List<SpriteRenderer> cartas = new List<SpriteRenderer>();
     [SerializeField] GameObject botonTienda;
     [SerializeField] bool isTienda;
+    [SerializeField] bool isCofreObjeto;
     [SerializeField] GameObject padre;
     [SerializeField] TMP_Text cantidadDineroTotal;
     int dineroTotal;
@@ -25,6 +26,7 @@ public class TiendaBehaviour : MonoBehaviour
     [SerializeField] AudioClip au_TiendaOPEN;
     [SerializeField] AudioClip au_TiendaCLOSE;
     [SerializeField] AudioClip musicaTienda;
+    [SerializeField] int objeto;
     
     //[SerializeField] int dineroTotal;
 
@@ -91,11 +93,18 @@ public class TiendaBehaviour : MonoBehaviour
                 Destroy(padre);
             }
         }
-        else if (!isTienda)
+        else if (!isTienda && !isCofreObjeto)
         {
 
             opciones.SetActive(false);
             MazoManager.Instance.AñadirCartaAlInventario(sprite);
+            SalirTienda();
+            Destroy(padre);
+        }
+        else if(isCofreObjeto)
+        {
+            opciones.SetActive(false);
+            InventarioBehaviour.Instance.añadirAlInventario(objeto);
             SalirTienda();
             Destroy(padre);
         }

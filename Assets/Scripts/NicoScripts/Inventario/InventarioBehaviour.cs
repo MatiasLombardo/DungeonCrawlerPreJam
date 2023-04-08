@@ -58,7 +58,9 @@ public class InventarioBehaviour : MonoBehaviour
         {
             if (listaInventario[i] == 4)
             {
-                listaInventario.Remove(i);
+                listaInventario.Remove(4);
+                listaInventarioVisuales[i].enabled = false;
+                DefinidorDeObjetos();
                 break;
             }
         }
@@ -68,6 +70,7 @@ public class InventarioBehaviour : MonoBehaviour
     public void añadirAlInventario(int objeto)
     {
         listaInventario.Add(objeto);
+        DefinidorDeObjetos();
     }
 
     public List<int> Get_Inventario()
@@ -92,7 +95,7 @@ public class InventarioBehaviour : MonoBehaviour
         }
     }*/
 
-    void DefinidorDeObjetos()
+    public void DefinidorDeObjetos()
     {
         for (int i = 0; i < listaInventario.Count; i++)
         {
@@ -102,32 +105,42 @@ public class InventarioBehaviour : MonoBehaviour
             {
                 case 0 :
                     listaInventarioVisuales[i].GetComponent<Image>().sprite = brujula;
+                    listaInventarioVisuales[i].enabled = true;
                     brujulaO.SetActive(true);
                 break;
 
                 case 1 :
                     listaInventarioVisuales[i].GetComponent<Image>().sprite = mapa1;
+                    listaInventarioVisuales[i].enabled = true;
                     //se activa el mapa 1 GameObject
                     mapa1O.SetActive(true);
                 break;
                 
                 case 2 :
                     listaInventarioVisuales[i].GetComponent<Image>().sprite = mapa2;
+                    listaInventarioVisuales[i].enabled = true;
+
                     mapa2O.SetActive(true);
                 break;
 
                 case 3 :
                     listaInventarioVisuales[i].GetComponent<Image>().sprite = mapa3;
+                    listaInventarioVisuales[i].enabled = true;
+
                     mapa3O.SetActive(true);
                 break;
 
                 case 4 :
                     listaInventarioVisuales[i].GetComponent<Image>().sprite = pocion;
+                    listaInventarioVisuales[i].enabled = true;
+
                     //Ademas que setee si se puede tomar o no
                 break;
                 
                 case 5 :
                     listaInventarioVisuales[i].GetComponent<Image>().sprite = llave;
+                    listaInventarioVisuales[i].enabled = true;
+
                 break;
                 
 
