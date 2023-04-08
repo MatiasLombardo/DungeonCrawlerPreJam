@@ -4072,6 +4072,7 @@ MonoBehaviour:
   sePuedeMover: 0
   rotationSpeed: 0.1
   camaraPlayer: {fileID: 7260943991726789332}
+  au_TomarPocion: {fileID: 0}
 --- !u!136 &7260943991388802812
 CapsuleCollider:
   m_ObjectHideFlags: 0

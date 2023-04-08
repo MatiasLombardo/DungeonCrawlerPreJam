@@ -14,13 +14,14 @@
 
     public SpriteRenderer spriteEnemigo;
 
+    public List<Sprite> mazoEne0 = new List<Sprite>();
     public List<Sprite> mazoEne1 = new List<Sprite>();
     public List<Sprite> mazoEne2 = new List<Sprite>();
     public List<Sprite> mazoEne3 = new List<Sprite>();
     public List<Sprite> mazoEne4 = new List<Sprite>();
-    public List<Sprite> mazoEne5 = new List<Sprite>();
     public List<Sprite> mazoBoss1 = new List<Sprite>();
     public List<Sprite> mazoBoss2 = new List<Sprite>();
+    public List<Sprite> mazoBoss3 = new List<Sprite>();
     //private List<Sprite> mazoExportado = new List<Sprite>();
 
 
@@ -58,24 +59,24 @@
     {
         if (tipoEnemigo == 0)
         {
-            mazoGuardado = new List<Sprite>(mazoEne1);
+            mazoGuardado = new List<Sprite>(mazoEne0);
 
         }
         if (tipoEnemigo == 1)
         {
-            mazoGuardado = new List<Sprite>(mazoEne2);
+            mazoGuardado = new List<Sprite>(mazoEne1);
         }
         if (tipoEnemigo == 2)
         {
-            mazoGuardado = new List<Sprite>(mazoEne3);
+            mazoGuardado = new List<Sprite>(mazoEne2);
         }
         if (tipoEnemigo == 3)
         {
-            mazoGuardado = new List<Sprite>(mazoEne4);
+            mazoGuardado = new List<Sprite>(mazoEne3);
         }
         if (tipoEnemigo == 4)
         {
-            mazoGuardado = new List<Sprite>(mazoEne5);
+            mazoGuardado = new List<Sprite>(mazoEne4);
         }
 
 
@@ -90,7 +91,7 @@
         }
         if (tipoEnemigo == 33)
         {
-            mazoGuardado = new List<Sprite>(mazoBoss2);
+            mazoGuardado = new List<Sprite>(mazoBoss3);
         }
 
 
