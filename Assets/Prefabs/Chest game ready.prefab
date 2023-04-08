@@ -1413,9 +1413,9 @@ MonoBehaviour:
   codigoPlayer: {fileID: 0}
   target: {fileID: 0}
   au_CofreOpen: {fileID: 8300000, guid: 77fe4ffd60778744084fad8d2b6ef694, type: 3}
-  au_TiendaOPEN: {fileID: 0}
-  au_TiendaCLOSE: {fileID: 0}
-  musicaTienda: {fileID: 0}
+  au_TiendaOPEN: {fileID: 8300000, guid: 15e4a99a85ff466468745b33925aef69, type: 3}
+  au_TiendaCLOSE: {fileID: 8300000, guid: 0d43f48f3bd102e4d91c4e93fbc5abd8, type: 3}
+  musicaTienda: {fileID: 8300000, guid: 77fe4ffd60778744084fad8d2b6ef694, type: 3}
 --- !u!1 &5652716876704411941
 GameObject:
   m_ObjectHideFlags: 0
