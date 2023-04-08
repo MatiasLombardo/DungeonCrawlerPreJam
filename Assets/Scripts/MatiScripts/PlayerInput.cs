@@ -85,6 +85,10 @@ public class PlayerInput : MonoBehaviour
 
         }
 
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            InventarioBehaviour.Instance.QuitarPocion();
+        }
         
 
         /*if (Input.GetKeyUp(forward)) controller.MoveForward();
