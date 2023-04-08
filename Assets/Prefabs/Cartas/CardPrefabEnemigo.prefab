@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 84a229f3487423642b23d53fab6df8fc, type: 3}
-  m_Color: {r: 0.41491634, g: 0.51904196, b: 0.7924528, a: 1}
+  m_Color: {r: 0.41491634, g: 0.51904196, b: 0.7924528, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -291,6 +291,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
   - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
   - {fileID: 21300000, guid: 635de2b5226df6241a02279889c4c1b4, type: 3}
+  cartaElegida: 0
 --- !u!1 &3245573509686006908
 GameObject:
   m_ObjectHideFlags: 0
