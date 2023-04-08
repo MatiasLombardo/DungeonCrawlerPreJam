@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3099,8 +3099,7 @@ MonoBehaviour:
   sePuedeMover: 0
   rotationSpeed: 0.1
   camaraPlayer: {fileID: 1975529989}
-  au_Movimiento1: {fileID: 0}
-  au_Movimiento2: {fileID: 0}
+  au_TomarPocion: {fileID: 0}
 --- !u!114 &1503489580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3415,32 +3414,20 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fbd8cd4ab55686a4eae0fe1c34c7e54f, type: 3}
   - {fileID: 21300000, guid: fbd8cd4ab55686a4eae0fe1c34c7e54f, type: 3}
   mazoBoss1:
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
+  - {fileID: 21300000, guid: c7f046a301649b440b2186e7c3a19845, type: 3}
+  - {fileID: 21300000, guid: 5b0c639af144dcf42a8ab75b9ee5d15d, type: 3}
+  - {fileID: 21300000, guid: 2010dc2759ad1864bb0f4fe27705ce31, type: 3}
+  - {fileID: 21300000, guid: 85c6e72b27d28ce45a4866c6dbaaa657, type: 3}
+  - {fileID: 21300000, guid: 826dd02e46e5cba4599f6a805881b18c, type: 3}
   mazoBoss2:
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
-  mazoBoss3: []
+  - {fileID: 21300000, guid: c7f046a301649b440b2186e7c3a19845, type: 3}
+  - {fileID: 21300000, guid: 5b0c639af144dcf42a8ab75b9ee5d15d, type: 3}
+  - {fileID: 21300000, guid: 2010dc2759ad1864bb0f4fe27705ce31, type: 3}
+  - {fileID: 21300000, guid: 1d7cb6ab61fb3434eb02a7eb7cfa0ac9, type: 3}
+  mazoBoss3:
+  - {fileID: 21300000, guid: 1d7cb6ab61fb3434eb02a7eb7cfa0ac9, type: 3}
+  - {fileID: 21300000, guid: 4c0353caba8a99941a965a1d428191de, type: 3}
+  - {fileID: 21300000, guid: 08a7e23e6319ece44b220f71a466a908, type: 3}
   tipoEnemigo: 0
   numeroDeCarta: 0
   spriteActual: {fileID: 0}
@@ -7453,8 +7440,7 @@ MonoBehaviour:
   sePuedeMover: 0
   rotationSpeed: 0.1
   camaraPlayer: {fileID: 1975529989}
-  au_Movimiento1: {fileID: 0}
-  au_Movimiento2: {fileID: 0}
+  au_TomarPocion: {fileID: 0}
 --- !u!4 &5310961601260204551
 Transform:
   m_ObjectHideFlags: 0
@@ -8944,7 +8930,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -284.8, y: 37}
+  m_AnchoredPosition: {x: -284.8, y: 37.000004}
   m_SizeDelta: {x: 258, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5310961601511625843
@@ -12748,7 +12734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 303, y: 37}
+  m_AnchoredPosition: {x: 303, y: 37.000004}
   m_SizeDelta: {x: 258, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5310961602132949305
@@ -16131,7 +16117,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.36499023, y: 33.947998}
+  m_AnchoredPosition: {x: -0.36499023, y: 33.948}
   m_SizeDelta: {x: -335.294, y: -67.897}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5310961603059514887
@@ -18102,7 +18088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7113689834731229156, guid: ead44b498abae9447b2f31587b5de833, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7113689834731229160, guid: ead44b498abae9447b2f31587b5de833, type: 3}
       propertyPath: m_RootOrder
