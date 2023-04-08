@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
-    public void GoToScene(string SceneName) { 
-        SceneManager.LoadScene(SceneName);
+    public void GoToScene() { 
+        SceneManager.LoadScene("Floor 1 Copy");
     }
 
     public void QuitGame()
