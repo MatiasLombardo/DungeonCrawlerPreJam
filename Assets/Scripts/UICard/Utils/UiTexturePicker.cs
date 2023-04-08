@@ -185,6 +185,43 @@ namespace Tools.UI.Card
                     cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
                 break;
 
+                case var value when value == posiblesCartas[23].name :
+                    daño = 8;
+                    absorber = 30;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[24].name :
+                    daño = 10;
+                    absorber = 20;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[25].name :
+                    daño = 15;
+                    absorber = 5;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[26].name :
+                    daño = 3;
+                    absorber = 12;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[27].name :
+                    daño = 5;
+                    absorber = 7;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[28].name :
+                    daño = 7;
+                    absorber = 4;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+                case var value when value == posiblesCartas[29].name :
+                    daño = 8;
+                    absorber = 3;
+                    cartaPadre.GetComponent<Tools.UI.Card.UiCardComponent>().Set_Daño(daño, absorber);
+                break;
+
+
 
                 default:
                     daño = 12;
