@@ -84,7 +84,7 @@ public class BalerinaBehaviour : MonoBehaviour
     }
 int temp4 = 0;
 bool temp5 = true;
-    void Update()
+    /*void Update()
     {
         
         if (preludiob)
@@ -98,7 +98,7 @@ bool temp5 = true;
             temp4++;
             
         }
-    }
+    }*/
 
 
     private void OnEnable() 

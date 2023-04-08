@@ -75,21 +75,20 @@ public class LoboBehaviour : MonoBehaviour
         segundaFase = true;
         this.gameObject.SetActive(false);
     }
-int temp4 = 0;
-bool temp5 = true;
+
+    int temp4 = 0;
+    bool temp5 = true;
+
     void Update()
     {
-        
         if (preludiob)
         {
-            Debug.Log(AudioManager.Instance.MusicSource.time);
             if (AudioManager.Instance.Get_IsPlaying() && temp4 > 500)
             {
                 AudioManager.Instance.StopMusic();
                 preludiob = false;
             }
             temp4++;
-            
         }
     }
 
