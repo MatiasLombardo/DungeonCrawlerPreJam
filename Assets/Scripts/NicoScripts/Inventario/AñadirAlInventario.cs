@@ -6,8 +6,6 @@ public class AñadirAlInventario : MonoBehaviour
 {
 
 
-
-
     public void AñadirAlInventarioNuevo(int id)
     {
         InventarioBehaviour.Instance.añadirAlInventario(id);

@@ -22,7 +22,7 @@ public class PlayerInput : MonoBehaviour
 
     PlayerController controller;
     public GameObject camaraPlayer; 
-    //[SerializeField] AudioClip au_Movimiento1;
+    [SerializeField] AudioClip au_TomarPocion;
     //[SerializeField] AudioClip au_Movimiento2;
 
     private void Awake()
@@ -102,9 +102,8 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.H))
         {
-            InventarioBehaviour.Instance.QuitarPocion();
+            InventarioBehaviour.Instance.QuitarPocion(au_TomarPocion);
         }
-        
 
         /*if (Input.GetKeyUp(forward)) controller.MoveForward();
        /if (Input.GetKeyUp(back)) controller.MoveBack();
