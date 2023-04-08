@@ -11,6 +11,22 @@ PrefabInstance:
       propertyPath: codigoPlayer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1933485099, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}
+      propertyPath: musicaInicioFase1
+      value: 
+      objectReference: {fileID: 8300000, guid: 5dcb4ddb993e7a3478652c56c632d42c, type: 3}
+    - target: {fileID: 1933485099, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}
+      propertyPath: musicaInicioFase2
+      value: 
+      objectReference: {fileID: 8300000, guid: 74ad87965d983e74eb12757c3c99e3c7, type: 3}
+    - target: {fileID: 1933485099, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}
+      propertyPath: spriteEnemigoFase1
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f3f9be7ae774f64ebfebc65ada4705a, type: 3}
+    - target: {fileID: 1933485099, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}
+      propertyPath: spriteEnemigoFase2
+      value: 
+      objectReference: {fileID: 21300000, guid: d52fb2c907362fe4eb89daa6fb4d16fc, type: 3}
     - target: {fileID: 8875168463664180550, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -58,6 +74,10 @@ PrefabInstance:
     - target: {fileID: 8875168463664180554, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}
       propertyPath: m_Name
       value: Lobo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875168463664180554, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2581b8b68875b1f459d73a62a2685c73, type: 3}

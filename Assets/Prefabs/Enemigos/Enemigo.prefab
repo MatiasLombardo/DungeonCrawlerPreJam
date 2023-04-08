@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1479639542858334753
 Transform:
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   vidaMaxima: 15
   codigoPlayer: {fileID: 0}
   cara: {fileID: 1479639543211639317}
-  musica: {fileID: 8300000, guid: be1474756cac7d446a624d8437261b4b, type: 3}
+  musica: {fileID: 8300000, guid: a223dd0cd32a375489de7db64da3608d, type: 3}
   spriteEnemigo: {fileID: 21300000, guid: b3497253e58513a469fb1bfa56829150, type: 3}
 --- !u!1 &1479639543211639318
 GameObject:

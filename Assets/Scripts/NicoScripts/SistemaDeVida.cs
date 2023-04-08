@@ -151,6 +151,7 @@ public class SistemaDeVida : MonoBehaviour
         }
         else if (isFinalBoss)
         {
+            SistemaDeTurnos.Instance.TerminarCombateBossFinalBoss();
             isFinalBoss = false;
         }
         else
@@ -170,6 +171,10 @@ public class SistemaDeVida : MonoBehaviour
 
     bool isLobo;
     bool isFinalBoss;
+    public void Set_isFinalBoss()
+    {
+        isFinalBoss = true;
+    }
 
     public void Set_vidaMaxPLOBO()
     {

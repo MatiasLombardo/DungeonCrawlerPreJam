@@ -89,6 +89,7 @@ using TMPro;
     private void FinalCombate()
     {
         SistemaDeVida.Instance.cargoComponentes = false;
+
         Destroy(sistemaDeCombate);
         tempp = true;
     }
@@ -203,6 +204,11 @@ using TMPro;
         contenedorDeMedidores.SetActive(true);
         yield return new WaitForSeconds(2f);
         AñadirDinero(dineroNuevo);
+        if (estadoB == BOSS.BAILARINA)
+        {
+            Debug.Log("backUp descargado");
+            MazoManager.Instance.BackUpDeMazo1();
+        }
         estadoB = BOSS.NONE;
         //gana dinero
         foreach (GameObject a in desactivarCosasAlIniciarCombate)
@@ -274,6 +280,34 @@ using TMPro;
 
     }
 
+    public void TerminarCombateBossFinalBoss()
+     {
+        StartCoroutine(TransicionTerminarCombateBossFinalBoss());
+     }
+
+    IEnumerator TransicionTerminarCombateBossFinalBoss()
+    {
+        //Termina la primera fase del boss
+        //animacion cuando se rompe un sprite enemigo (cuando muere, como undertale).
+        AudioManager.Instance.StopTodo();
+        anim.SetActive(true);
+        animacionFade.SetTrigger("Fade Brusco");
+        yield return new WaitForSeconds(0.5f);
+        sistemaDeCombate.SetActive(false);
+        bossFinal.SetActive(true);
+        foreach (GameObject a in desactivarCosasAlIniciarCombate)
+        {
+            a.SetActive(true);
+        }
+        FinalCombate();
+        //anim.SetActive(false);
+
+
+    }
+
+
+
+    
 
  #region LogicaTurnosYDaños
 
@@ -620,6 +654,7 @@ using TMPro;
     public void Set_EstadoBABFINAL()
     {
         estadoB = BOSS.BFINAL;
+        SistemaDeVida.Instance.Set_isFinalBoss();
     }
 
     public BOSS Get_EstadoBBOSS()

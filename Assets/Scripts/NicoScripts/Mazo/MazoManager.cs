@@ -11,6 +11,7 @@
     public static MazoManager Instance { get; private set; }
 
     public List<Sprite> mazoGuardado = new List<Sprite>();
+    public List<Sprite> mazoBackup = new List<Sprite>();
     //private List<Sprite> mazoExportado = new List<Sprite>();
     public List<Sprite> cartasParaInventario = new List<Sprite>();
 
@@ -72,10 +73,9 @@
 
         if (SistemaDeTurnos.Instance.bailarinaON)
         {
+            mazoBackup = new List<Sprite>(mazoGuardado);
             mazoGuardado[0] = tinyBailarina;
             mazoGuardado[4] = tinyBailarina;
-            mazoGuardado[7] = tinyBailarina;
-            mazoGuardado[11] = tinyBailarina;
 
         }
 
@@ -112,6 +112,16 @@
 
     }
 
+    public void BackUpDeMazo1()
+    {
+        Debug.Log("backup cargado");
+        mazoGuardado = new List<Sprite>(mazoBackup);
+    }
+    public void BackUpDeMazo2()
+    {
+        Debug.Log("backup descargado");
+        mazoBackup = new List<Sprite>(mazoGuardado);
+    }
 
 
     //añadir carta: (int daño, sprite, bloqueo, cantidad)

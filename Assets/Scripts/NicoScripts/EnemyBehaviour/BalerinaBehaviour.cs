@@ -5,7 +5,7 @@ using UnityEngine;
 public class BalerinaBehaviour : MonoBehaviour
 {
 
-int tipoEnemigo = 11;
+    int tipoEnemigo = 12;
     [SerializeField] float vidaMaxima = 30f;
     [SerializeField] PlayerInput codigoPlayer;
     [SerializeField] Transform cara;
@@ -14,7 +14,8 @@ int tipoEnemigo = 11;
     [SerializeField] float tiempoDeInterludio = 15;
     [SerializeField] AudioClip musicaInicioFase1;
     [SerializeField] AudioClip musicaInicioFase2;
-    [SerializeField] Sprite spriteEnemigo;
+    [SerializeField] Sprite spriteEnemigofase1;
+    [SerializeField] Sprite spriteEnemigofase2;
     [SerializeField] GameObject ventanaDialogo;
     [SerializeField] GameObject tituloPelea;
     float oldPos, newPos;
@@ -45,11 +46,18 @@ int tipoEnemigo = 11;
 
     bool preludiob;
 
+    bool val1 = true;
     private IEnumerator PrepararseParaCombate()
     {
         //que aqui haga algo raro como acercar la camara o algo que anticipe su ataque
         
         //acciona el interludio
+        //Debug.Log("back up del mazo");
+        if (val1)
+        {
+            MazoManager.Instance.BackUpDeMazo2();
+            val1 = false;
+        }
         yield return new WaitForSeconds(1f);
         AudioManager.Instance.PlayMusic(preludio);
         preludiob = true;
@@ -69,7 +77,7 @@ int tipoEnemigo = 11;
         SistemaDeTurnos.Instance.Set_EstadoBABAILARINA();
         SistemaDeTurnos.Instance.IniciarCombateBoss(vidaMaxima, musicaInicioFase1);
         yield return new WaitForSeconds(2f);
-        MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigo);
+        MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigofase1);
         yield return new WaitForSeconds(1f);
         segundaFase = true;
         this.gameObject.SetActive(false);
@@ -81,7 +89,7 @@ bool temp5 = true;
         
         if (preludiob)
         {
-            Debug.Log(AudioManager.Instance.MusicSource.time);
+            //Debug.Log(AudioManager.Instance.MusicSource.time);
             if (AudioManager.Instance.Get_IsPlaying() && temp4 > 500)
             {
                 AudioManager.Instance.StopMusic();
@@ -110,7 +118,7 @@ bool temp5 = true;
         //activa la musica de combate y arranca el combate
         SistemaDeTurnos.Instance.IniciarCombateBoss(vidaMaxima, musicaInicioFase2);
         yield return new WaitForSeconds(2f);
-        MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigo);
+        MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigofase2);
         yield return new WaitForSeconds(1f);
         this.gameObject.SetActive(false);
     }
