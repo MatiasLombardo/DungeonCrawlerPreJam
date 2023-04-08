@@ -22,6 +22,8 @@ public class PlayerInput : MonoBehaviour
 
     PlayerController controller;
     public GameObject camaraPlayer; 
+    [SerializeField] AudioClip au_Movimiento1;
+    [SerializeField] AudioClip au_Movimiento2;
 
     private void Awake()
     {
@@ -46,18 +48,28 @@ public class PlayerInput : MonoBehaviour
         RaycastHit hitRight;
 
 
-        if (Input.GetKeyUp(turnLeft) && sePuedeMover) controller.RotateLeft();
-        if (Input.GetKeyUp(turnRight) && sePuedeMover) controller.RotateRight();
+        if (Input.GetKeyUp(turnLeft) && sePuedeMover) 
+        {
+            AudioManager.Instance.Play(au_Movimiento2);
+            controller.RotateLeft();
+        }
+        if (Input.GetKeyUp(turnRight) && sePuedeMover)
+        {
+            AudioManager.Instance.Play(au_Movimiento2);
+            controller.RotateRight();
+        }
 
         //Rayo adelante
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * range);
         if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward) , out hitForward, range)&& Input.GetKey(forward) && sePuedeMover && controller.smoothTransition)
         {
+            AudioManager.Instance.Play(au_Movimiento1);
             controller.MoveForward();
             
         }
         else if(!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward) , out hitForward, range)&& Input.GetKeyDown(forward) && sePuedeMover)
         {
+            AudioManager.Instance.Play(au_Movimiento1);
             controller.MoveForward();            
         }
 
@@ -65,6 +77,7 @@ public class PlayerInput : MonoBehaviour
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward)* -1 * range);
         if (!Physics.Raycast(transform.position, transform.TransformDirection(-Vector3.forward), out hitBackward, range) && Input.GetKeyDown(back) && sePuedeMover)
         {
+            AudioManager.Instance.Play(au_Movimiento1);
             controller.MoveBack();
 
         }
@@ -73,6 +86,7 @@ public class PlayerInput : MonoBehaviour
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * range);
         if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hitLeft, range) && Input.GetKeyDown(left) && sePuedeMover)
         {
+            AudioManager.Instance.Play(au_Movimiento1); 
             controller.MoveLeft();
 
         }
@@ -81,6 +95,7 @@ public class PlayerInput : MonoBehaviour
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * range);
         if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hitRight, range) && Input.GetKeyDown(right) && sePuedeMover)
         {
+            AudioManager.Instance.Play(au_Movimiento1);
             controller.MoveRight();
 
         }
