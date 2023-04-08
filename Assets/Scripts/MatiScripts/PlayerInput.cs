@@ -102,10 +102,8 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.H))
         {
-            AudioManager.Instance.Play(au_TomarPocion);
-            InventarioBehaviour.Instance.QuitarPocion();
+            InventarioBehaviour.Instance.QuitarPocion(au_TomarPocion);
         }
-        
 
         /*if (Input.GetKeyUp(forward)) controller.MoveForward();
        /if (Input.GetKeyUp(back)) controller.MoveBack();

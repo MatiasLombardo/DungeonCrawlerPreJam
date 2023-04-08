@@ -52,7 +52,7 @@ public class InventarioBehaviour : MonoBehaviour
     //4: Pocion
     //5: Llave
 
-    public void QuitarPocion()
+    public void QuitarPocion(AudioClip clip)
     {
         for (int i = 0; i < listaInventario.Count; i++)
         {
@@ -61,6 +61,7 @@ public class InventarioBehaviour : MonoBehaviour
                 listaInventario.Remove(4);
                 listaInventarioVisuales[i].enabled = false;
                 DefinidorDeObjetos();
+                AudioManager.Instance.Play(clip);
                 break;
             }
         }
