@@ -709,16 +709,50 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\n\n\n\ngamedesign\nortiz urbano (urban)\n\n\n\n\n\n\n\n\n\n\n\ndireccion
-    de programacion\nbenitez pablo (guaca)\n\n\n\n\n\n\n\n\n\n\n\ndireccion de musica
-    y sonido\nGeronimo fern\xE1ndez (gero)\nlahorca nicolas (lnk)\n\n\n\n\n\n\n\n\n\n\n\nprogramadores\npalermo
-    maximiliano (maxi)\nlahorca nicolas (lnk)\nortiz urbano (urban)\nbenitez pablo
-    (guaca)\nSanterbas agustin (santer)\n\n\n\n\n\n\n\n\n\n\n\n\nlead designer\nlahorca
-    nicolas (lnk)\n\n\n\n\n\n\n\n\n\n\n\ndesigners\nlahorca nicolas (lnk)\nbunny
-    (bunny)\n\n\n\n\n\n\n\n\n\n\n\ngameplay\nbenitez pablo (guaca)\npalermo maximiliano
-    (maxi)\nortiz urbano (urban)\n\n\n\n\nnpcs\nlahorca nicolas (lnk)\n\n\n\n\nitems\nbunny
-    (bunny)\n\n\n\n\nsonidos y musica\nfern\xE1ndez geronimo (gero)\n\n\n\n\nhud/ui\nortiz
-    urbano (urban)\nlahorca nicolas (lnk)"
+  m_text: '
+
+
+    DDL Studios.
+
+
+
+    Integrantes:
+
+
+    - Benitez Pablo (Guaca)
+
+
+    -
+    Lahorca Nicolas (LNK)
+
+
+    - Matias Lombardo (Mati)
+
+
+    - Nacho (Bokuro)
+
+
+    -
+    Loey
+
+
+    - Rylark
+
+
+    - Pablo Wunderlich
+
+
+    - GoonLagoon
+
+
+    - Tulie
+
+
+    -
+    Deus Engi
+
+
+    - Maxi Palermo'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
