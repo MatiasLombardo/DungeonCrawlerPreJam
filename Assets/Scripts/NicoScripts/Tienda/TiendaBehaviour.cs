@@ -17,6 +17,7 @@ public class TiendaBehaviour : MonoBehaviour
     [SerializeField] bool isCofreObjeto;
     [SerializeField] GameObject padre;
     [SerializeField] TMP_Text cantidadDineroTotal;
+    //private InventarioBehaviour _inventarioBehaviour;
 
     int dineroTotal;
     int temp = 0;
@@ -44,21 +45,33 @@ public class TiendaBehaviour : MonoBehaviour
     //[SerializeField] int dineroTotal;
     private void Awake() 
     {
-        codigoPlayer = GameObject.Find("/PlayerPostMerge").GetComponent<PlayerInput>();
-        if (isTienda)
+        codigoPlayer = GameObject.FindWithTag("Player").GetComponent<PlayerInput>();
+        if (isTienda && carta1!=null && carta2!=null && carta3!=null)
         {
             
             carta1.GetComponent<Image>().sprite = spriteCarta1;
             carta2.GetComponent<Image>().sprite = spriteCarta2;
             carta3.GetComponent<Image>().sprite = spriteCarta3;
         }
-        else
+        else if(isTienda)
+        {
+            Debug.Log("ERROR: La tienda "+ this.gameObject.name + (" no tiene todas las cartas asignadas."));
+        }
+        if (isCofreObjeto && carta1!=null)
+        {
+            carta1.GetComponent<Image>().sprite = spriteObjeto;
+        }
+        else if (isCofreObjeto)
+        {
+            Debug.Log("ERROR: El cofre de objeto "+ this.gameObject.name + (" no tiene el objeto asignado en carta1."));
+        }
+        if(!isCofreObjeto && isTienda && carta1!=null)
         {
             carta1.GetComponent<Image>().sprite = spriteCarta1;
         }
-        if (isCofreObjeto)
+        else if (!isTienda && !isCofreObjeto)
         {
-            carta1.GetComponent<Image>().sprite = spriteObjeto;
+            Debug.Log("ERROR: El cofre de carta "+ this.gameObject.name + (" no tiene todas la carta1 asignada."));
         }
     }
 
@@ -68,15 +81,17 @@ public class TiendaBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
-        
-        temp2 = 0;
-        isPrimero = true;
+        if(other.gameObject.tag == "Player")
+        {
+            temp2 = 0;
+            isPrimero = true;
+        }
     }
 
     private void OnTriggerStay(Collider other) 
     {        
 
-        if (isPrimero)
+        if (isPrimero && other.gameObject.tag=="Player")
         {
             newPos = Vector3.Distance(other.transform.position, transform.position);
             if (temp2 <= 5)
@@ -122,6 +137,7 @@ public class TiendaBehaviour : MonoBehaviour
 
     public void SeleccionarCarta(Image sprite, GameObject carta, int coste)
     {
+        //_inventarioBehaviour = GameObject.FindWithTag("Inventory").GetComponent<InventarioBehaviour>();
         //dineroTotal = SistemaDeTurnos.Instance.Get_DineroTotal();
         Debug.Log("comprar");
         if (isTienda && dineroTotal >= coste && !isCofreObjeto)
@@ -152,6 +168,7 @@ public class TiendaBehaviour : MonoBehaviour
         else if(isCofreObjeto)
         {
             opciones.SetActive(false);
+            //_inventarioBehaviour.añadirAlInventario(objeto);
             InventarioBehaviour.Instance.añadirAlInventario(objeto);
             SalirTienda();
             terminoSuUso = true;

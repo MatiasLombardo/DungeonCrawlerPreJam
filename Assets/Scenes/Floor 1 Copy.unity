@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1836482726}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1210,6 +1210,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: codigoPlayer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: isCofreObjeto
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 85878247234668614, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -10259,6 +10267,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54919fb61c721a242bdbd5f8f4c0c77f, type: 3}
+--- !u!1 &429993800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5573523267456215636, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+  m_PrefabInstance: {fileID: 1632450222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &429993801 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+  m_PrefabInstance: {fileID: 1632450222}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429993800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e42b3b1b296bb54ea85c651df4ee792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &429993803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429993800}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -1, y: 0, z: 0}
 --- !u!1001 &431288462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13629,6 +13666,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: codigoPlayer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: isCofreObjeto
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 85878247234668614, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -15192,6 +15237,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: codigoPlayer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: spriteCarta1
+      value: 
+      objectReference: {fileID: 21300000, guid: 241cac8c7331cb04f9413fc64654eace, type: 3}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: isCofreObjeto
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 85878247234668614, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -16525,6 +16582,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: codigoPlayer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: isCofreObjeto
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 85878247234668614, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -21384,6 +21449,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: codigoPlayer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: isCofreObjeto
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 85878247234668614, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -23742,6 +23815,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54919fb61c721a242bdbd5f8f4c0c77f, type: 3}
+--- !u!1 &944527442 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5652716876704411941, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+  m_PrefabInstance: {fileID: 1632450222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &945977370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27363,6 +27441,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: codigoPlayer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: isCofreObjeto
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 85878247234668614, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -28028,6 +28114,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: codigoPlayer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: isCofreObjeto
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 85878247234668614, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -31476,6 +31570,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: codigoPlayer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: isCofreObjeto
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 85878247234668614, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -34643,6 +34745,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: codigoPlayer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: isCofreObjeto
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 85878247234668614, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -38585,6 +38695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazoGuardado: []
   spriteEnemigo: {fileID: 0}
+  mazoEne0: []
   mazoEne1:
   - {fileID: 21300000, guid: 822ea458b94f46f439394468ee9e4436, type: 3}
   - {fileID: 21300000, guid: dac460c33e51b304698d622c11fe3ccf, type: 3}
@@ -38615,7 +38726,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0cf2a985821d0304b862ef9dd7317b7f, type: 3}
   - {fileID: 21300000, guid: 0cf2a985821d0304b862ef9dd7317b7f, type: 3}
   mazoEne4: []
-  mazoEne5: []
   mazoBoss1:
   - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
   - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
@@ -38642,6 +38752,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
   - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
   - {fileID: 21300000, guid: b0cf02078fd18da4fba984618eb20775, type: 3}
+  mazoBoss3: []
   tipoEnemigo: 1
   numeroDeCarta: 0
   spriteActual: {fileID: 0}
@@ -39182,6 +39293,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: codigoPlayer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: spriteCarta1
+      value: 
+      objectReference: {fileID: 21300000, guid: 241cac8c7331cb04f9413fc64654eace, type: 3}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: spriteObjeto
+      value: 
+      objectReference: {fileID: 21300000, guid: 241cac8c7331cb04f9413fc64654eace, type: 3}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: isCofreObjeto
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 85878247234668614, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -39198,6 +39325,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1206596124268947225, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 241cac8c7331cb04f9413fc64654eace, type: 3}
     - target: {fileID: 1238846794908151170, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -39304,7 +39435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5573523267456215636, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Name
-      value: Chest game ready (8)
+      value: Cofre Brujula
       objectReference: {fileID: 0}
     - target: {fileID: 5573523267456215637, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_RootOrder
@@ -39371,6 +39502,10 @@ PrefabInstance:
       value: 1.14
       objectReference: {fileID: 0}
     - target: {fileID: 5652716875829348661, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652716875829348661, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Center.x
       value: -1.19
       objectReference: {fileID: 0}
@@ -39391,6 +39526,34 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5652716876704411940, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 944527442}
+    - target: {fileID: 5652716876704411940, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1766406273}
+    - target: {fileID: 5652716876704411940, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652716876704411940, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652716876704411940, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652716876704411940, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652716876704411940, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652716876704411940, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
@@ -39409,6 +39572,26 @@ PrefabInstance:
     - target: {fileID: 6400629127250082935, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466018380582062911, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: script
+      value: 
+      objectReference: {fileID: 429993801}
+    - target: {fileID: 7695887983543879761, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7695887983543879761, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1766406273}
+    - target: {fileID: 7695887983543879761, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7695887983543879761, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8880106947429602373, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
@@ -42500,6 +42683,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1766406273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2049395086837969597, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+  m_PrefabInstance: {fileID: 1632450222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1767372704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45371,6 +45559,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: codigoPlayer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: isCofreObjeto
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 85878247234668614, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -46893,6 +47089,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: codigoPlayer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 816081639, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
+      propertyPath: isCofreObjeto
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5573523267456215636, guid: 98d0e55a5b8d20643a2c304a1741a7fd, type: 3}
       propertyPath: m_Name
       value: Chest game ready (2)
@@ -53599,6 +53803,7 @@ MonoBehaviour:
   opciones: {fileID: 2049395088166640806}
   botonTienda: {fileID: 5652716875870658366}
   isTienda: 0
+  isCofreObjeto: 0
   padre: {fileID: 5652716876612511569}
   cantidadDineroTotal: {fileID: 5479932444926813422}
   codigoPlayer: {fileID: 1311764560}
@@ -53607,6 +53812,14 @@ MonoBehaviour:
   au_TiendaOPEN: {fileID: 0}
   au_TiendaCLOSE: {fileID: 0}
   musicaTienda: {fileID: 0}
+  objeto: 0
+  carta1: {fileID: 0}
+  carta2: {fileID: 0}
+  carta3: {fileID: 0}
+  spriteCarta1: {fileID: 0}
+  spriteCarta2: {fileID: 0}
+  spriteCarta3: {fileID: 0}
+  spriteObjeto: {fileID: 0}
 --- !u!65 &5652716876612511534
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53718,6 +53931,7 @@ MonoBehaviour:
   opciones: {fileID: 2049395087542991952}
   botonTienda: {fileID: 5652716876335431624}
   isTienda: 0
+  isCofreObjeto: 0
   padre: {fileID: 5652716877205227431}
   cantidadDineroTotal: {fileID: 5479932445563569176}
   codigoPlayer: {fileID: 1311764560}
@@ -53726,6 +53940,14 @@ MonoBehaviour:
   au_TiendaOPEN: {fileID: 0}
   au_TiendaCLOSE: {fileID: 0}
   musicaTienda: {fileID: 0}
+  objeto: 0
+  carta1: {fileID: 0}
+  carta2: {fileID: 0}
+  carta3: {fileID: 0}
+  spriteCarta1: {fileID: 0}
+  spriteCarta2: {fileID: 0}
+  spriteCarta3: {fileID: 0}
+  spriteObjeto: {fileID: 0}
 --- !u!1001 &5901679635779324942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53941,6 +54163,7 @@ MonoBehaviour:
   cantidad: 12
   texto_coste: {fileID: 5479932445563569176}
   texto_cantidad: {fileID: 4299524527142401996}
+  sprites: []
 --- !u!114 &6466018379752776996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53961,6 +54184,7 @@ MonoBehaviour:
   cantidad: 12
   texto_coste: {fileID: 5479932444926813422}
   texto_cantidad: {fileID: 4299524527430473530}
+  sprites: []
 --- !u!224 &6786532160521036023
 RectTransform:
   m_ObjectHideFlags: 0

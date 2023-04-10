@@ -1176,6 +1176,7 @@ MonoBehaviour:
   cantidad: 12
   texto_coste: {fileID: 5479932443583711989}
   texto_cantidad: {fileID: 4299524528786159905}
+  sprites: []
 --- !u!1 &5526686571379549276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,6 +1372,13 @@ MonoBehaviour:
   au_TiendaCLOSE: {fileID: 8300000, guid: 0d43f48f3bd102e4d91c4e93fbc5abd8, type: 3}
   musicaTienda: {fileID: 8300000, guid: 77fe4ffd60778744084fad8d2b6ef694, type: 3}
   objeto: 0
+  carta1: {fileID: 0}
+  carta2: {fileID: 0}
+  carta3: {fileID: 0}
+  spriteCarta1: {fileID: 0}
+  spriteCarta2: {fileID: 0}
+  spriteCarta3: {fileID: 0}
+  spriteObjeto: {fileID: 0}
 --- !u!1 &5652716875829348682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,7 +1388,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5652716875829348660}
-  - component: {fileID: 5652716875829348661}
   m_Layer: 2
   m_Name: CofreCollider+UI
   m_TagString: Untagged
@@ -1405,19 +1412,6 @@ Transform:
   m_Father: {fileID: 5573523267456215637}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5652716875829348661
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5652716875829348682}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.14, y: 1, z: 1.0552921}
-  m_Center: {x: -0.97, y: 0, z: 0.019955635}
 --- !u!1 &5652716876704411941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,7 +1546,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 5652716875829348661}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
