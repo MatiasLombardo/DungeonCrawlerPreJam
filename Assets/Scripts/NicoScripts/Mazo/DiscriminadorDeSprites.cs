@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DiscriminadorDeSprites : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class DiscriminadorDeSprites : MonoBehaviour
     private void OnEnable() 
     {
         
-        string nombre = gameObject.GetComponent<SpriteRenderer>().sprite.name;
+        string nombre = gameObject.GetComponent<Image>().sprite.name;
         Debug.Log(nombre);
         switch (nombre)
         {
@@ -195,5 +196,9 @@ public class DiscriminadorDeSprites : MonoBehaviour
             botonQuitar.SetActive(true);
         }
     }*/
+
+
+
+    
 
 }

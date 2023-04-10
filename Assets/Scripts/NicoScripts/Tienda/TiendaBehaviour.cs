@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class TiendaBehaviour : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class TiendaBehaviour : MonoBehaviour
     [SerializeField] bool isCofreObjeto;
     [SerializeField] GameObject padre;
     [SerializeField] TMP_Text cantidadDineroTotal;
+
     int dineroTotal;
     int temp = 0;
     int temp2 = 0;
@@ -27,33 +29,75 @@ public class TiendaBehaviour : MonoBehaviour
     [SerializeField] AudioClip au_TiendaCLOSE;
     [SerializeField] AudioClip musicaTienda;
     [SerializeField] int objeto;
+    [SerializeField] GameObject carta1;
+    [SerializeField] GameObject carta2;
+    [SerializeField] GameObject carta3;
+
+    [SerializeField] Sprite spriteCarta1;
+    [SerializeField] Sprite spriteCarta2;
+    [SerializeField] Sprite spriteCarta3;
+
+    [SerializeField] Sprite spriteObjeto;
+
+
     
     //[SerializeField] int dineroTotal;
+    private void Awake() 
+    {
+        codigoPlayer = GameObject.Find("/PlayerPostMerge").GetComponent<PlayerInput>();
+        if (isTienda)
+        {
+            
+            carta1.GetComponent<Image>().sprite = spriteCarta1;
+            carta2.GetComponent<Image>().sprite = spriteCarta2;
+            carta3.GetComponent<Image>().sprite = spriteCarta3;
+        }
+        else
+        {
+            carta1.GetComponent<Image>().sprite = spriteCarta1;
+        }
+        if (isCofreObjeto)
+        {
+            carta1.GetComponent<Image>().sprite = spriteObjeto;
+        }
+    }
+
+
+    bool isPrimero;
+    bool terminoSuUso;
 
     private void OnTriggerEnter(Collider other) 
     {
         
         temp2 = 0;
+        isPrimero = true;
     }
 
     private void OnTriggerStay(Collider other) 
     {        
 
-        newPos = Vector3.Distance(other.transform.position, transform.position);
-        if (temp2 <= 5)
+        if (isPrimero)
         {
-            oldPos = Vector3.Distance(other.transform.position, transform.position);
+            newPos = Vector3.Distance(other.transform.position, transform.position);
+            if (temp2 <= 5)
+            {
+                oldPos = Vector3.Distance(other.transform.position, transform.position);
+            }
+            if (newPos == oldPos)
+            {
+                botonTienda.SetActive(true);
+                isPrimero = false;
+            }
+            temp2++;
         }
-        if (newPos == oldPos)
-        {
-            botonTienda.SetActive(true);
-        }
-        temp2++;
     }
 
     private void OnTriggerExit(Collider other) 
     {
-        botonTienda.SetActive(false);
+        if (!terminoSuUso)
+        {
+            botonTienda.SetActive(false);
+        }
     }
 
     public void ActivarTienda(bool valor)
@@ -76,11 +120,11 @@ public class TiendaBehaviour : MonoBehaviour
         }
     }
 
-    public void SeleccionarCarta(SpriteRenderer sprite, GameObject carta, int coste)
+    public void SeleccionarCarta(Image sprite, GameObject carta, int coste)
     {
         //dineroTotal = SistemaDeTurnos.Instance.Get_DineroTotal();
         Debug.Log("comprar");
-        if (isTienda && dineroTotal >= coste)
+        if (isTienda && dineroTotal >= coste && !isCofreObjeto)
         {
             temp++;
             SistemaDeTurnos.Instance.RestarDinero(coste);
@@ -90,6 +134,8 @@ public class TiendaBehaviour : MonoBehaviour
             if (temp >= 3)
             {
                 SalirTienda();
+                terminoSuUso = true;
+                this.gameObject.GetComponent<BoxCollider>().enabled = false;
                 Destroy(padre);
             }
         }
@@ -99,6 +145,8 @@ public class TiendaBehaviour : MonoBehaviour
             opciones.SetActive(false);
             MazoManager.Instance.AñadirCartaAlInventario(sprite);
             SalirTienda();
+            terminoSuUso = true;
+            this.gameObject.GetComponent<BoxCollider>().enabled = false;
             Destroy(padre);
         }
         else if(isCofreObjeto)
@@ -106,6 +154,8 @@ public class TiendaBehaviour : MonoBehaviour
             opciones.SetActive(false);
             InventarioBehaviour.Instance.añadirAlInventario(objeto);
             SalirTienda();
+            terminoSuUso = true;
+            this.gameObject.GetComponent<BoxCollider>().enabled = false;
             Destroy(padre);
         }
         dineroTotal = SistemaDeTurnos.Instance.Get_DineroTotal();
@@ -122,7 +172,12 @@ public class TiendaBehaviour : MonoBehaviour
 
     public void borrar()
     {
+        terminoSuUso = true;
         Destroy(padre);
     }
+
+
+
+    
 
 }

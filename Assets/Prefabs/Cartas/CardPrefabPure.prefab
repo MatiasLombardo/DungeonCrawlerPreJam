@@ -176,9 +176,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3245573509247951607}
+  - component: {fileID: 7507440218825524969}
   - component: {fileID: 3245573509247951605}
   - component: {fileID: 8598093160269803284}
+  - component: {fileID: 4993824918393558410}
   m_Layer: 5
   m_Name: Character
   m_TagString: Untagged
@@ -186,21 +187,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3245573509247951607
-Transform:
+--- !u!224 &7507440218825524969
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3245573509247951606}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00041, y: -0.000106, z: -0.03}
+  m_LocalPosition: {x: 0, y: 0, z: -0.03}
   m_LocalScale: {x: 0.02184877, y: 0.017109446, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3921877624254176190}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 939.1304, y: 1252.1738}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &3245573509247951605
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -299,6 +305,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2010dc2759ad1864bb0f4fe27705ce31, type: 3}
   - {fileID: 21300000, guid: 85c6e72b27d28ce45a4866c6dbaaa657, type: 3}
   cartaElegida: 0
+--- !u!222 &4993824918393558410
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245573509247951606}
+  m_CullTransparentMesh: 1
 --- !u!1 &3245573509686006908
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +348,7 @@ Transform:
   m_Children:
   - {fileID: 456298575781739630}
   - {fileID: 4601752671374776813}
-  - {fileID: 3245573509247951607}
+  - {fileID: 7507440218825524969}
   - {fileID: 318355484183328232}
   - {fileID: 1726514253595573956}
   m_Father: {fileID: 0}

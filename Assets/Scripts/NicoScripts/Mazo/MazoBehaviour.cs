@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class MazoBehaviour : MonoBehaviour
 {
 
-    
+
 
     [SerializeField] List<Sprite> mazo = new List<Sprite>();
 
@@ -31,7 +32,7 @@ public class MazoBehaviour : MonoBehaviour
         {
             if (i < (cartasSeleccionables.Count))
             {
-                cartasParaSeleccionar[i].GetComponent<SpriteRenderer>().sprite = cartasSeleccionables[i];
+                cartasParaSeleccionar[i].GetComponent<Image>().sprite = cartasSeleccionables[i];
                 cartasParaSeleccionar[i].SetActive(true);
             }
             else
@@ -49,7 +50,7 @@ public class MazoBehaviour : MonoBehaviour
     public void AñadirCarta(GameObject carta)
     {
 
-        Sprite cartaSprite = carta.GetComponent<SpriteRenderer>().sprite;
+        Sprite cartaSprite = carta.GetComponent<Image>().sprite;
 
         for (int i = 0; i < mazo.Count; i++)
         {
@@ -66,7 +67,7 @@ public class MazoBehaviour : MonoBehaviour
     public void EliminarCarta (GameObject carta)
     {
 
-        Sprite cartaSprite = carta.GetComponent<SpriteRenderer>().sprite;
+        Sprite cartaSprite = carta.GetComponent<Image>().sprite;
 
         for (int i = 0; i < mazo.Count; i++)
         {
