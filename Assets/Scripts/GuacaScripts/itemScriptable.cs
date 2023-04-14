@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 [CreateAssetMenu(fileName ="Nuevo objeto" , menuName = "Objeto del inventario/Crear nuevo objeto")]
 public class itemScriptable : ScriptableObject
@@ -10,11 +11,11 @@ public class itemScriptable : ScriptableObject
     public int valor;
     public Sprite icono;
     public TipoDeItem tipoDeItem;
-
     public enum TipoDeItem
     {
         Pocion,
         NoUsable,
         Brujula
     }
+    public string descripcionDeEsteItem;
 }

@@ -17,3 +17,4 @@ MonoBehaviour:
   valor: 50
   icono: {fileID: 21300000, guid: 92cc3c1a257c20b47a3553a0026d3fb9, type: 3}
   tipoDeItem: 0
+  descripcionDeEsteItem: A big potion.

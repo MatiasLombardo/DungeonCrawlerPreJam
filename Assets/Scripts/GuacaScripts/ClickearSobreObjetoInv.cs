@@ -12,5 +12,6 @@ public class ClickearSobreObjetoInv : MonoBehaviour
     public void ActivarUso()
     {
         GameObject.Find("ActivadorDeUso").GetComponent<BotonUsarDelInventario>().ActivarBotonDeUso(item);
+        GameObject.Find("PanelDeDescripcion").GetComponent<DescripcionItem>().EscribirDescripcion(item);
     }
 }
