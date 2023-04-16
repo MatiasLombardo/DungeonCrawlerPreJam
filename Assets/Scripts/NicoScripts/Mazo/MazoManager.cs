@@ -2,6 +2,7 @@
  using System.Collections;
  using System.Collections.Generic;
  using System.Linq;
+ using UnityEngine.UI;
 
 
  
@@ -105,7 +106,7 @@
         return cartasParaInventario;
     }
 
-    public void AñadirCartaAlInventario(SpriteRenderer spriteRenderer)
+    public void AñadirCartaAlInventario(Image spriteRenderer)
     {
         Sprite sp = spriteRenderer.sprite;
         cartasParaInventario.Add(sp);
