@@ -55,3 +55,4 @@ sysinfo.txt
 crashlytics-build.properties
 
 Logs/shadercompiler-UnityShaderCompiler.exe0.log
+*.log
