@@ -31,10 +31,10 @@ using TMPro;
     [SerializeField] Animator animacionFadeBoss;
 
 
-    [SerializeField] AudioClip au_Comparadores;
-    [SerializeField] AudioClip au_Daño;
-    public AudioClip au_JugarCarta;
-    public AudioClip au_AgarrarCarta;
+    [SerializeField] int au_Comparadores = 4;
+    [SerializeField] int au_Daño = 5;
+    public int au_JugarCarta = 2;
+    public int au_AgarrarCarta = 1;
 
     
     public enum BOSS
@@ -94,7 +94,7 @@ using TMPro;
         tempp = true;
     }
 
-     public void IniciarCombate(float vidaTotal, AudioClip musica)
+     public void IniciarCombate(float vidaTotal, int musica)
      {
         
         
@@ -103,7 +103,7 @@ using TMPro;
      }
 
 
-    IEnumerator TransicionIniciarCombate(float vidaTotal, AudioClip musica)
+    IEnumerator TransicionIniciarCombate(float vidaTotal, int musica)
     {
         //El jugador mira al enemigo
         Debug.Log("accionar fade");
@@ -136,7 +136,7 @@ using TMPro;
         yield return null;
     }
 
-    public void IniciarCombateBoss(float vidaTotal, AudioClip musica)
+    public void IniciarCombateBoss(float vidaTotal, int musica)
     {
         
         
@@ -144,7 +144,7 @@ using TMPro;
 
     }
 
-    IEnumerator TransicionIniciarCombateBoss(float vidaTotal, AudioClip musica)
+    IEnumerator TransicionIniciarCombateBoss(float vidaTotal, int musica)
     {
         //El jugador mira al enemigo
         Debug.Log("accionar fade");
@@ -193,7 +193,7 @@ using TMPro;
         SistemaDeVida.Instance.Set_vidaNormal();
         anim.SetActive(true);
         animacionFade.SetTrigger("Fade Brusco");
-        AudioManager.Instance.StopMusic();
+        AudioManager.Instance.StopAll();
         yield return new WaitForSeconds(1.5f);
         float val = 2 * 5 + 10;
         float xp = Random.Range(val-val/2, val);
@@ -237,7 +237,7 @@ using TMPro;
     {
         //Termina la primera fase del boss
         //animacion cuando se rompe un sprite enemigo (cuando muere, como undertale).
-        AudioManager.Instance.StopTodo();
+        AudioManager.Instance.StopAll();
         anim.SetActive(true);
         animacionFade.SetTrigger("Fade Brusco");
         yield return new WaitForSeconds(0.5f);
@@ -264,7 +264,7 @@ using TMPro;
     {
         //Termina la primera fase del boss
         //animacion cuando se rompe un sprite enemigo (cuando muere, como undertale).
-        AudioManager.Instance.StopTodo();
+        AudioManager.Instance.StopAll();
         anim.SetActive(true);
         animacionFade.SetTrigger("Fade Brusco");
         yield return new WaitForSeconds(0.5f);
@@ -289,7 +289,7 @@ using TMPro;
     {
         //Termina la primera fase del boss
         //animacion cuando se rompe un sprite enemigo (cuando muere, como undertale).
-        AudioManager.Instance.StopTodo();
+        AudioManager.Instance.StopAll();
         anim.SetActive(true);
         animacionFade.SetTrigger("Fade Brusco");
         yield return new WaitForSeconds(0.5f);
@@ -483,7 +483,7 @@ using TMPro;
         if (valorTurno == 0)
         {
 
-            AudioManager.Instance.Play(au_Comparadores);
+            AudioManager.Instance.PlaySound(au_Comparadores);
             for (int i = 0; i < choqueDeDaños.Length; i++)
             {
                 comparadores[i].text = choqueDeDaños[i].ToString();
@@ -515,7 +515,7 @@ using TMPro;
             }
 
             yield return new WaitForSeconds(2f);
-            AudioManager.Instance.Play(au_Daño);
+            AudioManager.Instance.PlaySound(au_Daño);
             
             SistemaDeVida.Instance.HacerDañoPlayer(choqueDeDaños[0] - choqueDeDaños[3]);  
             SistemaDeVida.Instance.HacerDañoEnemigo(choqueDeDaños[2] - choqueDeDaños[1]); 

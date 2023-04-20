@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LoboBehaviour : MonoBehaviour
 {
-
+/*
     int tipoEnemigo = 11;
     [SerializeField] float vidaMaxima = 30f;
     [SerializeField] PlayerInput codigoPlayer;
@@ -56,7 +56,7 @@ public class LoboBehaviour : MonoBehaviour
         preludiob = true;
         yield return new WaitForSeconds(2f);
         //Acciona el titulo de la pelea "THE WOLF MIEDO A NO SE ALGO SE ME OCURRIRA"
-        AudioManager.Instance.Play(son_Titulo);
+        AudioManager.Instance.PlaySound(son_Titulo);
         tituloPelea.SetActive(true);
         yield return new WaitForSeconds(2);
         //se desactiva el titulo
@@ -113,6 +113,6 @@ public class LoboBehaviour : MonoBehaviour
         MazoEnemigoManager.Instance.Set_TipoEnemigo(tipoEnemigo, spriteEnemigoFase2);
         yield return new WaitForSeconds(1f);
         this.gameObject.SetActive(false);
-    }
+    }*/
 
 }

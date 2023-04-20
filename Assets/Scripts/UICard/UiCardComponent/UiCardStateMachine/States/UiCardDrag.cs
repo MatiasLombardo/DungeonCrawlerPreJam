@@ -41,7 +41,7 @@ namespace Tools.UI.Card
 
             //stop any movement
             Handler.Movement.StopMotion();
-            AudioManager.Instance.Play(SistemaDeTurnos.Instance.au_AgarrarCarta);
+            AudioManager.Instance.PlaySound(SistemaDeTurnos.Instance.au_AgarrarCarta);
             //cache old values
             StartEuler = Handler.transform.eulerAngles;
 

@@ -25,10 +25,10 @@ public class TiendaBehaviour : MonoBehaviour
     [SerializeField] PlayerInput codigoPlayer;
     [SerializeField] Transform target;
     float newPos, oldPos;
-    [SerializeField] AudioClip au_CofreOpen;
-    [SerializeField] AudioClip au_TiendaOPEN;
-    [SerializeField] AudioClip au_TiendaCLOSE;
-    [SerializeField] AudioClip musicaTienda;
+    [SerializeField] int au_CofreOpen;
+    [SerializeField] int au_TiendaOPEN;
+    [SerializeField] int au_TiendaCLOSE;
+    [SerializeField] int musicaTienda;
     [SerializeField] int objeto;
     [SerializeField] GameObject carta1;
     [SerializeField] GameObject carta2;
@@ -119,7 +119,7 @@ public class TiendaBehaviour : MonoBehaviour
     {
         if (isTienda)
         {
-            AudioManager.Instance.Play(au_TiendaOPEN);
+            AudioManager.Instance.PlaySound(au_TiendaOPEN);
             codigoPlayer.GirarCamaraA(target);
             dineroTotal = SistemaDeTurnos.Instance.Get_DineroTotal();
             cantidadDineroTotal.text = dineroTotal.ToString();
@@ -127,7 +127,7 @@ public class TiendaBehaviour : MonoBehaviour
         }
         else
         {
-            AudioManager.Instance.Play(au_CofreOpen);
+            AudioManager.Instance.PlaySound(au_CofreOpen);
             codigoPlayer.GirarCamaraA(target);
             dineroTotal = SistemaDeTurnos.Instance.Get_DineroTotal();
             cantidadDineroTotal.text = dineroTotal.ToString();
@@ -182,7 +182,7 @@ public class TiendaBehaviour : MonoBehaviour
 
     public void SalirTienda()
     {
-        AudioManager.Instance.Play(au_TiendaCLOSE);
+        AudioManager.Instance.PlaySound(au_TiendaCLOSE);
         codigoPlayer.sePuedeMover = true;
         codigoPlayer.camaraPlayer.transform.rotation = new Quaternion (0,0,0,0);
     }

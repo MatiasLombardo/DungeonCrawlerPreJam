@@ -9,7 +9,7 @@ namespace Tools.UI.Card
     {
         protected override void OnPointerUp(PointerEventData eventData)
         {
-            //AudioManager.Instance.Play(SistemaDeTurnos.Instance.au_JugarCarta);
+            //AudioManager.Instance.PlaySound(SistemaDeTurnos.Instance.au_JugarCarta);
             CardHand?.PlaySelected();
         } 
     }

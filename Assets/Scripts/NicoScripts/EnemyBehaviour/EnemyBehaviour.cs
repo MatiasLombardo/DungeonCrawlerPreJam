@@ -9,7 +9,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] float vidaMaxima = 15f;
     [SerializeField] PlayerInput codigoPlayer;
     [SerializeField] Transform cara;
-    [SerializeField] AudioClip musica;
+    [SerializeField] int musica;
     [SerializeField] Sprite spriteEnemigo;
     float oldPos, newPos;
     int temp2 = 0;

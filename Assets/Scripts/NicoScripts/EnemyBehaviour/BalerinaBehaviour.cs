@@ -9,11 +9,11 @@ public class BalerinaBehaviour : MonoBehaviour
     [SerializeField] float vidaMaxima = 30f;
     [SerializeField] PlayerInput codigoPlayer;
     [SerializeField] Transform cara;
-    [SerializeField] AudioClip preludio;
-    [SerializeField] AudioClip son_Titulo;
+    [SerializeField] int preludio = 9;
+    [SerializeField] int son_Titulo = 0;
     [SerializeField] float tiempoDeInterludio = 15;
-    [SerializeField] AudioClip musicaInicioFase1;
-    [SerializeField] AudioClip musicaInicioFase2;
+    [SerializeField] int musicaInicioFase1 = 10;
+    [SerializeField] int musicaInicioFase2 = 8;
     [SerializeField] Sprite spriteEnemigofase1;
     [SerializeField] Sprite spriteEnemigofase2;
     [SerializeField] GameObject ventanaDialogo;
@@ -35,7 +35,7 @@ public class BalerinaBehaviour : MonoBehaviour
         }
         if (newPos == oldPos)
         {
-            AudioManager.Instance.StopMusic();
+            AudioManager.Instance.StopAll();
             codigoPlayer.GirarCamaraA(cara);
             //inicia el dialogo
             StartCoroutine(PrepararseParaCombate());
@@ -63,7 +63,7 @@ public class BalerinaBehaviour : MonoBehaviour
         preludiob = true;
         yield return new WaitForSeconds(2f);
         //Acciona el titulo de la pelea "THE WOLF MIEDO A NO SE ALGO SE ME OCURRIRA"
-        AudioManager.Instance.Play(son_Titulo);
+        AudioManager.Instance.PlaySound(son_Titulo);
         tituloPelea.SetActive(true);
         yield return new WaitForSeconds(2);
         //se desactiva el titulo
@@ -72,7 +72,7 @@ public class BalerinaBehaviour : MonoBehaviour
         ventanaDialogo.SetActive(true);
         //espera a que el dialogo termine, y la musica tambien
         yield return new WaitUntil(() => AudioManager.Instance.Get_IsPlaying() && !ventanaDialogo.activeSelf);
-        AudioManager.Instance.StopMusic();
+        AudioManager.Instance.StopAll();
         //activa la musica de combate y arranca el combate
         SistemaDeTurnos.Instance.Set_EstadoBABAILARINA();
         SistemaDeTurnos.Instance.IniciarCombateBoss(vidaMaxima, musicaInicioFase1);

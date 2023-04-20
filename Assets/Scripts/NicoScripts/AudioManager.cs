@@ -1,21 +1,34 @@
+using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using DigitalRuby.SoundManagerNamespace;
+
 
 public class AudioManager : MonoBehaviour
 {
-	// Audio players components.
-	public AudioSource EffectsSource;
-	public AudioSource MusicSource;
 
-	// Random pitch adjustment range.
-	public float LowPitchRange = .95f;
-	public float HighPitchRange = 1.05f;
-
-	// Singleton instance.
 	public static AudioManager Instance = null;
 	
 	// Initialize the singleton instance.
+	
+
+		/*public Slider SoundSlider;
+        public Slider MusicSlider;
+        public InputField SoundCountTextBox;
+        public Toggle PersistToggle;*/
+
+        public List<AudioSource> SoundAudioSources = new List<AudioSource>();
+		public GameObject[] cajaDeSonidos;
+		public GameObject[] cajaDeMusicas;
+		public List<AudioSource> MusicAudioSources = new List<AudioSource>();
+
+		public AudioClip[] clips;
+		public AudioClip[] musicas;
+
+		int indexGlobal;
+
+
 	private void Awake()
 	{
 		// If there is not already an instance of SoundManager, set it to this.
@@ -31,54 +44,97 @@ public class AudioManager : MonoBehaviour
 
 		//Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
 		DontDestroyOnLoad (gameObject);
-	}
 
-	// Play a single clip through the sound effects source.
-	public void Play(AudioClip clip)
-	{
-		EffectsSource.clip = clip;
-		EffectsSource.Play();
-	}
 
-	// Play a single clip through the music source.
-	public void PlayMusic(AudioClip clip)
-	{
-		MusicSource.clip = clip;
-		MusicSource.Play();
-	}
 
-	// Play a random clip from an array, and randomize the pitch slightly.
-	public void RandomSoundEffect(params AudioClip[] clips)
-	{
-		int randomIndex = Random.Range(0, clips.Length);
-		float randomPitch = Random.Range(LowPitchRange, HighPitchRange);
 
-		EffectsSource.pitch = randomPitch;
-		EffectsSource.clip = clips[randomIndex];
-		EffectsSource.Play();
+
+		
+
+
+
+
 	}
 
 
-	public bool Get_IsPlaying()
-	{
-		if (MusicSource.time <= 0.2)
+	private void Start() 
+	{ 
+		SoundManager.StopSoundsOnLevelLoad = !true;
+		for (int i = 0; i < clips.Length; i++)
 		{
-			return true;	
+			cajaDeSonidos[i].AddComponent<AudioSource>();
+			SoundAudioSources.Add(cajaDeSonidos[i].GetComponent<AudioSource>());
+			SoundAudioSources[i].clip = clips[i];
 		}
-		return false;
-	}
 
-	public void StopMusic()
-	{
-		MusicSource.Stop();
-	}
-	public void StopTodo()
-	{
-		MusicSource.Stop();
-		EffectsSource.Stop();
+
+		for (int i = 0; i < musicas.Length; i++)
+		{
+			cajaDeMusicas[i].AddComponent<AudioSource>();
+			MusicAudioSources.Add(cajaDeMusicas[i].GetComponent<AudioSource>());
+			MusicAudioSources[i].clip = musicas[i];
+		}
+
 	}
 
 
+        public void PlaySound(int index)
+        {
+			indexGlobal = index;
+            int count;
+            /*if (!int.TryParse(SoundCountTextBox.text, out count))
+            {
+                count = 1;
+            }*/
+            //while (count-- > 0)
+            //{
+                /*SoundAudioSources[0].PlayOneShotSoundManaged(clips[index]);
+				Debug.Log("está sonando " + clips[index].name);*/
+
+				SoundAudioSources[index].PlayOneShotSoundManaged(SoundAudioSources[index].clip);
+				/*Debug.Log("está sonando " + clips[index].name);*/
+            //}
+        }
+
+        public void PlayMusic(int index)
+        {
+            MusicAudioSources[index].PlayLoopingMusicManaged(1.0f, 1.0f, true);
+        }
+
+
+
+
+        /*public void SoundVolumeChanged()
+        {
+            SoundManager.SoundVolume = SoundSlider.value;
+        }
+
+        public void MusicVolumeChanged()
+        {
+            SoundManager.MusicVolume = MusicSlider.value;
+        }
+
+        public void PersistToggleChanged(bool isOn)
+        {
+            SoundManager.StopSoundsOnLevelLoad = !isOn;
+        }*/
+
+
+
+		public void StopAll()
+		{
+			SoundManager.StopAll();
+		}
+
+		public bool Get_IsPlaying()
+		{
+			//if (SoundAudioSources.clip.length == 0) return false;
+			if (SoundAudioSources[indexGlobal].clip == null) return false;
+			return SoundAudioSources[indexGlobal].isPlaying;
+		}
 
 
 }
+
+
+

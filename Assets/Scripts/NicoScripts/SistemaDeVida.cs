@@ -8,7 +8,7 @@ public class SistemaDeVida : MonoBehaviour
 {
 
 
-    [SerializeField] AudioClip au_PerderVidaP, au_PerderVidaE;
+    [SerializeField] int au_PerderVidaP, au_PerderVidaE;
     
     public static SistemaDeVida Instance { get; private set; }
 
@@ -102,7 +102,7 @@ public class SistemaDeVida : MonoBehaviour
 
     if (daño > 0)
     {
-        AudioManager.Instance.Play(au_PerderVidaP);
+        AudioManager.Instance.PlaySound(au_PerderVidaP);
         p_health = p_health - daño;
         numero_vidaP.text = p_health.ToString();
         StartCoroutine(DañoTempoP(daño));
@@ -120,7 +120,7 @@ public class SistemaDeVida : MonoBehaviour
   {
     if (daño > 0)
     {
-        AudioManager.Instance.Play(au_PerderVidaE);
+        AudioManager.Instance.PlaySound(au_PerderVidaE);
         e_health = e_health - daño;
         numero_vidaE.text = e_health.ToString();
         StartCoroutine(DañoTempoE(daño));

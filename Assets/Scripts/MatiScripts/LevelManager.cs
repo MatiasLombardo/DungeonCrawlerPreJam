@@ -5,18 +5,32 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
 
-    [SerializeField] AudioClip m_ambience;
+    [SerializeField] int m_ambience1 = 15;
+    [SerializeField] int m_ambience2 = 1;
+    [SerializeField] int m_ambience3 = 2;
 
     // Start is called before the first frame update
     void Start()
     {
-        AudioManager.Instance.PlayMusic(m_ambience);
-        
+        MusicaNivel1();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MusicaNivel1()
     {
-        
+        AudioManager.Instance.PlayMusic(m_ambience1);
     }
+
+    public void MusicaNivel2()
+    {
+        AudioManager.Instance.PlayMusic(m_ambience2);
+    }
+
+    public void MusicaNivel3()
+    {
+        AudioManager.Instance.PlayMusic(m_ambience3);
+    }
+
+
+
+
 }
