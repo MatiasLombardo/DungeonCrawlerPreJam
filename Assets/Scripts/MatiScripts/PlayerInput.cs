@@ -23,7 +23,8 @@ public class PlayerInput : MonoBehaviour
     PlayerController controller;
     public GameObject camaraPlayer; 
     [SerializeField] int au_TomarPocion = 2;
-    //[SerializeField] int au_Movimiento2;
+    [SerializeField] int au_Movimiento2;
+    [SerializeField] int au_Movimiento1;
 
     private void Awake()
     {
@@ -50,12 +51,12 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKeyUp(turnLeft) && sePuedeMover) 
         {
-            //AudioManager.Instance.PlaySound(au_Movimiento2);
+            AudioManager.Instance.PlaySound(au_Movimiento2);
             controller.RotateLeft();
         }
         if (Input.GetKeyUp(turnRight) && sePuedeMover)
         {
-            //AudioManager.Instance.PlaySound(au_Movimiento2);
+            AudioManager.Instance.PlaySound(au_Movimiento2);
             controller.RotateRight();
         }
 
@@ -63,13 +64,13 @@ public class PlayerInput : MonoBehaviour
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * range);
         if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward) , out hitForward, range)&& Input.GetKey(forward) && sePuedeMover && controller.smoothTransition)
         {
-            //AudioManager.Instance.PlaySound(au_Movimiento1);
+            SonidoCaminar();
             controller.MoveForward();
             
         }
         else if(!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward) , out hitForward, range)&& Input.GetKeyDown(forward) && sePuedeMover)
         {
-            //AudioManager.Instance.PlaySound(au_Movimiento1);
+            SonidoCaminar();
             controller.MoveForward();            
         }
 
@@ -77,7 +78,7 @@ public class PlayerInput : MonoBehaviour
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward)* -1 * range);
         if (!Physics.Raycast(transform.position, transform.TransformDirection(-Vector3.forward), out hitBackward, range) && Input.GetKeyDown(back) && sePuedeMover)
         {
-            //AudioManager.Instance.PlaySound(au_Movimiento1);
+            SonidoCaminar();
             controller.MoveBack();
 
         }
@@ -86,7 +87,7 @@ public class PlayerInput : MonoBehaviour
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * range);
         if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hitLeft, range) && Input.GetKeyDown(left) && sePuedeMover)
         {
-            //AudioManager.Instance.PlaySound(au_Movimiento1); 
+            SonidoCaminar(); 
             controller.MoveLeft();
 
         }
@@ -95,7 +96,7 @@ public class PlayerInput : MonoBehaviour
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * range);
         if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hitRight, range) && Input.GetKeyDown(right) && sePuedeMover)
         {
-            //AudioManager.Instance.PlaySound(au_Movimiento1);
+            SonidoCaminar();
             controller.MoveRight();
 
         }
@@ -140,7 +141,13 @@ public class PlayerInput : MonoBehaviour
             //sePuedeMover = true;
     }
 
+    private void SonidoCaminar()
+    {
 
+            AudioManager.Instance.PlaySound(au_Movimiento1);
+
+
+    }
 
 
 

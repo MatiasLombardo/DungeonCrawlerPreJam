@@ -237,11 +237,18 @@ MonoBehaviour:
   cantidadDineroTotal: {fileID: 129068498384089583}
   codigoPlayer: {fileID: 0}
   target: {fileID: 4845324311005554785}
-  au_CofreOpen: {fileID: 8300000, guid: 77fe4ffd60778744084fad8d2b6ef694, type: 3}
-  au_TiendaOPEN: {fileID: 8300000, guid: 15e4a99a85ff466468745b33925aef69, type: 3}
-  au_TiendaCLOSE: {fileID: 8300000, guid: 0d43f48f3bd102e4d91c4e93fbc5abd8, type: 3}
-  musicaTienda: {fileID: 8300000, guid: 77fe4ffd60778744084fad8d2b6ef694, type: 3}
-  objeto: 4
+  au_CofreOpen: 0
+  au_TiendaOPEN: 0
+  au_TiendaCLOSE: 0
+  musicaTienda: 0
+  objeto: 1
+  carta1: {fileID: 0}
+  carta2: {fileID: 0}
+  carta3: {fileID: 0}
+  spriteCarta1: {fileID: 0}
+  spriteCarta2: {fileID: 0}
+  spriteCarta3: {fileID: 0}
+  spriteObjeto: {fileID: 0}
 --- !u!1 &266933485581634111
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +839,7 @@ MonoBehaviour:
   cantidad: 12
   texto_coste: {fileID: 129068498384089583}
   texto_cantidad: {fileID: 8533424491684086331}
+  sprites: []
 --- !u!1 &1519314912370755437
 GameObject:
   m_ObjectHideFlags: 0

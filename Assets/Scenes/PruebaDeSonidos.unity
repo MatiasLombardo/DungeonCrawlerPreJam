@@ -9764,9 +9764,17 @@ PrefabInstance:
       value: Player PostMerge
       objectReference: {fileID: 0}
     - target: {fileID: 7260943991388802810, guid: 742ebcba97b031a488aa9635184547f6, type: 3}
+      propertyPath: au_Movimiento1
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7260943991388802810, guid: 742ebcba97b031a488aa9635184547f6, type: 3}
+      propertyPath: au_Movimiento2
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7260943991388802810, guid: 742ebcba97b031a488aa9635184547f6, type: 3}
       propertyPath: au_TomarPocion
-      value: 
-      objectReference: {fileID: 8300000, guid: 28576360de8452c4da6ed25638af6ca4, type: 3}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7260943991388802811, guid: 742ebcba97b031a488aa9635184547f6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -10303,10 +10311,6 @@ PrefabInstance:
     - target: {fileID: 44767141001974095, guid: d921988f820076a49a2855768e5bc50a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 266933484977156653, guid: d921988f820076a49a2855768e5bc50a, type: 3}
-      propertyPath: objeto
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 266933484977156653, guid: d921988f820076a49a2855768e5bc50a, type: 3}
       propertyPath: codigoPlayer
